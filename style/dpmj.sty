@@ -1,0 +1,438 @@
+% 
+%            ,,                                        
+%          `7MM            _.o9                                
+%            MM                                             
+%  ,6"Yb.    MM  ,p6"bo   ,6"Yb.  M"""MMV  ,6"Yb.  `7Mb,od8 
+% 8)   MM    MM 6M'  OO  8)   MM  '  AMV  8)   MM    MM' "' 
+%  ,pm9MM    MM 8M        ,pm9MM    AMV    ,pm9MM    MM     
+% 8M   MM    MM YM.    , 8M   MM   AMV  , 8M   MM    MM     
+% `Moo9^Yo..JMML.YMbmd'  `Moo9^Yo.AMMmmmM `Moo9^Yo..JMML.   
+% 
+% 
+% Free and Open-Source template for academic works
+% https://github.com/dpmj/alcazar
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Import the packages and definitions 
+
+\usepackage{style/pkgs}
+\usepackage{style/colors}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PDF PARAMETERS
+
+\pdfminorversion=6
+\pdfobjcompresslevel=3
+\pdfcompresslevel=9
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TEXT STYLE
+
+\setlength{\parindent}{10mm}  % Indentation
+\setlength{\parskip}{2mm}  % Paragraph skip
+
+\renewcommand{\baselinestretch}{1.2}  % Default spacing between lines
+
+
+% Commands to have small monospace text
+
+\NewCommandCopy{\svtt}{\texttt}
+\renewcommand\texttt[1]{\svtt{\small#1}}
+
+% No hypenation
+
+% \tolerance=1
+% \emergencystretch=\maxdimen
+% \hyphenpenalty=10000
+% \hbadness=10000
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLE OF CONTENTS 
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAGE STYLE AND GEOMETRY
+
+\geometry{
+    a4paper,
+    top     = 2.5cm,
+    bottom  = 2.5cm,
+    inner   = 3.5cm,
+    outer   = 2.5cm
+} 
+
+% Style of normal pages
+
+\fancyhead{}
+
+\fancyhfoffset[RO,LE]{0cm}
+    
+\fancyhead[LE]{\small{\thepage}}
+\fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
+\fancyhead[C]{}
+\fancyhead[LO]{\small{\nouppercase{\rightmark}}}
+\fancyhead[RO]{\thepage}
+
+\fancyfoot[LE]{\small{\thepage}}
+\fancyfoot[RE]{\small{\thesisTitleShort}}
+\fancyhead[C]{}
+\fancyfoot[LO]{\small{\thesisAuthor}}
+\fancyfoot[RO]{\small{\thepage}}
+
+\renewcommand{\headrulewidth}{0.2mm}
+\renewcommand{\footrulewidth}{0.2mm}
+
+
+
+% Chapters
+
+\fancypagestyle{chapters}
+{
+    \fancyhfoffset[RO,LE]{0cm}
+    
+    \fancyhead[LE]{\small{\thepage}}
+    \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
+    \fancyhead[C]{}
+    \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
+    \fancyhead[RO]{\thepage}
+    
+    \fancyfoot[LE]{\small{\thepage}}
+    \fancyfoot[RE]{\small{\thesisTitleShort}}
+    \fancyhead[C]{}
+    \fancyfoot[LO]{\small{\thesisAuthor}}
+    \fancyfoot[RO]{\small{\thepage}}
+    
+    \renewcommand{\headrulewidth}{0.2mm}
+    \renewcommand{\footrulewidth}{0.2mm}
+}
+
+% Addendum
+
+\fancypagestyle{addenda}
+{
+    \fancyhfoffset[RO,LE]{0cm}
+    
+    \fancyhead[LE]{\small{\thepage}}
+    \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
+    \fancyhead[C]{}
+    \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
+    \fancyhead[RO]{\thepage}
+    
+    \fancyfoot[LE]{\small{\thepage}}
+    \fancyfoot[RE]{\small{\thesisTitleShort}}
+    \fancyhead[C]{}
+    \fancyfoot[LO]{\small{\thesisAuthor}}
+    \fancyfoot[RO]{\small{\thepage}}
+    
+    \renewcommand{\headrulewidth}{0.2mm}
+    \renewcommand{\footrulewidth}{0.2mm}
+}
+
+% Plain
+% Refefine so chapter starts with given style
+
+\fancypagestyle{plain}
+{
+    \fancyhf{}
+    \fancyhead{}
+    
+    \fancyfoot[LE]{}
+    \fancyfoot[RE]{}
+    \fancyhead[C]{}
+    \fancyfoot[LO]{\small{\thesisAuthor}}
+    \fancyfoot[RO]{\small{\thepage}}
+    
+    \renewcommand{\headrulewidth}{0mm}
+    \renewcommand{\footrulewidth}{0.2mm}
+}
+
+
+% Empty
+
+\fancypagestyle{empty}
+{
+    \fancyhf{}
+    \fancyhead{}
+    
+    
+    \fancyhead[LE]{}
+    \fancyhead[RE]{} 
+    \fancyhead[C]{}
+    \fancyhead[LO]{}
+    \fancyhead[RO]{}
+    
+    \fancyfoot[LE]{}
+    \fancyfoot[RE]{}
+    \fancyhead[C]{}
+    \fancyfoot[LO]{}
+    \fancyfoot[RO]{}
+    
+    \renewcommand{\headrulewidth}{0mm}
+    \renewcommand{\footrulewidth}{0mm}
+}
+
+
+% Bibliography
+
+\fancypagestyle{biblio}
+{
+    \fancyhfoffset[RO,LE]{0cm}
+    
+    \fancyhead[LE]{\small{\thepage}}
+    \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
+    \fancyhead[C]{}
+    \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
+    \fancyhead[RO]{\thepage}
+    
+    \fancyfoot[LE]{\small{\thepage}}
+    \fancyfoot[RE]{\small{\thesisTitleShort}}
+    \fancyhead[C]{}
+    \fancyfoot[LO]{\small{\thesisAuthor}}
+    \fancyfoot[RO]{\small{\thepage}}
+    
+    \renewcommand{\headrulewidth}{0.2mm}
+    \renewcommand{\footrulewidth}{0.2mm}
+}
+
+
+\pagestyle{fancy}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HYPERREF SETUP
+
+\hypersetup{%
+    pdfborder = {0 0 0},
+    unicode = true,  % allows to use characters of non-Latin based languages
+    bookmarksnumbered = true,
+    pdfstartview = {FitH},
+        %– FitH : Fit whole width of page
+        %– FitV : Fit whole height of page
+        %– FitB : Fit whole ”Bounding Box” page
+        %– FitBH: Fit whole width of ”Bounding Box” of page
+        %– FitBV: Fit whole height of ”Bounding Box” of page
+    pdfpagemode = UseOutlines,
+    pdftitle = {\thesisTitle},  % title
+    pdfauthor = {\thesisAuthor, \thesisTutor},  % authors
+    pdfsubject = {\thesisType},  % subject of the document
+    pdfkeywords = {\thesisKeywords},  % list of keywords
+    colorlinks = true,  % false: boxed links; true: colored links
+    linkcolor = url-color,  % color of internal links (blue)
+    citecolor = cite-color,  % color of links to bibliography (green)
+    filecolor = file-color,  % color of file links (black)
+    urlcolor = url-color,  % color of external links (green)
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CODE LISTINGS
+
+\lstset
+{
+    basicstyle = \color{listing-text-color}\linespread{1.0}\ttfamily\scriptsize{},
+    frame=Ltb,
+    framerule=0mm,
+    aboveskip=5mm,
+    belowskip=1mm,
+    abovecaptionskip=2mm,
+    belowcaptionskip=2mm,
+    xleftmargin=0mm,
+    rulesep=0.2mm,
+    backgroundcolor=\color{listing-background},
+    rulesepcolor=\color{listing-numbers},
+    showstringspaces=true,
+    commentstyle=\color{listing-comment},
+    captionpos=b,
+    numberbychapter=true,
+    numbers=left,
+    numbersep=5mm,
+    numberstyle=\ttfamily\tiny,
+    numberfirstline=false,
+    breaklines=true,
+    showtabs=false,
+    extendedchars=true,
+    inputencoding=ansinew,
+    stepnumber=1,
+    tabsize=4,
+    breakindent=2mm,
+    escapechar=¢,
+    escapeinside={(*@}{@*)},
+    extendedchars=true,
+    inputencoding=utf8,
+    %
+    literate={ñ}{{\~{n}}}1 {Ñ}{{\~{N}}}1 {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1 {‘}{{`}}1  {“}{{``}}1  {”}{{"}}1
+        {á}{{\'a}}1    {é}{{\'e}}1     {í}{{\'\i}}1 {ó}{{\'o}}1   {ú}{{\'u}}1
+ 		{Á}{{\'A}}1    {É}{{\'E}}1     {Í}{{\'I}}1  {Ó}{{\'O}}1   {Ú}{{\'U}}1
+ 		{à}{{\`a}}1    {è}{{\'e}}1     {ì}{{\`\i}}1 {ò}{{\`o}}1   {ù}{{\`u}}1
+ 		{À}{{\`A}}1    {È}{{\'E}}1     {Ì}{{\`I}}1  {Ò}{{\`O}}1   {Ù}{{\`U}}1
+ 		{ä}{{\"a}}1    {ë}{{\"e}}1     {ï}{{\"\i}}1 {ö}{{\"o}}1   {ü}{{\"u}}1
+ 		{Ä}{{\"A}}1    {Ë}{{\"E}}1     {Ï}{{\"I}}1  {Ö}{{\"O}}1   {Ü}{{\"U}}1
+ 		{â}{{\^a}}1    {ê}{{\^e}}1     {î}{{\^\i}}1 {ô}{{\^o}}1   {û}{{\^u}}1
+ 		{Â}{{\^A}}1    {Ê}{{\^E}}1     {Î}{{\^I}}1  {Ô}{{\^O}}1   {Û}{{\^U}}1
+ 		{œ}{{\oe}}1    {Œ}{{\OE}}1     {æ}{{\ae}}1  {Æ}{{\AE}}1   {ß}{{\ss}}1
+ 		{ç}{{\c c}}1   {Ç}{{\c C}}1    {ø}{{\o}}1   {å}{{\r a}}1  {Å}{{\r A}}1
+ 		{…}{{\ldots}}1 {≥}{{>=}}1      {≤}{{<=}}1   {„}{{\glqq}}1 {“}{{\grqq}}1
+ 		{”}{{''}}1     {ñ}{{\~n}}1     {Ñ}{{\~N}}1  {¿}{{?`}}1
+ 		{«}{{\guillemotleft}}1         {€}{{\EUR}}1 {£}{{\pounds}}1
+ 		{»}{{\guillemotright}}1
+}	
+
+
+\lstdefinestyle{colored}
+{%
+  basicstyle=\color{listing-text-color}\linespread{1.0}\ttfamily\footnotesize{},
+  backgroundcolor=\color{white},
+  commentstyle=\color{green}\itshape,
+  keywordstyle=\color{blue}\bfseries\itshape,
+  stringstyle=\color{red},
+}
+
+
+\lstdefinestyle{cite}
+{
+    basicstyle = \color{listing-text-color}\linespread{1.0}\ttfamily\footnotesize{},
+    frame=none,
+    framerule=0mm,
+    aboveskip=0mm,
+    belowskip=0mm,
+    abovecaptionskip=0mm,
+    belowcaptionskip=0mm,
+    xleftmargin=0mm,
+    rulesep=0mm,
+    backgroundcolor=\color{listing-background},
+    rulesepcolor=\color{listing-numbers},
+    showstringspaces=false,
+    commentstyle=\color{listing-comment},
+    captionpos=t,
+    numberbychapter=false,
+    numbers=none,
+    breaklines=true,
+    showtabs=false,
+    inputencoding=ansinew,
+    stepnumber=1,
+    tabsize=4,
+    breakindent=0mm,
+    escapeinside={(*@}{@*)},
+    extendedchars=true,
+    inputencoding=utf8,
+    %
+    literate={ñ}{{\~{n}}}1 {Ñ}{{\~{N}}}1 {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1 {‘}{{`}}1  {“}{{``}}1  {”}{{"}}1
+        {á}{{\'a}}1    {é}{{\'e}}1     {í}{{\'\i}}1 {ó}{{\'o}}1   {ú}{{\'u}}1
+ 		{Á}{{\'A}}1    {É}{{\'E}}1     {Í}{{\'I}}1  {Ó}{{\'O}}1   {Ú}{{\'U}}1
+ 		{à}{{\`a}}1    {è}{{\'e}}1     {ì}{{\`\i}}1 {ò}{{\`o}}1   {ù}{{\`u}}1
+ 		{À}{{\`A}}1    {È}{{\'E}}1     {Ì}{{\`I}}1  {Ò}{{\`O}}1   {Ù}{{\`U}}1
+ 		{ä}{{\"a}}1    {ë}{{\"e}}1     {ï}{{\"\i}}1 {ö}{{\"o}}1   {ü}{{\"u}}1
+ 		{Ä}{{\"A}}1    {Ë}{{\"E}}1     {Ï}{{\"I}}1  {Ö}{{\"O}}1   {Ü}{{\"U}}1
+ 		{â}{{\^a}}1    {ê}{{\^e}}1     {î}{{\^\i}}1 {ô}{{\^o}}1   {û}{{\^u}}1
+ 		{Â}{{\^A}}1    {Ê}{{\^E}}1     {Î}{{\^I}}1  {Ô}{{\^O}}1   {Û}{{\^U}}1
+ 		{œ}{{\oe}}1    {Œ}{{\OE}}1     {æ}{{\ae}}1  {Æ}{{\AE}}1   {ß}{{\ss}}1
+ 		{ç}{{\c c}}1   {Ç}{{\c C}}1    {ø}{{\o}}1   {å}{{\r a}}1  {Å}{{\r A}}1
+ 		{…}{{\ldots}}1 {≥}{{>=}}1      {≤}{{<=}}1   {„}{{\glqq}}1 {“}{{\grqq}}1
+ 		{”}{{''}}1     {ñ}{{\~n}}1     {Ñ}{{\~N}}1  {¿}{{?`}}1
+ 		{«}{{\guillemotleft}}1         {€}{{\EUR}}1 {£}{{\pounds}}1
+ 		{»}{{\guillemotright}}1
+}
+
+
+\lstdefinelanguage{PythonPlus}[]{Python}
+{
+    morekeywords=[1]{,as,assert,nonlocal,with,yield}, % Python builtin
+    morekeywords=[2]{,__init__,__add__,__mul__,__div__,__sub__,__call__,__getitem__,__setitem__,__eq__,__ne__,__nonzero__,__rmul__,__radd__,__repr__,__str__,__get__,__truediv__,__pow__,__name__,__future__,__all__,True,False,None,SDG1062X,USB2GPIB,HP33120A}, % magic methods
+    morekeywords=[3]{,object,type,isinstance,copy,deepcopy,zip,enumerate,reversed,list,set,len,dict,tuple,range,xrange,append,execfile,real,imag,reduce,str,repr,sleep,strip,split,@staticmethod,self}, % common functions
+    morekeywords=[4]{,Exception,NameError,IndexError,SyntaxError,TypeError,ValueError,OverflowError,ZeroDivisionError, FileExistsError}, % errors
+    morekeywords=[5]{,ode,fsolve,sqrt,exp,sin,cos,arctan,arctan2,arccos,pi, array,norm,solve,dot,arange,isscalar,max,sum,flatten,shape,reshape,find,any,all,abs,plot,linspace,legend,quad,polyval,polyfit,hstack,concatenate,vstack,column_stack,empty,zeros,ones,rand,vander,grid,pcolor,eig,eigs,eigvals,svd,qr,tan,det,logspace,roll,min,mean,cumsum,cumprod,diff,vectorize,lstsq,cla,eye,xlabel,ylabel,squeeze,DataFrame,concat,to_csv,ask,write,mkdir,decode, query,Instrument,ResourceManager,get_instrument,timeout,samples_float_to_int_C2, samples_int_C2_to_bytes,identify,reset,loadtxt,arb_send_samples,arb_output,graphSamples, send_samples_file, burst_config, burst_send_manual_both_channels, burst_send_manual_single_channel, burst_config, arb_get_samples, arb_sample_rate, output_basic_wave, output_config, open_resource, error, set_slave_address, arb_download_to_volatile, reset_input_buffer, reset_output_buffer, samples_to_signed_int, get_output_parameters, get_output_waveform, get_trigger_source, set_trigger_source, set_burst_count, enable_burst, set_frequency, set_offset, set_amplitude, set_output_waveform, set_output_load, get_auto_response, get_slave_address, set_auto_response, arb_set_output_waveform, arb_set_waveform, arb_get_waveform, arb_list_waveforms, version}, % numpy / math / pandas / añadir cuando sea necesario
+    }
+
+
+\lstdefinelanguage{PyBrIM}[]{PythonPlus}
+{
+    emph={d,E,a,Fc28,Fy,Fu,D,des,supplier,Material,Rectangle,PyElmt,},
+}
+
+
+    
+\lstdefinestyle{colorEX}
+{
+    basicstyle=\color{listing-text-color}\linespread{1.0}\ttfamily\footnotesize{},
+    backgroundcolor=\color{listing-background},
+    commentstyle=\color{listing-comment}\slshape,
+    %
+    keywordstyle={\color{listing-keyword}\bfseries},
+    keywordstyle={[2]\color{listing-keyword-2}\bfseries},
+    keywordstyle={[3]\color{listing-keyword-3}\itshape},
+    keywordstyle={[4]\color{listing-keyword-4}\bfseries},
+    keywordstyle={[5]\color{listing-keyword-5}},
+    %
+    stringstyle=\color{listing-string},
+    %emphstyle=\color{pink}\underbar,
+}
+
+
+
+\lstdefinelanguage{none}
+{
+    identifierstyle=
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIGURES AND CAPTIONS
+
+\setcounter{topnumber}{3}  % Max. number of figs. on top
+\setcounter{bottomnumber}{3}  % Max. number of figs. on bottom
+\setcounter{totalnumber}{10}  % Max. number of figs. per page
+
+\renewcommand{\topfraction}{1}  % Ratio of page filled with figures
+\renewcommand{\bottomfraction}{1}  % Ratio of page filled with figures
+\renewcommand{\textfraction}{0}  % Ratio of page filled with text
+\renewcommand{\floatpagefraction}{1}  % Ratio of page filled with floats
+
+% \textfloatsep=0.5mm
+
+% Caption margins
+
+% \captionsetup[subfigure]{captionskip=2mm, skip=2mm, nearskip=2mm, farskip=5mm}
+% \captionsetup[subfloat]{captionskip=2mm, nearskip=2mm, farskip=5mm}
+
+
+
+\setlength{\textfloatsep}{5mm plus 2mm minus 2mm} 
+\setlength{\floatsep}{5mm plus 2mm minus 2mm}
+\setlength{\abovecaptionskip}{5mm plus 2mm minus 2mm}
+\setlength{\belowcaptionskip}{5mm plus 2mm minus 2mm}
+\setlength\intextsep{5mm plus 2mm minus 2mm}
+
+\renewcommand{\subfigureautorefname}{\figureautorefname}  % fix autoref for subfloats
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ICONS
+
+% Command to vertically centre adjacent content
+\newcommand{\vcenteredhbox}[1]
+{%
+    \noindent\setbox0=\hbox{#1}\parbox{\wd0}{\box0}%
+}
+
+% 1: FontAwesome icon command 
+% 2: box size in pt 
+% 3: text
+\newcommand{\icon}[3]
+{%
+    \vcenteredhbox{%
+        \colorbox{#3}{%
+            \makebox(#2, #2){%
+                \textcolor{white}{\noindent #1}%
+            }%
+        }%
+    }%
+}

@@ -1,0 +1,91 @@
+% 
+%            ,,                                        
+%          `7MM            _.o9                                
+%            MM                                             
+%  ,6"Yb.    MM  ,p6"bo   ,6"Yb.  M"""MMV  ,6"Yb.  `7Mb,od8 
+% 8)   MM    MM 6M'  OO  8)   MM  '  AMV  8)   MM    MM' "' 
+%  ,pm9MM    MM 8M        ,pm9MM    AMV    ,pm9MM    MM     
+% 8M   MM    MM YM.    , 8M   MM   AMV  , 8M   MM    MM     
+% `Moo9^Yo..JMML.YMbmd'  `Moo9^Yo.AMMmmmM `Moo9^Yo..JMML.   
+% 
+% 
+% Free and Open-Source template for academic works
+% https://github.com/dpmj/alcazar
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Cover
+\input{opening/cover}
+
+% About the document
+% License, logos, collaborators, repositories, social networks, links, etc.
+% Feel free to edit this doc:
+\input{opening/about}
+
+% Abstract
+\input{opening/abstract}
+
+% Dedication
+% To whom do you dedicate the thesis? Or maybe include a quote, poem, etc. Free space for yourself.
+% Delete if you are too manly for these things
+\input{opening/dedication}
+
+% Acknowledgements
+\input{opening/acknowledgements}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLES OF CONTENTS
+
+\begingroup
+
+    \renewcommand{\baselinestretch}{0.3}\normalsize  % Comprime space used by TOC
+    
+    % List of Contents
+    \tableofcontents
+    \addcontentsline{toc}{chapter}{Table of contents}
+    
+    % List of Figures
+    \listoffigures
+    \addcontentsline{toc}{chapter}{List of figures}
+    
+    % List of Tables
+    \listoftables
+    \addcontentsline{toc}{chapter}{List of tables}
+    
+    % List of Listings
+    {
+        % This particular toc uses shorter spacing for some reason
+
+        \renewcommand{\baselinestretch}{1.2}\normalsize
+        
+        \listof{lstlisting}{Code listings} % \lstlistoflistings
+        \addcontentsline{toc}{chapter}{Code listings}
+    }
+    
+\endgroup
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GLOSSARIES AND ACRONYMS
+
+\printglossaries
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OPENING
+
+% Standard numbering and page style
+
+\clearpage
+\cleardoublepage
+\phantomsection
+
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+

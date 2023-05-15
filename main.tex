@@ -1,0 +1,76 @@
+% 
+%            ,,                                        
+%          `7MM            _.o9                                
+%            MM                                             
+%  ,6"Yb.    MM  ,p6"bo   ,6"Yb.  M"""MMV  ,6"Yb.  `7Mb,od8 
+% 8)   MM    MM 6M'  OO  8)   MM  '  AMV  8)   MM    MM' "' 
+%  ,pm9MM    MM 8M        ,pm9MM    AMV    ,pm9MM    MM     
+% 8M   MM    MM YM.    , 8M   MM   AMV  , 8M   MM    MM     
+% `Moo9^Yo..JMML.YMbmd'  `Moo9^Yo.AMMmmmM `Moo9^Yo..JMML.   
+% 
+% 
+% Free, Open-Source Thesis template for LaTeX
+% https://github.com/dpmj/alcazar
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREAMBLE
+
+\documentclass[twoside, openright]{report}
+
+
+% Variables
+
+% Title for the title page 
+\newcommand{\thesisTitle}{Alcázar: a free and open-source {\LaTeX} template for academic works, for nerd grown-up kids who do boring stuff such as theses with endless titles}
+% Title for the pages' heading 
+\newcommand{\thesisTitleShort}{Alcázar: a free and open-source {\LaTeX} template for academic works}
+
+\newcommand{\thesisType}{Master's Thesis}  % Bachelor's Thesis, Master's Thesis, PhD Thesis...
+\newcommand{\thesisDegree}{Master's Degree}  % Bachelor's Degree, Master's Degree, PhD...
+\newcommand{\thesisArea}{Telecommunications Engineering}  % Area of knowledge
+
+\newcommand{\thesisAuthor}{Name of the author of the thesis}
+\newcommand{\thesisTutor}{Name of the supervisor of the thesis}  
+
+\newcommand{\thesisYear}{2077}  % Date of the thesis' submission or defense 
+\newcommand{\thesisMonth}{June}
+\newcommand{\thesisDate}{{\thesisMonth} {\thesisYear}}
+\newcommand{\thesisAcademicCourse}{2076/2077}  % During which academic year(s) was the thesis developed
+
+\newcommand{\thesisSchool}{Universitat Politècnica de València}
+\newcommand{\thesisAddress}{Camí de Vera, s/n, 46022 València, Valencia, Spain}
+\newcommand{\thesisDepartment}{Department of Electronic Engineering}
+
+\newcommand{\thesisKeywords}{Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 4, Keyword 5, Keyword 6, Keyword 7, Keyword 8, Keyword 9, Keyword 10, Keyword 11, Keyword N}  % For the abstract and for indexing
+
+
+
+% Import document style
+\usepackage{style/dpmj}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN DOCUMENT
+
+\begin{document}
+
+\pagestyle{plain}
+\include{opening/opening.tex}
+
+\pagestyle{chapters}
+\include{text/chapters/chapter1.tex}
+
+\pagestyle{biblio}
+\include{bibliography/bibliography.tex}
+
+\pagestyle{addenda}
+\include{text/appendix/appendix.tex}
+
+\end{document}
+
+% END DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
