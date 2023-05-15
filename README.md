@@ -78,7 +78,9 @@ This work is unrelated to any institution, and the citation and logos are merely
 ## Fix    
 
 - [ ] Inconsistent skips above and below floats, too much space sometimes.
+- [ ] Inconsistent skips above and below titles
 - [ ] Hyphenation is weird?
+- [ ] In listings, for some reason the comments of lots of `%` are bugged.
 
 
 

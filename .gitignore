@@ -9,9 +9,15 @@ main.acr
 main.alg
 main.aux
 main.bbl
+main.blg
 main.glg
 main.glo
 main.gls
 main.lof
 main.lot
 main.out
+opening/opening.aux
+text/appendix/appendix.aux
+text/chapters/chapter1.aux
+bibliography/bibliography.aux
+*.kate-swp
