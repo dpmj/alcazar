@@ -1,14 +1,6 @@
-```
-           ,,                                        
-         `7MM            _.o9                                
-           MM                                             
- ,6"Yb.    MM  ,p6"bo   ,6"Yb.  M"""MMV  ,6"Yb.  `7Mb,od8 
-8)   MM    MM 6M'  OO  8)   MM  '  AMV  8)   MM    MM' "' 
- ,pm9MM    MM 8M        ,pm9MM    AMV    ,pm9MM    MM     
-8M   MM    MM YM.    , 8M   MM   AMV  , 8M   MM    MM     
-`Moo9^Yo..JMML.YMbmd'  `Moo9^Yo.AMMmmmM `Moo9^Yo..JMML.   
-
-```
+<p align="center">
+    <img src="opening/resources/logos/alcazar.pdf" />
+</p>
 
 A free and Open-Source template for academic works
 
@@ -51,7 +43,7 @@ Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA 4.0)
 
 ## Disclaimer
 
-This work is unrelated to any institution, and the citation and logos are merely an example of usage.
+This work is unrelated to any institution, and the references, logos and the like are merely an example of usage.
 
 
 ## To-Do
@@ -75,7 +67,7 @@ This work is unrelated to any institution, and the citation and logos are merely
     - [x] Thanks
     
     
-## Fix    
+## Fixes
 
 - [ ] Inconsistent skips above and below floats, too much space sometimes.
 - [ ] Inconsistent skips above and below titles
