@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="opening/resources/logos/alcazar.pdf" />
+    <img src="opening/resources/logos/alcazar.svg" />
 </p>
 
 A free and Open-Source template for academic works
