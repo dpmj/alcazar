@@ -13,16 +13,15 @@
 % https://github.com/dpmj/alcazar
 
 
+% Start standard numbering and page style
 
 \clearpage
 \cleardoublepage
+\phantomsection
 
-\pagestyle{addenda}
+\pagestyle{chapters}
+\pagenumbering{arabic}
+\setcounter{page}{1}
 
-\begin{appendices}
+\input{text/chapters/chapter-1/chapter-1.tex}
 
-
-    \input{text/appendix/appendix-a/appendix-a.tex}
-    
-
-\end{appendices}
