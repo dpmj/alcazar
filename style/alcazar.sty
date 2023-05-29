@@ -31,16 +31,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TEXT STYLE
 
-\setlength{\parindent}{10mm}  % Indentation
+\setlength{\parindent}{7mm}  % Indentation
 \setlength{\parskip}{2mm}  % Paragraph skip
 
-\renewcommand{\baselinestretch}{1.2}  % Default spacing between lines
+\renewcommand{\baselinestretch}{1.1}  % Default spacing between lines
 
 
 % Commands to have small monospace text
-
 \NewCommandCopy{\svtt}{\texttt}
 \renewcommand\texttt[1]{\svtt{\small#1}}
+
+
+% No skip between items in a list to save space 
+% Enumitem config
+
+\setenumerate{itemsep=0mm}
+\setitemize{itemsep=0mm}
+\setdescription{itemsep=0mm}
 
 % No hypenation
 
@@ -206,6 +213,14 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Glossary style adjustments
+
+\setlength{\columnsep}{7mm}
+% \renewcommand*{\glsgroupskip}{\vspace{2mm}}
+% \renewcommand*{\glsgroupheading}{\vspace{2mm}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HYPERREF SETUP
 
 \hypersetup{%
@@ -241,9 +256,9 @@
     frame=Ltb,
     framerule=0mm,
     aboveskip=5mm,
-    belowskip=1mm,
-    abovecaptionskip=2mm,
-    belowcaptionskip=2mm,
+    belowskip=0mm,
+    abovecaptionskip=0mm,
+    belowcaptionskip=0mm,
     xleftmargin=0mm,
     rulesep=0.2mm,
     backgroundcolor=\color{listing-background},
@@ -387,14 +402,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FIGURES AND CAPTIONS
 
-\setcounter{topnumber}{3}  % Max. number of figs. on top
-\setcounter{bottomnumber}{3}  % Max. number of figs. on bottom
-\setcounter{totalnumber}{10}  % Max. number of figs. per page
+% \setcounter{topnumber}{3}  % Max. number of figs. on top
+% \setcounter{bottomnumber}{3}  % Max. number of figs. on bottom
+% \setcounter{totalnumber}{10}  % Max. number of figs. per page
 
-\renewcommand{\topfraction}{1}  % Ratio of page filled with figures
-\renewcommand{\bottomfraction}{1}  % Ratio of page filled with figures
-\renewcommand{\textfraction}{0}  % Ratio of page filled with text
-\renewcommand{\floatpagefraction}{1}  % Ratio of page filled with floats
+% \renewcommand{\topfraction}{1}  % Ratio of page filled with figures
+% \renewcommand{\bottomfraction}{1}  % Ratio of page filled with figures
+% \renewcommand{\textfraction}{0}  % Ratio of page filled with text
+% \renewcommand{\floatpagefraction}{1}  % Ratio of page filled with floats
 
 % \textfloatsep=0.5mm
 
@@ -405,11 +420,11 @@
 
 
 
-\setlength{\textfloatsep}{5mm plus 2mm minus 2mm} 
-\setlength{\floatsep}{5mm plus 2mm minus 2mm}
-\setlength{\abovecaptionskip}{5mm plus 2mm minus 2mm}
-\setlength{\belowcaptionskip}{5mm plus 2mm minus 2mm}
-\setlength\intextsep{5mm plus 2mm minus 2mm}
+% \setlength{\textfloatsep}{5mm plus 2mm minus 2mm} 
+% \setlength{\floatsep}{5mm plus 2mm minus 2mm}
+% \setlength{\abovecaptionskip}{5mm plus 2mm minus 2mm}
+% \setlength{\belowcaptionskip}{5mm plus 2mm minus 2mm}
+% \setlength\intextsep{5mm plus 2mm minus 2mm}
 
 \renewcommand{\subfigureautorefname}{\figureautorefname}  % fix autoref for subfloats
 
@@ -437,3 +452,15 @@
         }%
     }%
 }
+
+
+%% BIBLIOGRAPHY
+
+% Bibliography redefinition so its on double column
+
+\patchcmd{\thebibliography}
+    {\list}
+    {\begin{multicols}{2}\small\list}
+    {}
+    {}
+\appto{\endthebibliography}{\end{multicols}}

@@ -80,7 +80,7 @@ In vestibulum faucibus ligula eget blandit. Donec eget cursus risus, quis suscip
 Nullam quis lacus vel ante feugiat efficitur id ut quam. Pellentesque commodo elit nec urna gravida maximus. Suspendisse ut risus eu ipsum porta porta ac et orci. Donec dictum ligula sodales, euismod est sed, semper libero. In blandit, nulla et elementum pharetra, mi nunc sagittis tellus, sit amet scelerisque magna elit ac sapien. Curabitur ipsum dui, pretium a maximus id, varius gravida nisl. Sed vitae mattis elit, vitae hendrerit lorem. 
 
 
-\begin{lstlisting}[caption={Some Python Code}, language=PythonPlus, style=ColorEX]
+\begin{lstlisting}[caption={Some Python Code \cite{esp32_devkit_reference_design}}, language=PythonPlus, style=ColorEX]
 """
 Some interesting python code 
 Blah Blah Blah
@@ -146,19 +146,47 @@ Nulla elementum orci in dolor dapibus, ac facilisis sem ultrices. Nullam eleifen
 
 Etiam gravida velit sed arcu viverra dapibus. Mauris vitae augue dapibus, molestie justo eget, condimentum ipsum. Nulla tristique mi eget semper luctus. 
 
-Etiam commodo vestibulum vulputate. Etiam quis sapien dolor. Nunc tristique eu lacus quis ullamcorper. Sed volutpat rutrum vehicula. Donec nunc nisl, suscipit in faucibus vitae, tristique eu risus. Nulla facilisis augue eget interdum rutrum. Aliquam sem nunc, fermentum sed urna ac, faucibus interdum nisi.
 
-Proin a condimentum nibh \cite{esp32_devkit_reference_design}. Praesent vulputate tellus vel metus rutrum, non luctus mi sollicitudin. Nam ac tellus ut eros sollicitudin luctus at ac mi. Vestibulum mollis nec nisi a laoreet. Proin neque tortor, placerat nec suscipit sit amet, ullamcorper in sem. Fusce faucibus ultrices cursus. Maecenas scelerisque mauris diam, at volutpat nisi porta vitae. Sed at ipsum et leo cursus varius eu eu lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut felis ipsum, imperdiet rhoncus orci ac, consectetur luctus nisl. Cras aliquet elementum tellus ullamcorper malesuada. Integer purus est, pharetra eu ullamcorper quis, imperdiet non turpis.
-
-In vestibulum faucibus ligula eget blandit. Donec eget cursus risus, quis suscipit justo. Curabitur efficitur, dolor nec pulvinar pellentesque, lectus eros hendrerit nisi, in aliquet erat nunc non ipsum. Curabitur felis nunc, viverra nec quam ultrices, suscipit condimentum nibh. Nam faucibus felis hendrerit imperdiet maximus. Curabitur tincidunt porttitor lectus quis feugiat. Sed imperdiet bibendum mi.
-
-Nullam quis lacus vel ante feugiat efficitur id ut quam. Pellentesque commodo elit nec urna gravida maximus. Suspendisse ut risus eu ipsum porta porta ac et orci. Donec dictum ligula sodales, euismod est sed, semper libero. In blandit, nulla et elementum pharetra, mi nunc sagittis tellus, sit amet scelerisque magna elit ac sapien. Curabitur ipsum dui, pretium a maximus id, varius gravida nisl. Sed vitae mattis elit, vitae hendrerit lorem \cite{github_LVGL, github_celestial}. 
-
-
-Nulla elementum orci in dolor dapibus, ac facilisis sem ultrices. Nullam eleifend id eros sed luctus. Maecenas arcu ipsum, scelerisque id lorem in, placerat posuere tellus. Etiam gravida velit sed arcu viverra dapibus. Mauris vitae augue dapibus, molestie justo eget, condimentum ipsum. Nulla tristique mi eget semper luctus. Etiam commodo vestibulum vulputate. Etiam quis sapien dolor. Nunc tristique eu lacus quis ullamcorper. Sed volutpat rutrum vehicula. Donec nunc nisl, suscipit in faucibus vitae, tristique eu risus. Nulla facilisis augue eget interdum rutrum. Aliquam sem nunc, fermentum sed urna ac, faucibus interdum nisi.
-
-Proin a condimentum nibh. Praesent vulputate tellus vel metus rutrum, non luctus mi sollicitudin. Nam ac tellus ut eros sollicitudin luctus at ac mi. Vestibulum mollis nec nisi a laoreet. Proin neque tortor, placerat nec suscipit sit amet, ullamcorper in sem. Fusce faucibus ultrices cursus. Maecenas scelerisque mauris diam, at volutpat nisi porta vitae. Sed at ipsum et leo cursus varius eu eu lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut felis ipsum, imperdiet rhoncus orci ac, consectetur luctus nisl. Cras aliquet elementum tellus ullamcorper malesuada. Integer purus est, pharetra eu ullamcorper quis, imperdiet non turpis.
-
-In vestibulum faucibus ligula eget blandit. Donec eget cursus risus, quis suscipit justo. Curabitur efficitur, dolor nec pulvinar pellentesque, lectus eros hendrerit nisi, in aliquet erat nunc non ipsum. Curabitur felis nunc, viverra nec quam ultrices, suscipit condimentum nibh. Nam faucibus felis hendrerit imperdiet maximus. Curabitur tincidunt porttitor lectus quis feugiat. Sed imperdiet bibendum mi \cite{HAMEG_USER_MANUAL}.
-
-Nullam quis lacus vel ante feugiat efficitur id ut quam. Pellentesque commodo elit nec urna gravida maximus. Suspendisse ut risus eu ipsum porta porta ac et orci. Donec dictum ligula sodales, euismod est sed, semper libero. In blandit, nulla et elementum pharetra, mi nunc sagittis tellus, sit amet scelerisque magna elit ac sapien. Curabitur ipsum dui, pretium a maximus id, varius gravida nisl. Sed vitae mattis elit, vitae hendrerit lorem. 
+\begin{landscape}
+    \begin{table}[p]
+    \footnotesize
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    
+    \caption{Example of a long landscape table.}
+    \label{tab:predecesoras-1}
+    \begin{tabular}{|l|l|p{5.5cm}|l|l|l|l|l|p{5.5cm}|}
+    \hline
+    \textbf{Nº} & \textbf{EDT} & \textbf{Nombre de tarea} & \textbf{Trabajo} & \textbf{Duración} & \textbf{Predecesoras} & \textbf{Comienzo} & \textbf{Fin} & \textbf{Recursos} \\ \hline\hline
+    \textbf{1} & \textbf{1} & \textbf{Dirección del proyecto} & 4 días & 4 días &  & lun 03/07/23 & jue 06/07/23 &  \\ \hline
+    2 & 1.1 & Reunión inicial de planificación con el cliente & 3 días & 3 días &  & lun 03/07/23 & mié 05/07/23 & Ana Torres;Carla Aguilar;Diego Ortiz;Lucía   Castro;Martina Martinez;Pablo Gómez;Rodrigo García \\ \hline
+    3 & 1.2 & Reparto de tareas a los trabajadores & 1 día & 1 día & 1.1 & jue 06/07/23 & jue 06/07/23 & Ana Torres \\ \hline
+    \textbf{4} & \textbf{2} & \textbf{Estudio de la viabilidad del despliegue} & \textbf{27 días} & \textbf{9,67 días} & \textbf{} & \textbf{vie 07/07/23} & \textbf{jue 20/07/23} & \textbf{} \\ \hline
+    5 & 2.1 & Estudio de la orografía & 5 días & 1,67 días & 1.2 & vie 07/07/23 & lun 10/07/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    6 & 2.2 & Estudio del emplazamiento de las antenas del   radioenlace y balance de potencias & 4 días & 1,33 días & 2.1 & mié 12/07/23 & jue 13/07/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    7 & 2.3 & Estudio del emplazamiento de las estaciones   base y radio de cobertura & 4 días & 1,33 días & 2.1 & jue 13/07/23 & vie 14/07/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    8 & 2.4 & Estudio de la magnitud del tráfico & 3 días & 1 día & 1.2 & lun 10/07/23 & mar 11/07/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    9 & 2.5 & Revisión de la normativa & 2 días & 0,67 días & 1.2 & mar 11/07/23 & mié 12/07/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    10 & 2.6 & Establecimiento de los requisitos técnicos & 5 días & 1,67 días & 2.1;2.2;2.3;2.4;2.5 & lun 17/07/23 & mar 18/07/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    11 & 2.7 & Establecimiento de un presupuesto temprano & 4 días & 2 días & 2.6 & mar 18/07/23 & jue 20/07/23 & Ana Torres;Rodrigo García \\ \hline
+    \textbf{12} & \textbf{3} & \textbf{Diseño del despliegue} & \textbf{41 días} & \textbf{14 días} & \textbf{} & \textbf{jue 20/07/23} & \textbf{mié 09/08/23} & \textbf{} \\ \hline
+    13 & 3.1 & Diseño de la red & 29 días & 9,67 días &  & jue 20/07/23 & jue 03/08/23 &  \\ \hline
+    14 & 3.1.1 & Diseño de las estaciones base de telefonía & 7 días & 9,67 días &  & jue 20/07/23 & jue 03/08/23 &  \\ \hline
+    15 & 3.1.1.1 & Elección del emplazamiento físico & 5 días & 1,67 días & 2 & jue 20/07/23 & lun 24/07/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    16 & 3.1.1.2 & Diseño de la sectorización y el apuntado & 2 días & 0,67 días & 3.1.1.1 & mié 02/08/23 & jue 03/08/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    17 & 3.1.2 & Diseño de las estaciones base del radioenlace & 7 días & 2,33 días &  & lun 24/07/23 & mié 26/07/23 &  \\ \hline
+    18 & 3.1.2.1 & Elección del emplazamiento físico & 5 días & 1,67 días & 2 & lun 24/07/23 & mar 25/07/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    19 & 3.1.2.2 & Diseño del apuntado & 2 días & 0,67 días & 3.1.2.1 & mié 26/07/23 & mié 26/07/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    20 & 3.1.3 & Diseño de la topología de red & 10 días & 3,33 días & 2 & mié 26/07/23 & lun 31/07/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    21 & 3.1.4 & Diseño de la gestión y separación del tráfico & 5 días & 1,67 días & 2 & mar 01/08/23 & mié 02/08/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    22 & 3.2 & Elección de equipos y componentes & 10 días & 3,33 días &  & jue 03/08/23 & mar 08/08/23 &  \\ \hline
+    23 & 3.2.1 & Elección de los equipos de RF & 5 días & 1,67 días & 3.1 & jue 03/08/23 & vie 04/08/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    24 & 3.2.2 & Elección de los equipos de red & 5 días & 1,67 días & 3.1 & lun 07/08/23 & mar 08/08/23 & Rodrigo García;Paloma Cuesta;Ramón García \\ \hline
+    25 & 3.3 & Elaboración del presupuesto base & 2 días & 1 día & 3.1;3.2 & mar 08/08/23 & mié 09/08/23 & Rodrigo García;Ana Torres \\ \hline
+    \textbf{26} & \textbf{4} & \textbf{Despliegue físico} & \textbf{38 días} & \textbf{15,83 días} & \textbf{} & \textbf{mié 09/08/23} & \textbf{jue 31/08/23} & \textbf{} \\ \hline
+    27 & 4.1 & Reunión de materiales & 4 días & 2 días & 3 & mié 09/08/23 & vie 11/08/23 & Diego Ortiz;Martina Martinez \\ \hline
+    28 & 4.2 & Construcción & 15 días & 7,5 días &  & vie 11/08/23 & mié 23/08/23 &  \\ \hline
+    29 & 4.2.1 & Estaciones de telefonía & 5 días & 2,5 días & 4.1 & vie 11/08/23 & mié 16/08/23 & Diego Ortiz;Martina Martinez \\ \hline
+    \end{tabular}%
+    \end{table}
+\end{landscape}

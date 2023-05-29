@@ -27,15 +27,15 @@
 % -----------------------------------------------------------------------------
 % B
 
-\newglossaryentry{bypass_cap}{name={Bypass capacitor}, plural={bypass capacitors}, description={A synonym for ``\gls{decoupling_cap}''}}
+\newglossaryentry{bypass_cap}{name={Bypass capacitor}, plural={bypass capacitors}, description={A synonym for ``\glsname{decoupling_cap}''}}
 
-\newglossaryentry{BJT}{name={BJT}, description={\textbf{(Bipolar-Junction Transistor)} A type of semiconductor-based \gls{transistor} that uses electrons and electron holes as carriers. The current flow between the ``collector'' and the ``emitter'' terminals is controlled by a small current injected at the ``base'' terminal }}
+\newglossaryentry{BJT}{name={BJT}, description={\textbf{(Bipolar-Junction Transistor)} A type of semiconductor-based \glsname{transistor} that uses electrons and electron holes as carriers. The current flow between the ``collector'' and the ``emitter'' terminals is controlled by a small current injected at the ``base'' terminal }}
 
 
 % -----------------------------------------------------------------------------
 % C
 
-\newglossaryentry{coupling_cap}{name={Coupling capacitor}, text={coupling capacitor}, plural={coupling capacitors}, description={A capacitor used to couple an AC signal from one circuit phase to another, blocking the DC component. Functionally opposite to a \gls{decoupling_cap}}}
+\newglossaryentry{coupling_cap}{name={Coupling capacitor}, text={coupling capacitor}, plural={coupling capacitors}, description={A capacitor used to couple an AC signal from one circuit phase to another, blocking the DC component. Functionally opposite to a \glsname{decoupling_cap}}}
 
 \newglossaryentry{conflictresource}{name={Conflict resource}, text={conflict resource}, description={ Natural resources whose systematic exploitation and trade in a context of conflict contribute to, benefit from or result in the commission of serious violations of human rights, violations of international humanitarian law or violations amounting to crimes under international law}}
 
@@ -49,7 +49,7 @@
 % -----------------------------------------------------------------------------
 % D
 
-\newglossaryentry{decoupling_cap}{name={Decoupling capacitor}, text={decoupling capacitor}, plural={decoupling capacitors}, description={A decoupling capacitor removes unwanted AC components (\gls{noise} and \gls{ripple}) from a DC signal, making it more clean and stable. Usually 100 nF, ceramic, and located on the power input pins of an active device. This device is functionally opposite to a \gls{coupling_cap}. It's a common and effective technique for noise filtering on power traces. A bypass capacitor should be placed as close as possible to the pin of the component that uses such power rail. In addition, it provides a charge reserve physically near to the component itself, which supplies energy to the IC in case it has an irregular, pulsed power consumption characteristic. Thus preventing the supply voltage from decaying in short pulses and mitigating the effects it may have on the rest of the components connected to the same power rail}}
+\newglossaryentry{decoupling_cap}{name={Decoupling capacitor}, text={decoupling capacitor}, plural={decoupling capacitors}, description={A decoupling capacitor removes unwanted AC components (\glsname{noise} and \glsname{ripple}) from a DC signal. Usually located on the power input pins of an active device, it's a common and effective technique for noise filtering on power traces. It provides a charge reserve physically near to the component, which supplies energy to it in case of an irregular or pulsed power consumption, thus preventing the supply voltage from decaying}}
 
 \newglossaryentry{differential_pair}{name={Differential Pair}, text={differential pair}, plural={differential pairs}, description={A pair of parallel conductors of identical impedance carrying differential signals, which are two opposite, complementary signals. The receiving circuit responds to the difference between the two signals. This technique is used for example in high-fidelity audio and high-speed digital lines, with many advantages such as improving signal integrity, noise rejection and equalizing the time of arrival of delicate signals}} 
 
@@ -59,7 +59,7 @@
 % -----------------------------------------------------------------------------
 % E
 
-\newglossaryentry{EMC}{name={EMC}, text={Electro-Magnetic Compatibility}, description={\textbf{(Electro-Magnetic Compatibility)} the capability of electrical and electronic systems, equipment and devices to operate in their intended electromagnetic environment within a defined margin of safety, and at design levels of performance without suffering or causing unacceptable degradation as a result of \gls{EMI}}}
+\newglossaryentry{EMC}{name={EMC}, text={Electro-Magnetic Compatibility}, description={\textbf{(Electro-Magnetic Compatibility)} the capability of electrical and electronic systems, equipment and devices to operate in their intended electromagnetic environment within a defined margin of safety, and at design levels of performance without suffering or causing unacceptable degradation as a result of \glsname{EMI}}}
 
 \newglossaryentry{EMI}{name={EMI}, text={Electro-Magnetic Interference}, description={\textbf{(Electro-Magnetic Interference)} the process by disruptive electromagnetic energy is transmitted from one electronic device to another, via radiated or conducted paths (or both)}}
 
@@ -69,15 +69,15 @@
 % -----------------------------------------------------------------------------
 % F
 
-\newglossaryentry{FR-4}{name={FR-4}, text={FR-4}, description={\textbf{(Flame Retardant 4)} A designation for fiberglass-reinforced epoxy laminate material that it is self-extinguishing. Commonly used as an electrical insulator for electronic devices and \gls{PCB} fabrication for its fire resistance, nearly zero water absorption and high mechanical strength}}
+\newglossaryentry{FR-4}{name={FR-4}, text={FR-4}, description={\textbf{(Flame Retardant 4)} A designation for fiberglass-reinforced epoxy laminate material that it is self-extinguishing. Commonly used as an electrical insulator for electronic devices and \glsname{PCB} fabrication for its fire resistance, nearly zero water absorption and high mechanical strength}}
 
-\newglossaryentry{footprint}{name={Footprint}, text={footprint}, plural={footprints}, description={A synonym for \gls{landpattern}, is the arrangement of pads used to physically and electrically attach a component to a \gls{PCB} }}
+\newglossaryentry{footprint}{name={Footprint}, text={footprint}, plural={footprints}, description={A synonym for \glsname{landpattern}, is the arrangement of pads used to physically and electrically attach a component to a \glsname{PCB} }}
 
-\newglossaryentry{fiducial}{name={Fiducial marks}, text={fiducial}, plural={fiducials}, description={On a \gls{PCB}, fiducial marks are pads of a determined size which act as reference points \gls{stencil} alignment, computer vision automated component placement by \gls{pickandplace} machines and optical inspections systems. Usually found as round SMT pad of 1 mm in diameter, with \gls{solder_mask} expansion of 3 mm in diameter. To achieve the best measurement precision, fiducials should be placed as far from each other as possible, and no more than 3 should be placed in a single layer}}
+\newglossaryentry{fiducial}{name={Fiducial marks}, text={fiducial}, plural={fiducials}, description={On a \glsname{PCB}, fiducial marks are pads which act as reference points for \glsname{stencil} alignment, computer vision automated component placement by \glsname{pickandplace} machines and optical inspections systems. To achieve the best precision, three should be placed as far apart as possible}}
 
-\newglossaryentry{ferritebead}{name={Ferrite Bead}, description={A type of \gls{choke} made of ferritic material that \gls{filter} high-frequency AC and \gls{noise} in a circuit}}
+\newglossaryentry{ferritebead}{name={Ferrite Bead}, description={A type of \glsname{choke} made of ferritic material that \glsname{filter} high-frequency AC and \glsname{noise} in a circuit}}
 
-\newglossaryentry{form_factor}{name={Form factor}, text={form factor}, description={The size and shape of a \gls{PCB}. Aspects such as the chassis, mounting schemes and standards are taken into consideration for defining a board form factor}}
+\newglossaryentry{form_factor}{name={Form factor}, text={form factor}, description={The size and shape of a \glsname{PCB}. Aspects such as the chassis, mounting schemes and standards are taken into consideration for defining a board form factor}}
 
 
 % -----------------------------------------------------------------------------
@@ -97,7 +97,7 @@
 
 \newglossaryentry{isotropic}{name={Isotropic material}, text={isotropic}, description={A material whose mechanical and thermal properties are the same in all directions}}
 
-\newglossaryentry{IPython}{name={IPython}, description={\textbf{(Interactive Python)} is a command shell for originally developed for \gls{Python} (but nowdays it supports many other programming languages). It offers an interactive shells, debugging, media support, a browser-based notebook interface and parallel computing.}}
+\newglossaryentry{IPython}{name={IPython}, description={\textbf{(Interactive Python)} is a command shell for originally developed for \glsname{Python} (but nowdays it supports many other programming languages). It offers an interactive shells, debugging, media support, a browser-based notebook interface and parallel computing.}}
 
 \newglossaryentry{IC}{name={IC},text={Integrated Circuit}, plural={Integrated Circuits}, description={\textbf{(Integrated Circuit)} A monolithic set of electronic circuits integrated onto a small flat piece of semiconductor material, usually silicon}}
 
@@ -105,7 +105,7 @@
 % -----------------------------------------------------------------------------
 % J
 
-\newglossaryentry{jupyter}{name={Jupyter Lab}, description={A web-based interactive development environment for notebooks, code, and data. It an open, flexible environment with support for extensions. Jupyter supports multiple programming languages, but the main one is \gls{Python}, which uses \gls{IPython} as a interpreter and kernel }}
+\newglossaryentry{jupyter}{name={Jupyter Lab}, description={A web-based interactive development environment for notebooks, code, and data. It an open, flexible environment with support for extensions. Jupyter supports multiple programming languages, but the main one is \glsname{Python}, which uses \glsname{IPython} as a interpreter and kernel }}
 
 
 % -----------------------------------------------------------------------------
@@ -117,11 +117,11 @@
 
 \newglossaryentry{lead}{name={Lead}, text={lead}, plural={leads}, description={Can be referred to: \\1. The chemical element with the symbol \textit{Pb}, and atomic number 82. It is a heavy metal, very dense, malleable and with a relatively low melting point. It is also a toxic substance.\\2. A length of rigid wire designed to electrically connect two spots }}
 
-\newglossaryentry{linux}{name={GNU/Linux}, text={GNU/Linux}, description={A family of \gls{open_source} \gls{unix}-like OSes (called {\it ``distributions''}) based on the Linux kernel and accompanied by \glsname{GNU}'s software and libraries}}
+\newglossaryentry{linux}{name={GNU/Linux}, text={GNU/Linux}, description={A family of \glsname{open_source} \glsname{unix}-like OSes (called {\it ``distributions''}) based on the Linux kernel and accompanied by \glsname{GNU}'s software and libraries}}
 
-\newglossaryentry{landpattern}{name={Land pattern}, description={The arrangement of pads used to physically and electrically attach a component to a \gls{PCB} }}
+\newglossaryentry{landpattern}{name={Land pattern}, description={The arrangement of pads used to physically and electrically attach a component to a \glsname{PCB} }}
 
-\newglossaryentry{LED}{name={LED}, description={\textbf{(Light-Emitting Diode)} A semiconductor \gls{diode} that emits visible light when current flows through it. Photons are released by the recombination of electrons with electron holes. The color of the light is determined by the amount of energy that electrons require for crossing the band gap of the semiconductor }}
+\newglossaryentry{LED}{name={LED}, description={\textbf{(Light-Emitting Diode)} A semiconductor \glsname{diode} that emits visible light when current flows through it. Photons are released by the recombination of electrons with electron holes. The color of the light is determined by the amount of energy that electrons require for crossing the band gap of the semiconductor }}
 
 
 % -----------------------------------------------------------------------------
@@ -129,7 +129,7 @@
 
 \newglossaryentry{microwave}{name={Microwaves}, text={microwave}, plural={microwaves}, description={The name given to electromagnetic waves with frequencies between 300 MHz and 300 GHz. In this range, the wavelengths vary between one meter and one millimeter, respectively}}
 
-\newglossaryentry{microcontroller}{name={Microcontroller}, text={microcontroller}, plural={microcontrollers}, description={A standalone computer which contains one or more CPUs or cores along with memory and peripherals on a single \gls{IC}. Is similar to, but less sophisticated than, a \gls{SoC}. These chips are meant for \gls{embedded} devices, in opposition to the microprocessors used in general purpose applications }}
+\newglossaryentry{microcontroller}{name={Microcontroller}, text={microcontroller}, plural={microcontrollers}, description={A standalone computer which contains one or more CPUs or cores along with memory and peripherals on a single \glsname{IC}. Is similar to, but less sophisticated than, a \glsname{SoC}. These chips are meant for \glsname{embedded} devices, in opposition to the microprocessors used in general purpose applications }}
 
 \newglossaryentry{microprocessor}{name={Microprocessor}, text={microprocessor}, plural={microprocessors}, description={A type of \glsname{IC} circuit that contains the arithmetic-logic and control blocks required to perform the tasks of a CPU}}
 
@@ -151,13 +151,13 @@
 
 \newglossaryentry{open_source}{name={Open Source}, text={open source}, description={An initiative in which the developer licenses a software or resource to grant users the rights to use, change, make derived work and freely distribute the software and its source code}}
 
-\newglossaryentry{open_hardware}{name={Open Hardware}, text={open hardware}, description={The philosophy of \gls{open_source} but applied to mechanical, electric and electronic resources}}
+\newglossaryentry{open_hardware}{name={Open Hardware}, text={open hardware}, description={The philosophy of \glsname{open_source} but applied to mechanical, electric and electronic resources}}
 
 
 % -----------------------------------------------------------------------------
 % P
 
-\newglossaryentry{pickandplace}{name={Pick and Place machine}, text={pick and place}, description={A machine with a robot arm and computer vision for picking components from a feeder and inserting them into a specific site on the \gls{PCB}}}
+\newglossaryentry{pickandplace}{name={Pick and Place machine}, text={pick and place}, description={A machine with a robot arm and computer vision for picking components from a feeder and inserting them into a specific site on the \glsname{PCB}}}
 
 \newglossaryentry{Python}{name={Python}, description={A high-level, cross-platform, interpreted, dynamically-typed, garbage-collected, general-purpose programming language. Has strong emphasis in code readability and includes a comprehensive standard library. It supports structured, object-oriented and functional programming paradigms }}
 
@@ -179,7 +179,7 @@
 
 \newglossaryentry{rise_time}{name={Rise time}, text={rise time}, description={Time required for a signal to raise from the 10\% to the 90\% of its higher state}}
 
-\newglossaryentry{reflow}{name={Re-flow soldering}, text={reflow}, description={The process consists on joining components to substrates by placing the parts into \gls{solder_paste} and then warming the paste up to its melting point for a short period of time, in order to achieve re-flow and the interconnection between a component terminal and a \gls{PCB} pad}}
+\newglossaryentry{reflow}{name={Re-flow soldering}, text={reflow}, description={The process consists on joining components to substrates by placing the parts into \glsname{solder_paste} and then warming the paste up to its melting point for a short period of time, in order to achieve re-flow and the interconnection between a component terminal and a \glsname{PCB} pad}}
 
 \newglossaryentry{rohs}{name={RoHS}, text={RoHS}, description={\textbf{(Restriction of Hazardous Substances)} European normative that restricts the use of the following hazardous substances in electrical and electronic equipment: lead (Pb), mercury (Hg), cadmium (Cd), hexavalent chromium (Cr6+), polybrominated biphenyls (PBB), polybrominated diphenyl ether (PBDE), bisphthalate (DEHP), butyl benzyl phthalate (BBP), dibutyl phthalate (DBP) and diisobutyl phthalate (DIBP) in a concentration no larger than 1000 ppm}}
 
@@ -191,9 +191,9 @@
 
 \newglossaryentry{skew}{name={Skew}, text={skew}, description={The effect of one signal being delayed with respect to another signal, due to different path lengths. This can cause timing errors in an electronic design}}
 
-\newglossaryentry{stencil}{name={Stencil}, text={stencil}, description={A sheet of material (usually plastic or stainless steel) with openings according to the \gls{solder_mask}. The apertures are the same shape and size as the SMD component pads, and are placed in their corresponding position. With the stencil it is easy to deposit the right amount of \gls{solder_paste} accurately and repeatably}}
+\newglossaryentry{stencil}{name={Stencil}, text={stencil}, description={A sheet of material (usually plastic or stainless steel) with openings according to the \glsname{solder_mask}. The apertures are the same shape and size as the SMD component pads, and are placed in their corresponding position. With the stencil it is easy to deposit the right amount of \glsname{solder_paste} accurately and repeatably}}
 
-\newglossaryentry{stackup}{name={Layer stackup}, text={layer stackup}, description={Arrangement of conductive and insulating layers in a \gls{PCB}}}
+\newglossaryentry{stackup}{name={Layer stackup}, text={layer stackup}, description={Arrangement of conductive and insulating layers in a \glsname{PCB}}}
 
 \newglossaryentry{solder_paste}{name={Solder paste}, text={solder paste}, description={A sticky mixture of powdered solder (the fusible metal alloy which bonds pads and components) and flux (a viscous chemical cleaning agent) }}
 
@@ -201,9 +201,9 @@
 
 \newglossaryentry{SoC}{name={SoC},text={SoC},description={\textbf{(System on Chip)} \glsname{IC} that integrates all the components within a chip including analog, digital, mixed and even radio frequency functionality}}
 
-\newglossaryentry{solder_mask}{name={Solder mask},text={solder mask},description={The insulating polymer coating used to mask or protect the \gls{PCB}'s copper tracks from chemical and abrasive damage, such as corrosion and oxidation, dirt, dust, and fingerprints. It also masks off a PCB surface and prevents masked areas of being poured by solder during wave \gls{reflow} soldering and other processes such as etchant or plating. This way, only the desired pads are soldered and no shorts are created between tracks. Solder mask is also colored, giving the PCBs a distinct colour, being usually green}}
+\newglossaryentry{solder_mask}{name={Solder mask},text={solder mask},description={The insulating polymer coating used to mask or protect the \glsname{PCB}'s copper tracks from corrosion and oxidation, dirt, dust, and fingerprints. It also prevents masked areas of being poured by solder during \glsname{reflow} and other processes such as etching or plating. This way, no shorts are created between tracks. Solder mask give PCBs a distinct colour, usually green}}
 
-\newglossaryentry{silkscreen}{name={Silkscreen},text={silkscreen},description={Also called {\it ``overlay''}, is the layer of shapes and text printed above the \gls{solder_mask}}}
+\newglossaryentry{silkscreen}{name={Silkscreen},text={silkscreen},description={Also called {\it ``overlay''}, is the layer of shapes and text printed above the \glsname{solder_mask}}}
 
 
 % -----------------------------------------------------------------------------
@@ -231,7 +231,7 @@
 % -----------------------------------------------------------------------------
 % W
 
-\newglossaryentry{wave_soldering}{name={Wave soldering}, text={wave soldering}, description={A standard method for industrial, mass soldering of leaded THT components onto \gls{PCB}s. Consists of passing loaded boards over a wave of liquid solder. This soldering can be used successfully for assembly of \glsname{mixed_technology} boards}}
+\newglossaryentry{wave_soldering}{name={Wave soldering}, text={wave soldering}, description={A standard method for industrial, mass soldering of leaded THT components onto \glsname{PCB}s. Consists of passing loaded boards over a wave of liquid solder. This soldering can be used successfully for assembly of \glsname{mixed_technology} boards}}
 
 
 % -----------------------------------------------------------------------------

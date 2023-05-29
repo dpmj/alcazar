@@ -21,9 +21,19 @@
 
 % TEXT AND FONTS
 
-\usepackage{plex-mono}  % Monospace font
+% Serif font
+\usepackage{libertinus}  % Traditional but with personality, easy to read, compact
+% Some alternatives:
+% \usepackage{nimbusserif}  % Similar to Times
+% \usepackage[default,regular,semibold]{sourceserifpro}  % A bit big and less compact, but easy on the eyes
+
+% Monospace font
+\usepackage{plex-mono}  
+
+
 \usepackage[T1]{fontenc}
 
+% Symbols
 \usepackage{eurosym}  % Euro symbol
 
 \usepackage{moresize}
@@ -61,16 +71,9 @@
 
 % URL, REF AND HYPERREF
 
-\usepackage{url}
 \usepackage{hyperref}
+\usepackage{xurl}  % eXtended url package
 \usepackage{nameref}  % get section names by label
-
-
-% GLOSSARIES AND ACRONYMS
-
-\usepackage[nonumberlist, acronym, toc, style=listhypergroup]{glossaries}  
-\usepackage{glossary/glossary}  % Glossary file
-\makeglossaries
 
 
 % APPENDIX
@@ -80,7 +83,8 @@
 
 % TABLES
 
-\usepackage{multirow}  % For tables
+\usepackage{multirow}
+\usepackage{multicol}
 \usepackage{array}
 \usepackage{colortbl}
 
@@ -99,6 +103,27 @@
 \usepackage{moreverb}
 
 
+% LISTS
 
+\usepackage{enumitem}
+
+
+% BIBLIOGRAPHY
+
+% Necessary to make the bibliography two-column
+\usepackage{etoolbox}
+\usepackage{relsize}
+
+
+% GLOSSARIES AND ACRONYMS
+
+% One-column glossary
+% \usepackage[nonumberlist, acronym, toc, style=listhypergroup]{glossaries}  
+
+% Two-column glossary
+\usepackage[nonumberlist, acronym, toc, style=mcoltreehypergroup, stylemods=mcols]{glossaries-extra}  
+
+\usepackage{glossary/glossary}  % Glossary file
+\makeglossaries
 
 
