@@ -16,7 +16,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PREAMBLE
 
-\documentclass[twoside, openright]{report}
+\documentclass[twoside, openright, 11pt]{report}
 
 
 % Variables
@@ -42,13 +42,16 @@
 \newcommand{\thesisAddress}{Camí de Vera, s/n, 46022 València, Valencia, Spain}
 \newcommand{\thesisDepartment}{Department of Electronic Engineering}
 
-\newcommand{\thesisKeywords}{Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 4, Keyword 5, Keyword 6, Keyword 7, Keyword 8, Keyword 9, Keyword 10, Keyword 11, Keyword N}  % For the abstract and for indexing
+\newcommand{\thesisKeywords}{Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 4, Keyword 5, Keyword 6, Keyword 7, Keyword 8, Keyword 9, Keyword 10, Keyword N}  
+% For the abstract and indexing
 
 
 
 % Import document style
 \usepackage{style/alcazar}
 
+% \usepackage{multibib}
+% \newcites{latex}{Publications}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,17 +59,23 @@
 
 \begin{document}
 
+% Titlepage, license, about, abstract, keywords, publications, acknowledgements, dedication and tables of contents
 \include{opening/opening.tex}
 
-\include{text/chapters/chapters.tex}
-
-\include{bibliography/bibliography.tex}
-
-\include{text/appendix/appendix.tex}
-
+% Glossary and acronyms
 \include{glossary/glossary.tex}
 
-\include{text/appendix/thanks} 
+% Chapters - main text
+\include{text/chapters/chapters.tex}
+
+% Bibliography
+\include{bibliography/bibliography.tex}
+
+% Addendum - secondary text
+\include{text/appendix/appendix.tex}
+
+% It's nice to say thanks. 
+\include{text/appendix/thanks}  % Optional: comment this line if you feel like it.
 
 
 \end{document}

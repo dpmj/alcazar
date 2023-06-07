@@ -57,6 +57,24 @@
 % \hbadness=10000
 
 
+% \usepackage{showframe}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLES STYLE
+
+% Chapter
+
+\titleformat{\chapter}[display]
+{}
+{\large \scshape \chaptername \enspace \thechapter}
+{0mm}
+{\LARGE \bfseries}
+[]
+
+\titlespacing{\chapter}{0mm}{-5mm}{5mm}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TABLE OF CONTENTS 
 
@@ -95,6 +113,8 @@
 
 \renewcommand{\headrulewidth}{0.2mm}
 \renewcommand{\footrulewidth}{0.2mm}
+
+\setlength{\headheight}{13.6pt}
 
 
 
@@ -303,7 +323,6 @@
 
 \lstdefinestyle{colored}
 {%
-  basicstyle=\color{listing-text-color}\linespread{1.0}\ttfamily\footnotesize{},
   backgroundcolor=\color{white},
   commentstyle=\color{green}\itshape,
   keywordstyle=\color{blue}\bfseries\itshape,
@@ -377,7 +396,6 @@
     
 \lstdefinestyle{colorEX}
 {
-    basicstyle=\color{listing-text-color}\linespread{1.0}\ttfamily\footnotesize{},
     backgroundcolor=\color{listing-background},
     commentstyle=\color{listing-comment}\slshape,
     %
@@ -458,9 +476,11 @@
 
 % Bibliography redefinition so its on double column
 
-\patchcmd{\thebibliography}
-    {\list}
-    {\begin{multicols}{2}\small\list}
-    {}
-    {}
-\appto{\endthebibliography}{\end{multicols}}
+% \patchcmd{\thebibliography}
+%     {\list}
+%     {\begin{multicols}{2}\small\list}
+%     {}
+%     {}
+% \appto{\endthebibliography}{\end{multicols}}
+
+

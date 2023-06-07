@@ -19,14 +19,22 @@
 \pagestyle{biblio}
 
 
-\renewcommand{\UrlFont}{\ttfamily\footnotesize} % reduce el tamaño de la tipografía de los enlaces.
 
 
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}
 
-\bibliographystyle{ieeetr}
 {
+    \renewcommand{\UrlFont}{\ttfamily\scriptsize}  
+    % Smaller URLs (FOR IBM PLEX MONO ONLY)
+    
     \small  % Compress space used by bibliography
-    \bibliography{bibliography/references}
+    % \bibliographystyle{ieeetr}
+    % \bibliography{bibliography/references}
+
+    \begin{multicols}{2}[\printbibheading]
+        \AtNextBibliography{\small}
+        \printbibliography[heading=none]  
+    \end{multicols}
+
 }

@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.3238075"
-     inkscape:cx="447.57263"
-     inkscape:cy="113.68722"
+     inkscape:zoom="0.66190375"
+     inkscape:cx="417.73445"
+     inkscape:cy="373.92143"
      inkscape:current-layer="layer1"
      showguides="true"><inkscape:grid
        type="xygrid"
@@ -216,7 +216,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-3.96875,-3.96875)"><text
+     transform="translate(-3.96875,-3.96875)"><rect
+       style="fill:#ffffff;stroke:none;stroke-width:1.32909;stroke-linejoin:bevel;paint-order:stroke fill markers;fill-opacity:1"
+       id="rect380"
+       width="203.72917"
+       height="51.59375"
+       x="3.96875"
+       y="3.96875" /><text
        xml:space="preserve"
        style="font-size:50px;line-height:1.25;font-family:Inter;-inkscape-font-specification:'Inter, Normal';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.7;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
        x="136.71674"

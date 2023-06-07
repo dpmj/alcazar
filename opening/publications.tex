@@ -1,0 +1,49 @@
+% 
+%            ,,                                        
+%          `7MM            _.o9                                
+%            MM                                             
+%  ,6"Yb.    MM  ,p6"bo   ,6"Yb.  M"""MMV  ,6"Yb.  `7Mb,od8 
+% 8)   MM    MM 6M'  OO  8)   MM  '  AMV  8)   MM    MM' "' 
+%  ,pm9MM    MM 8M        ,pm9MM    AMV    ,pm9MM    MM     
+% 8M   MM    MM YM.    , 8M   MM   AMV  , 8M   MM    MM     
+% `Moo9^Yo..JMML.YMbmd'  `Moo9^Yo.AMMmmmM `Moo9^Yo..JMML.   
+% 
+% 
+% Free and Open-Source template for academic works
+% https://github.com/dpmj/alcazar
+
+
+% Add here your Publications.
+% Depends on Biblatex and Biber for multiple bibliographies.
+
+\newpage
+
+\clearpage
+\cleardoublepage
+\phantomsection
+
+\pagestyle{empty}
+
+% \phantomsection
+% \addcontentsline{toc}{chapter}{Publications}
+
+
+\begin{refsection}
+
+    \nocite{own-article-1, own-article-2, own-article-3}
+
+    \defbibnote{pre-note}{
+        \noindent The {\thesisDegree} candidate, {\thesisAuthor}, has co-authored the following publications with Prof. {\thesisTutor} et al. The articles come as a result of the research activities carried out during the {\thesisType}. The candidate is the corresponding author in two of the three publications listed below:
+    }
+    \defbibnote{post-note}{
+        \noindent Note: \cite{own-article-3} is not yet published.
+    }
+
+    \printbibliography[heading=bibintoc,  % Title in Table of contents
+                       title={Publications},  % Title
+                       prenote=pre-note,  % Text before bibliography
+                       postnote=post-note]  % Text after bibliography
+
+\end{refsection}
+
+

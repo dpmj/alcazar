@@ -21,15 +21,16 @@
 
 ## Build
 
-You can build it with your favorite LaTeX frontend. 
+You can build it with your favorite LaTeX frontend. Please note that this template requires `biber` for the multi-bibliography support of `biblatex`.
 
-Also, this project can easily be built with `pdflatex`. In the project directory, run:
+This project can easily be built by using the following commands:
 
 ```
-$ pdflatex main.tex
-$ bibtex main
+$ pdflatex main
+$ biber main
 $ makeglossaries main
-$ pdflatex main.tex
+$ pdflatex main
+$ pdflatex main
 ```
 
 
@@ -57,6 +58,7 @@ The file structure of Alcázar is simple and self-explanatory:
 |   ├── acknowledgements.tex    # Acknowledgements
 |   ├── dedication.tex          # Dedication
 |   ├── opening.tex             # Structures the opening part of the document
+|   └── publications.tex        # Your publications. Optional, comment line in opening.tex
 |   └── titlepage.tex           # Title page
 |
 ├── style/                      # STYLE
@@ -67,7 +69,7 @@ The file structure of Alcázar is simple and self-explanatory:
 ├── text/                       # TEXT
 |   ├── appendix/               # Put your addendum here
 |   |   ├── appendix.tex        # Appendix generation
-|   |   └── thanks.tex          # Say thanks to your readers!
+|   |   └── thanks.tex          # Say thanks. Optional, comment line in main.tex
 |   |
 |   └── chapters/               # Put your chapters here
 |
@@ -100,27 +102,44 @@ This work is unrelated to any institution, and the references, logos and the lik
 - [x] Opening
     - [x] Cover
     - [x] About the document
-    - [x] Dedication
+    - [x] Abstract and keywords
+    - [x] Publications
     - [x] Acknowledgements
+    - [x] Dedication
     - [x] Tables of contents
     - [x] Glossary
         - [x] Example Entries
 - [x] Chapters
     - [x] Example Text
     - [x] Example Figures
+    - [ ] Example Tables
     - [x] Example Listings
-- [x] Bibliography (bibtex)
+- [x] Bibliography
     - [x] Example Citations
 - [x] Addendum
     - [x] Example Text
     - [x] Thanks
-    
+
+
+## Style 
+
+- [x] Compress space used by citations (small, double column)
+- [x] Compress space used by glossary (small, double column)
+- [x] Choose default serif font - Libertinus
+- [x] Choose default sans-serif font - Open Sans (unused for now)
+- [x] Choose default monospace font - IBM Plex Mono
+- [x] Default font size: 11pt
+- [x] Page size: A4 paper
+- [ ] Simple and compact chapter title style 
+- [ ] Chapter number marker on the side margins
+- [ ] Check footnote style
+
+
     
 ## Fixes
 
 - [ ] Inconsistent skips above and below floats, too much space sometimes.
 - [ ] Inconsistent skips above and below titles
-- [ ] Hyphenation is weird?
 - [ ] In listings, for some reason the comments of lots of `%` are bugged.
 
 

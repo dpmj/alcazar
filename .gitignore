@@ -19,4 +19,5 @@
 *.out
 *.kate-swp
 *.synctex.gz
+*.run.xml
 

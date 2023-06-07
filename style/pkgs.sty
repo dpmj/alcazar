@@ -30,13 +30,17 @@
 % Monospace font
 \usepackage{plex-mono}  
 
+% Sans-serif font
+\usepackage[defaultsans,scale=0.9]{opensans}
 
+% Encoding
 \usepackage[T1]{fontenc}
 
 % Symbols
 \usepackage{eurosym}  % Euro symbol
 
-\usepackage{moresize}
+% Misc
+\usepackage{moresize}  % More text sizes
 \usepackage[singlespacing]{setspace}  % Control line spacing
 
 
@@ -67,6 +71,11 @@
 \usepackage{fancyhdr}  % Fancy page style
 \usepackage{changepage}  % Margin adjustment and detection of odd/even pages
 \usepackage{pdflscape}  % Landscape pages
+
+
+% TITLE FORMATTING
+
+\usepackage{titlesec}  % Modify title style and spacing
 
 
 % URL, REF AND HYPERREF
@@ -111,8 +120,13 @@
 % BIBLIOGRAPHY
 
 % Necessary to make the bibliography two-column
-\usepackage{etoolbox}
-\usepackage{relsize}
+%\usepackage{etoolbox}
+%\usepackage{relsize}
+
+\usepackage{csquotes}
+\usepackage[backend=biber, style=ieee]{biblatex}
+\addbibresource{bibliography/references.bib}
+
 
 
 % GLOSSARIES AND ACRONYMS
@@ -121,9 +135,10 @@
 % \usepackage[nonumberlist, acronym, toc, style=listhypergroup]{glossaries}  
 
 % Two-column glossary
-\usepackage[nonumberlist, acronym, toc, style=mcoltreehypergroup, stylemods=mcols]{glossaries-extra}  
+\usepackage[toc, style=mcoltreehypergroup, stylemods=mcols]{glossaries-extra}  
 
 \usepackage{glossary/glossary}  % Glossary file
 \makeglossaries
+
 
 

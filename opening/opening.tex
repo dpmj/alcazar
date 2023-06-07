@@ -28,6 +28,9 @@
 % Abstract
 \input{opening/abstract}
 
+% Publications
+\input{opening/publications}  % Optional: comment this line if you don't need it
+
 % Acknowledgements
 \input{opening/acknowledgements}
 
@@ -41,34 +44,41 @@
 
 \begingroup
 
-    \renewcommand{\baselinestretch}{0.3}\normalsize  % Comprime space used by TOC
+    % Greatly compress space used by TOC with less spacing, smaller font size and less 
+    \renewcommand{\baselinestretch}{0.5}\small
+
     
     % List of Contents
-    \tableofcontents
-    \addcontentsline{toc}{chapter}{Table of contents}
+    {
+        \tableofcontents
+        \addcontentsline{toc}{chapter}{Table of contents}
+    }
     
     % List of Figures
-    \listoffigures
-    \addcontentsline{toc}{chapter}{List of figures}
+    {
+        \listoffigures
+        \addcontentsline{toc}{chapter}{List of figures}
+    }
     
     % List of Tables
-    \listoftables
-    \addcontentsline{toc}{chapter}{List of tables}
+    {
+        \listoftables
+        \addcontentsline{toc}{chapter}{List of tables}
+    }
     
     % List of Listings
-    {
-        % This particular toc uses shorter spacing for some reason
+    % {
+    %     % This particular toc uses shorter spacing for some reason
 
-        \renewcommand{\baselinestretch}{1.2}\normalsize
+    %     \renewcommand{\baselinestretch}{1.2}\normalsize
         
-        \listof{lstlisting}{Code listings} % \lstlistoflistings
-        \addcontentsline{toc}{chapter}{Code listings}
-    }
+    %     \listof{lstlisting}{Code listings} % \lstlistoflistings
+    %     \addcontentsline{toc}{chapter}{Code listings}
+    % }
+    % This list does not respect styles
     
 \endgroup
 
 % END OPENING
-
-
 
 
