@@ -25,6 +25,8 @@
 \addcontentsline{toc}{chapter}{Bibliography}
 
 {
+
+    %\pagestyle{biblio}
     \renewcommand{\UrlFont}{\ttfamily\scriptsize}  
     % Smaller URLs (FOR IBM PLEX MONO ONLY)
     
@@ -33,7 +35,7 @@
     % \bibliography{bibliography/references}
 
     \begin{multicols}{2}[\printbibheading]
-        \AtNextBibliography{\small}
+        \AtNextBibliography{\small \pagestyle{biblio}}
         \printbibliography[heading=none]  
     \end{multicols}
 

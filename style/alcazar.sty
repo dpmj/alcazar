@@ -60,7 +60,7 @@
 % \usepackage{showframe}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% TITLES STYLE
+% STYLE OF TITLES
 
 % Chapter
 
@@ -81,155 +81,6 @@
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PAGE STYLE AND GEOMETRY
-
-\geometry{
-    a4paper,
-    top     = 2.5cm,
-    bottom  = 2.5cm,
-    inner   = 3.5cm,
-    outer   = 2.5cm
-} 
-
-% Style of normal pages
-
-\fancyhead{}
-
-\fancyhfoffset[RO,LE]{0cm}
-    
-\fancyhead[LE]{\small{\thepage}}
-\fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
-\fancyhead[C]{}
-\fancyhead[LO]{\small{\nouppercase{\rightmark}}}
-\fancyhead[RO]{\thepage}
-
-\fancyfoot[LE]{\small{\thepage}}
-\fancyfoot[RE]{\small{\thesisTitleShort}}
-\fancyhead[C]{}
-\fancyfoot[LO]{\small{\thesisAuthor}}
-\fancyfoot[RO]{\small{\thepage}}
-
-\renewcommand{\headrulewidth}{0.2mm}
-\renewcommand{\footrulewidth}{0.2mm}
-
-\setlength{\headheight}{13.6pt}
-
-
-
-% Chapters
-
-\fancypagestyle{chapters}
-{
-    \fancyhfoffset[RO,LE]{0cm}
-    
-    \fancyhead[LE]{\small{\thepage}}
-    \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
-    \fancyhead[C]{}
-    \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
-    \fancyhead[RO]{\thepage}
-    
-    \fancyfoot[LE]{\small{\thepage}}
-    \fancyfoot[RE]{\small{\thesisTitleShort}}
-    \fancyhead[C]{}
-    \fancyfoot[LO]{\small{\thesisAuthor}}
-    \fancyfoot[RO]{\small{\thepage}}
-    
-    \renewcommand{\headrulewidth}{0.2mm}
-    \renewcommand{\footrulewidth}{0.2mm}
-}
-
-% Addendum
-
-\fancypagestyle{addenda}
-{
-    \fancyhfoffset[RO,LE]{0cm}
-    
-    \fancyhead[LE]{\small{\thepage}}
-    \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
-    \fancyhead[C]{}
-    \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
-    \fancyhead[RO]{\thepage}
-    
-    \fancyfoot[LE]{\small{\thepage}}
-    \fancyfoot[RE]{\small{\thesisTitleShort}}
-    \fancyhead[C]{}
-    \fancyfoot[LO]{\small{\thesisAuthor}}
-    \fancyfoot[RO]{\small{\thepage}}
-    
-    \renewcommand{\headrulewidth}{0.2mm}
-    \renewcommand{\footrulewidth}{0.2mm}
-}
-
-% Plain
-% Refefine so chapter starts with given style
-
-\fancypagestyle{plain}
-{
-    \fancyhf{}
-    \fancyhead{}
-    
-    \fancyfoot[LE]{}
-    \fancyfoot[RE]{}
-    \fancyhead[C]{}
-    \fancyfoot[LO]{\small{\thesisAuthor}}
-    \fancyfoot[RO]{\small{\thepage}}
-    
-    \renewcommand{\headrulewidth}{0mm}
-    \renewcommand{\footrulewidth}{0.2mm}
-}
-
-
-% Empty
-
-\fancypagestyle{empty}
-{
-    \fancyhf{}
-    \fancyhead{}
-    
-    
-    \fancyhead[LE]{}
-    \fancyhead[RE]{} 
-    \fancyhead[C]{}
-    \fancyhead[LO]{}
-    \fancyhead[RO]{}
-    
-    \fancyfoot[LE]{}
-    \fancyfoot[RE]{}
-    \fancyhead[C]{}
-    \fancyfoot[LO]{}
-    \fancyfoot[RO]{}
-    
-    \renewcommand{\headrulewidth}{0mm}
-    \renewcommand{\footrulewidth}{0mm}
-}
-
-
-% Bibliography
-
-\fancypagestyle{biblio}
-{
-    \fancyhfoffset[RO,LE]{0cm}
-    
-    \fancyhead[LE]{\small{\thepage}}
-    \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
-    \fancyhead[C]{}
-    \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
-    \fancyhead[RO]{\thepage}
-    
-    \fancyfoot[LE]{\small{\thepage}}
-    \fancyfoot[RE]{\small{\thesisTitleShort}}
-    \fancyhead[C]{}
-    \fancyfoot[LO]{\small{\thesisAuthor}}
-    \fancyfoot[RO]{\small{\thepage}}
-    
-    \renewcommand{\headrulewidth}{0.2mm}
-    \renewcommand{\footrulewidth}{0.2mm}
-}
-
-
-\pagestyle{fancy}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -482,5 +333,203 @@
 %     {}
 %     {}
 % \appto{\endthebibliography}{\end{multicols}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CHAPTER NUMBER IN THE SIDE
+
+% Definition of the box with number inside with tikz
+
+\newcommand{\chapterNumber}[1]
+{%
+    \begin{tikzpicture}%
+        [blob/.style={minimum width=10mm, minimum height=15mm, align=center}]
+        \node[blob, fill=gray07, text=white] at (0,0) { \sffamily \bfseries \Huge #1};
+    \end{tikzpicture}
+}
+
+
+% For chapters
+
+\newcommand{\rightChapterNumber}
+{%
+    \begin{picture}(0,0)
+        \put(16mm, -25.5mm - 15mm * \value{chapter} + 15mm) {\chapterNumber{\arabic{chapter}}}
+    \end{picture}
+}
+\newcommand{\leftChapterNumber}
+{%
+    \begin{picture}(0,0)
+        \put(-25mm, -25.5mm - 15mm * \value{chapter} + 15mm) {\chapterNumber{\arabic{chapter}}}
+    \end{picture}
+}
+
+
+% For appendices
+
+\newcommand{\rightAppendixNumber}
+{%
+    \begin{picture}(0,0)
+        \put(16mm, -25.5mm - 15mm * \value{chapter} + 15mm) {\chapterNumber{\Alph{chapter}}}
+    \end{picture}
+}
+\newcommand{\leftAppendixNumber}
+{%
+    \begin{picture}(0,0)
+        \put(-25mm, -25.5mm - 15mm * \value{chapter} + 15mm) {\chapterNumber{\Alph{chapter}}}
+    \end{picture}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAGE STYLE AND GEOMETRY
+
+\geometry{
+    a4paper,
+    top     = 2.5cm,
+    bottom  = 2.5cm,
+    inner   = 3.5cm,
+    outer   = 2.5cm
+} 
+
+% Style of normal pages
+
+% \fancyhead{}
+
+% \fancyhfoffset[RO,LE]{0cm}
+    
+% \fancyhead[LE]{\small{\thepage}}
+% \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
+% \fancyhead[C]{}
+% \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
+% \fancyhead[RO]{\small{\thepage}}
+
+% \fancyfoot[LE]{\small{\thepage}}
+% \fancyfoot[RE]{\small{\thesisTitleShort}}
+% \fancyhead[C]{}
+% \fancyfoot[LO]{\small{\thesisAuthor}}
+% \fancyfoot[RO]{\small{\thepage}}
+
+% \renewcommand{\headrulewidth}{0.2mm}
+% \renewcommand{\footrulewidth}{0.2mm}
+
+\setlength{\headheight}{13.6pt}
+
+% \pagestyle{fancy}
+
+
+
+% Chapters
+
+\fancypagestyle{chapters}
+{
+    \fancyhfoffset[RO,LE]{0cm}
+    
+    \fancyhead[LE]{\leftChapterNumber \small{\thepage}}
+    \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
+    \fancyhead[C]{}
+    \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
+    \fancyhead[RO]{\small{\thepage} \rightChapterNumber}
+    
+    \fancyfoot[LE]{\small{\thepage}}
+    \fancyfoot[RE]{\small{\thesisTitleShort}}
+    \fancyhead[C]{}
+    \fancyfoot[LO]{\small{\thesisAuthor}}
+    \fancyfoot[RO]{\small{\thepage}}
+    
+    \renewcommand{\headrulewidth}{0.2mm}
+    \renewcommand{\footrulewidth}{0.2mm}
+}
+
+% Addendum
+
+\fancypagestyle{addenda}
+{
+    \fancyhfoffset[RO,LE]{0cm}
+    
+    \fancyhead[LE]{\leftAppendixNumber \small{\thepage}}
+    \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
+    \fancyhead[C]{}
+    \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
+    \fancyhead[RO]{\small{\thepage} \rightAppendixNumber}
+    
+    \fancyfoot[LE]{\small{\thepage}}
+    \fancyfoot[RE]{\small{\thesisTitleShort}}
+    \fancyhead[C]{}
+    \fancyfoot[LO]{\small{\thesisAuthor}}
+    \fancyfoot[RO]{\small{\thepage}}
+    
+    \renewcommand{\headrulewidth}{0.2mm}
+    \renewcommand{\footrulewidth}{0.2mm}
+}
+
+% Plain
+% Refefine so chapter starts with given style
+% First page of bibliography also uses this style
+
+\fancypagestyle{plain}
+{
+    \fancyhf{}
+    \fancyhead{}
+
+    \fancyfoot[LE]{}
+    \fancyfoot[RE]{}
+    \fancyhead[C]{}
+    \fancyfoot[LO]{\small{\thesisAuthor}}
+    \fancyfoot[RO]{\small{\thepage}}
+    
+    \renewcommand{\headrulewidth}{0mm}
+    \renewcommand{\footrulewidth}{0.2mm}
+}
+
+
+% Empty
+
+\fancypagestyle{empty}
+{
+    \fancyhf{}
+    \fancyhead{}
+    
+    \fancyhead[LE]{}
+    \fancyhead[RE]{} 
+    \fancyhead[C]{}
+    \fancyhead[LO]{}
+    \fancyhead[RO]{}
+    
+    \fancyfoot[LE]{}
+    \fancyfoot[RE]{}
+    \fancyhead[C]{}
+    \fancyfoot[LO]{}
+    \fancyfoot[RO]{}
+    
+    \renewcommand{\headrulewidth}{0mm}
+    \renewcommand{\footrulewidth}{0mm}
+}
+
+
+% Bibliography
+
+\fancypagestyle{biblio}
+{
+    \fancyhfoffset[RO,LE]{0cm}
+    
+    \fancyhead[LE]{\small{\thepage}}
+    \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
+    \fancyhead[C]{}
+    \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
+    \fancyhead[RO]{\small{\thepage}}
+    
+    \fancyfoot[LE]{\small{\thepage}}
+    \fancyfoot[RE]{\small{\thesisTitleShort}}
+    \fancyhead[C]{}
+    \fancyfoot[LO]{\small{\thesisAuthor}}
+    \fancyfoot[RO]{\small{\thepage}}
+    
+    \renewcommand{\headrulewidth}{0.2mm}
+    \renewcommand{\footrulewidth}{0.2mm}
+}
+
 
 

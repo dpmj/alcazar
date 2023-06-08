@@ -112,7 +112,7 @@ This work is unrelated to any institution, and the references, logos and the lik
 - [x] Chapters
     - [x] Example Text
     - [x] Example Figures
-    - [ ] Example Tables
+    - [x] Example Tables
     - [x] Example Listings
 - [x] Bibliography
     - [x] Example Citations
@@ -130,16 +130,17 @@ This work is unrelated to any institution, and the references, logos and the lik
 - [x] Choose default monospace font - IBM Plex Mono
 - [x] Default font size: 11pt
 - [x] Page size: A4 paper
-- [ ] Simple and compact chapter title style 
-- [ ] Chapter number marker on the side margins
-- [ ] Check footnote style
+- [x] Simple and compact chapter title style 
+- [x] Chapter number marker on the side margins
+- [x] Check footnote style
+- [ ] Change style of paragraph and subparagraph
 
 
     
 ## Fixes
 
 - [ ] Inconsistent skips above and below floats, too much space sometimes.
-- [ ] Inconsistent skips above and below titles
+- [ ] Inconsistent skips above and below titles sometimes
 - [ ] In listings, for some reason the comments of lots of `%` are bugged.
 
 
