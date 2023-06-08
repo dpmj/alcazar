@@ -45,12 +45,20 @@
 \begingroup
 
     % Greatly compress space used by TOC with less spacing, smaller font size and less 
-    \renewcommand{\baselinestretch}{0.5}\small
+    \renewcommand{\baselinestretch}{0.7}\small
 
     
     % List of Contents
     {
+
+        \newpage
+
+        \clearpage
+        \cleardoublepage
+        \phantomsection
+
         \tableofcontents
+        
         \addcontentsline{toc}{chapter}{Table of contents}
     }
     

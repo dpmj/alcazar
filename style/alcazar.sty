@@ -81,14 +81,18 @@
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
 
+% Change TOC indentation
+\makeatletter
+    \renewcommand*\l@section{\@dottedtocline{1}{0.75em}{2em}}
+    \renewcommand*\l@subsection{\@dottedtocline{1}{1.5em}{2.5em}}
+    \renewcommand*\l@subsubsection{\@dottedtocline{1}{2.25em}{3.25em}}
+    \renewcommand*\l@paragraph{\@dottedtocline{1}{3em}{3.75em}}
+    % \renewcommand*\l@subparagraph{\@dottedtocline{1}{3.75em}{4em}}
+\makeatother
 
+% Column separation
+\setlength{\columnsep}{8mm}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Glossary style adjustments
-
-\setlength{\columnsep}{7mm}
-% \renewcommand*{\glsgroupskip}{\vspace{2mm}}
-% \renewcommand*{\glsgroupheading}{\vspace{2mm}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -467,7 +471,7 @@
 
 % Plain
 % Refefine so chapter starts with given style
-% First page of bibliography also uses this style
+% First page of bibliography, contents, etc. also uses this style
 
 \fancypagestyle{plain}
 {
@@ -477,7 +481,7 @@
     \fancyfoot[LE]{}
     \fancyfoot[RE]{}
     \fancyhead[C]{}
-    \fancyfoot[LO]{\small{\thesisAuthor}}
+    \fancyfoot[LO]{}
     \fancyfoot[RO]{\small{\thepage}}
     
     \renewcommand{\headrulewidth}{0mm}
