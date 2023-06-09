@@ -79,8 +79,11 @@ In vestibulum faucibus ligula eget blandit. Donec eget cursus risus, quis suscip
 
 Nullam quis lacus vel ante feugiat efficitur id ut quam. Pellentesque commodo elit nec urna gravida maximus. Suspendisse ut risus eu ipsum porta porta ac et orci. Donec dictum ligula sodales, euismod est sed, semper libero. In blandit, nulla et elementum pharetra, mi nunc sagittis tellus, sit amet scelerisque magna elit ac sapien. Curabitur ipsum dui, pretium a maximus id, varius gravida nisl. Sed vitae mattis elit, vitae hendrerit lorem. 
 
-
-\begin{lstlisting}[caption={Some Python Code \cite{esp32_devkit_reference_design}}, language=PythonPlus, style=ColorEX]
+% [caption={Some Python Code \cite{esp32_devkit_reference_design}}
+\begin{code}
+\label{code:apx:a:python}
+\captionof{listing}{Some example large code}
+\begin{minted}{python}
 """
 Some interesting python code 
 Blah Blah Blah
@@ -135,5 +138,6 @@ plt.xlim([0, 6])
 # Dont forget to save
 
 plt.savefig("nmos_vgs_ids.pdf")
-\end{lstlisting}
+\end{minted}
+\end{code}
 

@@ -75,15 +75,13 @@
     }
     
     % List of Listings
-    % {
-    %     % This particular toc uses shorter spacing for some reason
+    % Seems that it does not work with multitoc
+    {
+        % \listoflistings
+        % \addcontentsline{toc}{chapter}{List of listings}
 
-    %     \renewcommand{\baselinestretch}{1.2}\normalsize
-        
-    %     \listof{lstlisting}{Code listings} % \lstlistoflistings
-    %     \addcontentsline{toc}{chapter}{Code listings}
-    % }
-    % This list does not respect styles
+        % \listof{lstlisting}{Code listings} % old code
+    }
     
 \endgroup
 

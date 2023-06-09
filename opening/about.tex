@@ -99,16 +99,16 @@
 
 % Listings workaround to include the background in broken lines
 
-\begin{verbatimwrite}{cite.txt}
-@mastersthesis{citeKey,
-    author  = "(*@{\thesisAuthor}@*) and (*@{\thesisTutor}@*)",
-    title   = "(*@{\thesisTitle}@*)",
-    school  = "(*@{\thesisSchool}@*)",
-    year    = "(*@{\thesisYear}@*)",
-    month   = "(*@{\thesisMonth}@*)",
-    address = "(*@{\thesisAddress}@*)"
-}
-\end{verbatimwrite}
+% \begin{verbatimwrite}{cite.txt}
+% @mastersthesis{citeKey,
+%     author  = "(*@{\thesisAuthor}@*) and (*@{\thesisTutor}@*)",
+%     title   = "(*@{\thesisTitle}@*)",
+%     school  = "(*@{\thesisSchool}@*)",
+%     year    = "(*@{\thesisYear}@*)",
+%     month   = "(*@{\thesisMonth}@*)",
+%     address = "(*@{\thesisAddress}@*)"
+% }
+% \end{verbatimwrite}
 
 
 \begingroup
@@ -120,10 +120,38 @@
 \renewcommand*{\arraystretch}{1.2}
 {\noindent\large  Cite this work:}
 
-\begin{mdframed}[backgroundcolor=listing-background,hidealllines=true]
+% \begin{mdframed}[backgroundcolor=listing-background,hidealllines=true]
 \vspace*{2mm}
-\lstinputlisting[style=cite, nolol]{./cite.txt}
-\end{mdframed}
+% \lstinputlisting[style=cite, nolol]{./cite.txt}
+
+\newwrite\tempfile
+\immediate\openout\tempfile=cite.txt
+\immediate\write\tempfile{%
+@mastersthesis{citeKey,^^J
+author  = "\thesisAuthor and \thesisTutor",^^J
+title   = "\thesisTitle",^^J
+school  = "\thesisSchool",^^J
+year    = "\thesisYear",^^J
+month   = "\thesisMonth",^^J
+address = "\thesisAddress"^^J
+}
+}
+\immediate\closeout\tempfile
+
+% Does not work because escapes are inside strings
+% \begin{minted}{bibtex}
+% @mastersthesis{citeKey,
+%     author  = "¢{\thesisAuthor}¢ and ¢{\thesisTutor}¢",
+%     title   = "¢{\thesisTitle}¢",
+%     school  = "¢{\thesisSchool}¢",
+%     year    = "¢{\thesisYear}¢",
+%     month   = "¢{\thesisMonth}¢",
+%     address = "¢{\thesisAddress}¢"
+% }
+% \end{minted}
+
+\inputminted[style=algol_nu]{bibtex}{./cite.txt}
+% \end{mdframed}
 
 
 \endgroup

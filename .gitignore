@@ -1,5 +1,6 @@
 .directory
-.vscode
+.vscode/
+*_minted_main/
 *.log
 *.toc
 *.acn
@@ -21,4 +22,5 @@
 *.kate-swp
 *.synctex.gz
 *.run.xml
-
+*.pygtex
+*.pygstyle
