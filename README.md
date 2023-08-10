@@ -1,9 +1,19 @@
 <p align="center">
-    <img src="opening/resources/logos/alcazar.svg" height=150px/>
+<img src="opening/resources/logos/alcazar.svg" height="150px"/>
 </p>
-<p align="center">A free and Open-Source template for academic works<p>
+
+<p align="center">
+<b>A free and Open-Source template for academic works</b>
+</p>
+
+<p align="center">
+<img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" height="24px"/>
+</p>
 
 
+<p align="center"><b>
+<a href="https://raw.githubusercontent.com/dpmj/alcazar/main/main.pdf">See PDF Preview</a></b>
+</p>
 
 
 ## Philosophy
@@ -16,10 +26,14 @@
 - No strange packages.
 
 
-### [See preview](https://github.com/dpmj/alcazar/blob/main/main.pdf)
+## Features
+
+<p align="center">
+<img src="figures/examples/alcazar-feature-display.jpg" width="100%"/>
+</p>
 
 
-## Requisites
+## Requirements
 
 - `biber` for the multi-bibliography support of `biblatex`. Also, it's nice.
 - `python 3` for the `minted` package.
@@ -33,6 +47,7 @@ You can build it with your favorite LaTeX frontend.
 ### Overleaf
 
 Works out-of the box, no need to configure anything. Simply download this repo as `.zip` and then upload the archive to Overleaf as a new project.
+
 
 ### LaTeX Workshop extension for VS Code / Codium
 
@@ -154,13 +169,7 @@ The file structure of Alcázar is simple and self-explanatory:
 ## License
     
 This work is licensed under a
-[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
-
-[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
-
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+[Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 
 ## Disclaimer
