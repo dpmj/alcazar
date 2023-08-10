@@ -19,18 +19,89 @@
 ### [See preview](https://github.com/dpmj/alcazar/blob/main/main.pdf)
 
 
+## Requisites
+
+- `biber` for the multi-bibliography support of `biblatex`. Also, it's nice.
+- `python 3` for the `minted` package.
+
+
 ## Build
 
-You can build it with your favorite LaTeX frontend. Please note that this template requires `biber` for the multi-bibliography support of `biblatex`.
+You can build it with your favorite LaTeX frontend.
 
-This project can easily be built by using the following commands:
 
+### Overleaf
+
+Works out-of the box, no need to configure anything. Simply download this repo as `.zip` and then upload the archive to Overleaf as a new project.
+
+### LaTeX Workshop extension for VS Code / Codium
+
+If you are using the LaTeX Workshop extension by James Yu, you need to add the following tools to your configuration file, under `latex-workshop.latex.tools` (In the UI, navigate to *Latex-workshop > Latex: Recipes > Edit in settings.json*): 
+
+```json
+{
+    "name": "biber",
+    "command": "biber",
+    "args": [
+        "%DOC%"
+    ],
+},
+{
+    "name": "makeglossaries",
+    "command": "makeglossaries",
+    "args": [
+        "%DOCFILE%"
+    ],
+}
 ```
-$ pdflatex main
+
+Also, edit the `pdflatex` entry as follows to include the `-shell-escape` argument, necessary for the `minted` package.
+
+```json
+{
+    "name": "pdflatex",
+    "command": "pdflatex",
+    "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+    ],
+    "env": {}
+}
+```
+
+Now add a new recipe, under `latex-workshop.latex.recipes` (In the UI: *Latex-workshop > Latex: Tools > Edit in settings.json*): : 
+
+```json
+{
+    "name": "alcazar",
+    "tools": [
+        "pdflatex",
+        "makeglossaries",
+        "biber",
+        "pdflatex",
+        "pdflatex"
+    ]
+}
+```
+
+And run the `alcazar` recipe while on a `.tex` file from the project. 
+
+**Note:** If you constantly encounter a `makeglossaries` error saying that `main.aux` could not be found, set to `false` the setting `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` (In the UI, unmark *"Latex-workshop > Latex > Auto build > Clean and retry: Enabled"*)
+
+
+### Console
+
+This project can easily be built by using the following commands with these recommended parameters. As before, `-shell-escape` flag is needed for the `minted` package.
+
+```bash
+$ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
 $ biber main
 $ makeglossaries main
-$ pdflatex main
-$ pdflatex main
+$ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
+$ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
 ```
 
 
