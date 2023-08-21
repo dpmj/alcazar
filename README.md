@@ -1,9 +1,5 @@
 <p align="center">
-<img src="opening/resources/logos/alcazar.svg" height="150px"/>
-</p>
-
-<p align="center">
-<b>A free and Open-Source template for academic works</b>
+<img src="figures/examples/alcazar-title.jpg" width="100%"/>
 </p>
 
 <p align="center">
