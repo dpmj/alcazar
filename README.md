@@ -1,9 +1,15 @@
 <p align="center">
-    <img src="opening/resources/logos/alcazar.svg" height=150px/>
+<img src="figures/examples/alcazar-title.jpg" width="100%"/>
 </p>
-<p align="center">A free and Open-Source template for academic works<p>
+
+<p align="center">
+<img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" height="24px"/>
+</p>
 
 
+<p align="center"><b>
+<a href="https://raw.githubusercontent.com/dpmj/alcazar/main/main.pdf">See PDF Preview</a></b>
+</p>
 
 
 ## Philosophy
@@ -16,21 +22,97 @@
 - No strange packages.
 
 
-### [See preview](https://github.com/dpmj/alcazar/blob/main/main.pdf)
+## Features
+
+<p align="center">
+<img src="figures/examples/alcazar-feature-display.jpg" width="100%"/>
+</p>
+
+
+## Requirements
+
+- `biber` for the multi-bibliography support of `biblatex`. Also, it's nice.
+- `python 3` for the `minted` package.
 
 
 ## Build
 
 You can build it with your favorite LaTeX frontend.
 
-This project can easily be built by using the following commands:
 
+### Overleaf
+
+Works out-of the box, no need to configure anything. Simply download this repo as `.zip` and then upload the archive to Overleaf as a new project.
+
+
+### LaTeX Workshop extension for VS Code / Codium
+
+If you are using the LaTeX Workshop extension by James Yu, you need to add the following tools to your configuration file, under `latex-workshop.latex.tools` (In the UI, navigate to *Latex-workshop > Latex: Recipes > Edit in settings.json*): 
+
+```json
+{
+    "name": "biber",
+    "command": "biber",
+    "args": [
+        "%DOC%"
+    ],
+},
+{
+    "name": "makeglossaries",
+    "command": "makeglossaries",
+    "args": [
+        "%DOCFILE%"
+    ],
+}
 ```
-$ pdflatex main
+
+Also, edit the `pdflatex` entry as follows to include the `-shell-escape` argument, necessary for the `minted` package.
+
+```json
+{
+    "name": "pdflatex",
+    "command": "pdflatex",
+    "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+    ],
+    "env": {}
+}
+```
+
+Now add a new recipe, under `latex-workshop.latex.recipes` (In the UI: *Latex-workshop > Latex: Tools > Edit in settings.json*): : 
+
+```json
+{
+    "name": "alcazar",
+    "tools": [
+        "pdflatex",
+        "makeglossaries",
+        "biber",
+        "pdflatex",
+        "pdflatex"
+    ]
+}
+```
+
+And run the `alcazar` recipe while on a `.tex` file from the project. 
+
+**Note:** If you constantly encounter a `makeglossaries` error saying that `main.aux` could not be found, set to `false` the setting `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` (In the UI, unmark *"Latex-workshop > Latex > Auto build > Clean and retry: Enabled"*)
+
+
+### Console
+
+This project can easily be built by using the following commands with these recommended parameters. As before, `-shell-escape` flag is needed for the `minted` package.
+
+```bash
+$ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
 $ biber main
 $ makeglossaries main
-$ pdflatex main
-$ pdflatex main
+$ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
+$ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
 ```
 
 
@@ -91,13 +173,7 @@ The file structure of Alcázar is simple and self-explanatory:
 ## License
     
 This work is licensed under a
-[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
-
-[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
-
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+[Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 
 ## Disclaimer
