@@ -21,7 +21,7 @@
 
 ## Build
 
-You can build it with your favorite LaTeX frontend. Please note that this template requires `biber` for the multi-bibliography support of `biblatex`.
+You can build it with your favorite LaTeX frontend.
 
 This project can easily be built by using the following commands:
 
@@ -32,6 +32,14 @@ $ makeglossaries main
 $ pdflatex main
 $ pdflatex main
 ```
+
+
+### Requirements
+
+This project requires:
+
+- `biber` for the multi-bibliography support of `biblatex`.
+- `pygments` (and thus `python`) for the `minted` package.
 
 
 ## Usage
@@ -134,6 +142,7 @@ This work is unrelated to any institution, and the references, logos and the lik
 - [x] Chapter number marker on the side margins
 - [x] Check footnote style
 - [ ] Change style of paragraph and subparagraph
+- [ ] Uniformize vertical skips on figures, subfigures, tables, listings, etc.
 
 
     
@@ -141,8 +150,12 @@ This work is unrelated to any institution, and the references, logos and the lik
 
 - [ ] Inconsistent skips above and below floats, too much space sometimes.
 - [ ] Inconsistent skips above and below titles sometimes
-- [ ] In listings, for some reason the comments of lots of `%` are bugged.
+- [x] In listings, for some reason the comments of lots of `%` are bugged.
+- [X] Page style not consistent in opening
 
 
+## Known issues
+
+- For the two-column table of contents `minitoc` is used, which seems to be abandoned.
 
 

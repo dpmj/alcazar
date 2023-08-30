@@ -14,6 +14,9 @@
 
 
 
+% ------------------------------------------------------------------------------
+% FILES
+
 % Title page
 \input{opening/titlepage.tex}
 
@@ -40,23 +43,27 @@
 \input{opening/dedication}
 
 
+
+% ------------------------------------------------------------------------------
 % TABLES OF CONTENTS
+
+\newpage
+\thispagestyle{empty}
+
+\clearpage
+\cleardoublepage
+\phantomsection
+
+\pagestyle{plain}
+
 
 \begingroup
 
     % Greatly compress space used by TOC with less spacing, smaller font size and less 
     \renewcommand{\baselinestretch}{0.7}\small
 
-    
     % List of Contents
     {
-
-        \newpage
-
-        \clearpage
-        \cleardoublepage
-        \phantomsection
-
         \tableofcontents
         
         \addcontentsline{toc}{chapter}{Table of contents}
@@ -86,5 +93,6 @@
 \endgroup
 
 % END OPENING
+% ------------------------------------------------------------------------------
 
 

@@ -25,15 +25,17 @@
 \addcontentsline{toc}{chapter}{Bibliography}
 
 {
-
-    %\pagestyle{biblio}
     \renewcommand{\UrlFont}{\ttfamily\scriptsize}  
-    % Smaller URLs (FOR IBM PLEX MONO ONLY)
+    % Smaller URLs (USE FOR IBM PLEX MONO ONLY)
     
     \small  % Compress space used by bibliography
+
+    % For bibtex bibliography
     % \bibliographystyle{ieeetr}
     % \bibliography{bibliography/references}
 
+    % Multi-column bibliography 
+    % For biblatex bibliography
     \begin{multicols}{2}[\printbibheading]
         \AtNextBibliography{\small \pagestyle{biblio}}
         \printbibliography[heading=none]  

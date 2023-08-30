@@ -349,9 +349,9 @@
     \noindent\setbox0=\hbox{#1}\parbox{\wd0}{\box0}%
 }
 
-% 1: FontAwesome icon command 
-% 2: box size in pt 
-% 3: text
+% 1: FontAwesome icon command, e.g.: "\faLinkedIn"
+% 2: box size (in pt), e.g.: "12" 
+% 3: color, e.g.: "blue"
 \newcommand{\icon}[3]
 {%
     \vcenteredhbox{%
@@ -515,7 +515,7 @@
     \fancyhf{}
     \fancyhead{}
 
-    \fancyfoot[LE]{}
+    \fancyfoot[LE]{\small{\thepage}}
     \fancyfoot[RE]{}
     \fancyhead[C]{}
     \fancyfoot[LO]{}
