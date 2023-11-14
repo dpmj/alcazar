@@ -59,8 +59,11 @@
 
 \begingroup
 
-    % Greatly compress space used by TOC with less spacing, smaller font size and less 
-    \renewcommand{\baselinestretch}{0.7}\small
+    % Greatly compress space used by TOC, LOF and LOT
+    \renewcommand{\baselinestretch}{1}  % less spacing
+    \small  % smaller font size
+    \setlength{\parskip}{0mm}  % Paragraph skip 0mm
+
 
     % List of Contents
     {
@@ -81,8 +84,7 @@
         \addcontentsline{toc}{chapter}{List of tables}
     }
     
-    % List of Listings
-    % Seems that it does not work with multitoc
+    % List of Listings -- uncomment if necessary
     {
         % \listoflistings
         % \addcontentsline{toc}{chapter}{List of listings}
