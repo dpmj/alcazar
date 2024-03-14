@@ -24,3 +24,4 @@
 *.run.xml
 *.pygtex
 *.pygstyle
+*(busy)
