@@ -31,19 +31,27 @@
 
 ## Requirements
 
-- `biber` for the multi-bibliography support of `biblatex`. Also, it's nice.
-- `python 3` for the `minted` package.
+- `biber` for `biblatex`.
+- `python 3` and `pygments` for the `minted` package.
 
 
 ## Build
 
-You can build it with your favorite LaTeX frontend.
+### CLI, makefiles, etc.
 
+This project can be easily built using the following commands with these recommended parameters. The `-shell-escape' flag is required for the `minted' package.
+
+```bash
+$ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
+$ biber main
+$ makeglossaries main
+$ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
+$ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
+```
 
 ### Overleaf
 
-Works out-of the box, no need to configure anything. Simply download this repo as `.zip` and then upload the archive to Overleaf as a new project.
-
+Works out of the box, no configuration required. Simply download this repo as a `.zip` and then upload the archive to Overleaf as a new project.
 
 ### LaTeX Workshop extension for VS Code / Codium
 
@@ -66,7 +74,7 @@ If you are using the LaTeX Workshop extension by James Yu, you need to add the f
 }
 ```
 
-Also, edit the `pdflatex` entry as follows to include the `-shell-escape` argument, necessary for the `minted` package.
+Edit the `pdflatex` entry as follows to include the `-shell-escape` argument, necessary for the `minted` package.
 
 ```json
 {
@@ -83,7 +91,7 @@ Also, edit the `pdflatex` entry as follows to include the `-shell-escape` argume
 }
 ```
 
-Now add a new recipe, under `latex-workshop.latex.recipes` (In the UI: *Latex-workshop > Latex: Tools > Edit in settings.json*): : 
+Now add a new recipe, under `latex-workshop.latex.recipes` (In the UI: *Latex-workshop > Latex: Tools > Edit in settings.json*):
 
 ```json
 {
@@ -98,33 +106,12 @@ Now add a new recipe, under `latex-workshop.latex.recipes` (In the UI: *Latex-wo
 }
 ```
 
-And run the `alcazar` recipe while on a `.tex` file from the project. 
+And run the `alcazar' recipe on a `.tex' file from the project. 
 
-**Note:** If you constantly encounter a `makeglossaries` error saying that `main.aux` could not be found, set to `false` the setting `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` (In the UI, unmark *"Latex-workshop > Latex > Auto build > Clean and retry: Enabled"*)
-
-
-### Console
-
-This project can easily be built by using the following commands with these recommended parameters. As before, `-shell-escape` flag is needed for the `minted` package.
-
-```bash
-$ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
-$ biber main
-$ makeglossaries main
-$ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
-$ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
-```
+**Note:** If you keep getting a `makeglossaries` error saying that `main.aux` could not be found, set the `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` setting to `false` (in the UI, uncheck *"Latex-workshop > Latex > AutoBuild > Clean and retry: Enabled"*)
 
 
-### Requirements
-
-This project requires:
-
-- `biber` for the multi-bibliography support of `biblatex`.
-- `pygments` (and thus `python`) for the `minted` package.
-
-
-## Usage
+## File structure
 
 The file structure of Alcázar is simple and self-explanatory:
 
@@ -167,71 +154,15 @@ The file structure of Alcázar is simple and self-explanatory:
 ```
 
 - In `main.tex` you will find some variable definitions, fill them in according to your thesis and the document will update all occurrences automatically.
-- Fill in your details about the authors in the file `opening/about.tex`.
+- Fill in your author information in the `opening/about.tex` file.
 
 
 ## License
     
 This work is licensed under a
-[Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 
 ## Disclaimer
 
-This work is unrelated to any institution, and the references, logos and the like are merely an example of usage.
-
-
-## To-Do
-
-- [x] Opening
-    - [x] Cover
-    - [x] About the document
-    - [x] Abstract and keywords
-    - [x] Publications
-    - [x] Acknowledgements
-    - [x] Dedication
-    - [x] Tables of contents
-    - [x] Glossary
-        - [x] Example Entries
-- [x] Chapters
-    - [x] Example Text
-    - [x] Example Figures
-    - [x] Example Tables
-    - [x] Example Listings
-- [x] Bibliography
-    - [x] Example Citations
-- [x] Addendum
-    - [x] Example Text
-    - [x] Thanks
-
-
-## Style 
-
-- [x] Compress space used by citations (small, double column)
-- [x] Compress space used by glossary (small, double column)
-- [x] Choose default serif font - Libertinus
-- [x] Choose default sans-serif font - Open Sans (unused for now)
-- [x] Choose default monospace font - IBM Plex Mono
-- [x] Default font size: 11pt
-- [x] Page size: A4 paper
-- [x] Simple and compact chapter title style 
-- [x] Chapter number marker on the side margins
-- [x] Check footnote style
-- [ ] Change style of paragraph and subparagraph
-- [ ] Uniformize vertical skips on figures, subfigures, tables, listings, etc.
-
-
-    
-## Fixes
-
-- [ ] Inconsistent skips above and below floats, too much space sometimes.
-- [ ] Inconsistent skips above and below titles sometimes
-- [x] In listings, for some reason the comments of lots of `%` are bugged.
-- [X] Page style not consistent in opening
-
-
-## Known issues
-
-- For the two-column table of contents `minitoc` is used, which seems to be abandoned.
-
-
+This work is not affiliated with any institution, and the references, logos, and the like are merely examples of usage. Any third-party resources included in this repository are the property of their respective owners, and are provided for convenience only.
