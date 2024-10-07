@@ -34,7 +34,7 @@
 % \usepackage[default,regular,semibold]{sourceserifpro}  % A bit big and less compact, but easy on the eyes
 
 % Monospace font
-\usepackage{plex-mono}  
+\usepackage[scale = 0.9]{plex-mono}  
 
 % Sans-serif font
 \usepackage[defaultsans,scale=0.9]{opensans}
@@ -53,7 +53,7 @@
 % MATH
 
 \usepackage{amsmath}  % Math
-\usepackage{siunitx}  % International System units
+\usepackage[separate-uncertainty=true]{siunitx}  % International System units
 
 
 % GRAPHICS AND ICONS
@@ -89,6 +89,14 @@
 \usepackage{hyperref}
 \usepackage{xurl}  % eXtended url package
 \usepackage{nameref}  % get section names by label
+
+% LICENSE
+
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={4.0},
+]{doclicense}
 
 
 % APPENDIX
@@ -143,7 +151,7 @@
 % \usepackage[nonumberlist, acronym, toc, style=listhypergroup]{glossaries}  
 
 % Two-column glossary
-\usepackage[toc, style=mcoltreehypergroup, stylemods=mcols]{glossaries-extra}  
+\usepackage[toc, style=mcoltreehypergroup, stylemods=mcols, nonumberlist]{glossaries-extra}  
 
 \usepackage{glossary/glossary}  % Glossary file
 \makeglossaries

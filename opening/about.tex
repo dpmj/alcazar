@@ -13,7 +13,7 @@
 % https://github.com/dpmj/alcazar
 
 \newpage
-
+\pagestyle{empty}
 
 \clearpage
 \cleardoublepage
@@ -22,137 +22,73 @@
 \pagestyle{empty}
 
 \phantomsection
-\addcontentsline{toc}{chapter}{About this work}
+\addcontentsline{toc}{chapter}{About the authors}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ABOUT THE AUTHORS
 
+
+% \vspace*{\fill}
+
 \begingroup
 
-    \small
+    \footnotesize
     \setlength\tabcolsep{0pt}
     \renewcommand*{\arraystretch}{1}
     
     \noindent
-    \begin{tabular}{p{3.5cm} p{11.5cm}}
-        \vspace{0mm} \includegraphics[width=3cm]{opening/resources/about/kleiner.png} & \vspace{-0.5mm} {\large \bf \thesisAuthor} 
-        \hfill
+    \begin{tabular}{p{3cm} p{12cm}}
+        \vspace{0mm} \includegraphics[width=2.5cm]{opening/resources/about/coomer.png}
+        \newline
+        & \vspace{-0.5mm} {\normalsize \bf \thesisAuthor}
+        \hfill 
         \href{https://orcid.org/}{  % Link to your orcid
-            \icon{\faOrcid}{10}{orcid-green}
+            \icon{\faOrcid}{10}{black}
         }
         \href{https://www.linkedin.com/}{  % Link to your linkedin
-            \icon{\faLinkedinIn}{10}{linkedin-blue}
+            \icon{\faLinkedinIn}{10}{black}
         }
         \href{https://github.com/}{  % Link to your github
-            \icon{\faGithub}{10}{github-black}
+            \icon{\faGithub}{10}{black}
         }
-        % \href{https://twitter.com/}{  % Link to your twitter
-        %     \icon{\faTwitter}{10}{twitter-blue}
-        % }
         \href{mailto:example@domain.org}{  % Your E-mail
-            \icon{\faEnvelope}{10}{email-red}
+            \icon{\faEnvelope}{10}{black}
         }
         \href{https://t.me/}{  % Link to your telegram
-            \icon{\faTelegramPlane}{10}{telegram-blue}
-        }
-        \vspace{2mm}
-        \newline A short paragraph about you and how handsome and hard-working you are. Brag about your work, awards, publications and merits. The glory is yours! Congratulations. The Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus quis elit id sagittis. Cras tincidunt nisi at tellus luctus, et congue dolor posuere. Aliquam suscipit felis sit amet lacus ultrices aliquet. Sed sagittis ultrices nisi, vel elementum elit dignissim non. 
-    \end{tabular}
-    
-    \vspace{2mm}
-    
-    \noindent
-    \begin{tabular}{p{3.5cm} p{11.5cm}}
-        \vspace{0mm} \includegraphics[width=3cm]{opening/resources/about/coomer.png} & \vspace{-0.5mm} {\large \bf \thesisTutor} 
-        \hfill
-        \href{https://orcid.org/}{  % Link to your orcid
-            \icon{\faOrcid}{10}{orcid-green}
-        }
-        \href{https://www.linkedin.com/}{  % Link to your linkedin
-            \icon{\faLinkedinIn}{10}{linkedin-blue}
-        }
-        \href{https://github.com/}{  % Link to your github
-            \icon{\faGithub}{10}{github-black}
-        }
-        % \href{https://twitter.com/}{  % Link to your twitter
-        %     \icon{\faTwitter}{10}{twitter-blue}
-        % }
-        \href{mailto:example@domain.org}{  % Your E-mail
-            \icon{\faEnvelope}{10}{email-red}
-        }
-        \href{https://t.me/}{  % Link to your telegram
-            \icon{\faTelegramPlane}{10}{telegram-blue}
+            \icon{\faTelegramPlane}{10}{black}
         }
         \vspace{2mm} 
-        \newline What a big fish you've got yourself. Show off your tutor. Now that's a job well done. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus quis elit id sagittis. Cras tincidunt nisi at tellus luctus, et congue dolor posuere. Aliquam suscipit felis sit amet lacus ultrices aliquet. Sed sagittis ultrices nisi, vel elementum elit dignissim non. Fusce faucibus ex at massa ultrices elementum.
+        \newline Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     \end{tabular}
     
-\endgroup
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% how to cite this work
-
-% Listings workaround to include the background in broken lines
-
-% \begin{verbatimwrite}{cite.txt}
-% @mastersthesis{citeKey,
-%     author  = "(*@{\thesisAuthor}@*) and (*@{\thesisTutor}@*)",
-%     title   = "(*@{\thesisTitle}@*)",
-%     school  = "(*@{\thesisSchool}@*)",
-%     year    = "(*@{\thesisYear}@*)",
-%     month   = "(*@{\thesisMonth}@*)",
-%     address = "(*@{\thesisAddress}@*)"
-% }
-% \end{verbatimwrite}
-
-
-\begingroup
-
-\vspace*{\fill}
-
-\small
-\setlength\tabcolsep{0pt}
-\renewcommand*{\arraystretch}{1.2}
-{\noindent\large  Cite this work:}
-
-% \begin{mdframed}[backgroundcolor=listing-background,hidealllines=true]
-\vspace*{2mm}
-% \lstinputlisting[style=cite, nolol]{./cite.txt}
-
-\newwrite\tempfile
-\immediate\openout\tempfile=cite.txt
-\immediate\write\tempfile{%
-@mastersthesis{citeKey,^^J
-author  = "\thesisAuthor \space and \thesisTutor",^^J
-title   = "\thesisTitle",^^J
-school  = "\thesisSchool",^^J
-year    = "\thesisYear",^^J
-month   = "\thesisMonth",^^J
-address = "\thesisAddress",^^J
-type = "\thesisType"^^J
-}
-}
-\immediate\closeout\tempfile
-
-% Does not work because escapes are inside strings
-% \begin{minted}{bibtex}
-% @mastersthesis{citeKey,
-%     author  = "¢{\thesisAuthor}¢ and ¢{\thesisTutor}¢",
-%     title   = "¢{\thesisTitle}¢",
-%     school  = "¢{\thesisSchool}¢",
-%     year    = "¢{\thesisYear}¢",
-%     month   = "¢{\thesisMonth}¢",
-%     address = "¢{\thesisAddress}¢"
-% }
-% \end{minted}
-
-\inputminted[style=algol_nu]{bibtex}{./cite.txt}
-% \end{mdframed}
-
+    \vspace{5mm}
+    
+    \noindent
+    \begin{tabular}{p{3cm} p{12cm}}
+        \vspace{0mm} \includegraphics[width=2.5cm]{opening/resources/about/kleiner.png} & \vspace{-0.5mm} {\normalsize \bf \thesisTutor} 
+        \hfill 
+        \href{https://orcid.org/}{  % Link to your orcid
+            \icon{\faOrcid}{10}{black}
+        }
+        \href{https://www.linkedin.com/}{  % Link to your linkedin
+            \icon{\faLinkedinIn}{10}{black}
+        }
+        \href{https://github.com/}{  % Link to your github
+            \icon{\faGithub}{10}{github-black}
+        }
+        \href{mailto:example@domain.org}{  % Your E-mail
+            \icon{\faEnvelope}{10}{black}
+        }
+        \href{https://t.me/}{  % Link to your telegram
+            \icon{\faTelegramPlane}{10}{black}
+        }
+        \vspace{2mm} 
+        \newline Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    \end{tabular}
+    
+    \vspace{10mm}
 
 \endgroup
+
+% \vspace*{\fill}

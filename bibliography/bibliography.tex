@@ -18,17 +18,14 @@
 
 \pagestyle{biblio}
 
-
-
-
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}
 
 {
-    \renewcommand{\UrlFont}{\ttfamily\scriptsize}  
+    \renewcommand{\UrlFont}{\ttfamily\fontsize{9}{9}\selectfont}  
     % Smaller URLs (USE FOR IBM PLEX MONO ONLY)
     
-    \small  % Compress space used by bibliography
+    \footnotesize  % Compress space used by bibliography
 
     % For bibtex bibliography
     % \bibliographystyle{ieeetr}
@@ -37,7 +34,8 @@
     % Multi-column bibliography 
     % For biblatex bibliography
     \begin{multicols}{2}[\printbibheading]
-        \AtNextBibliography{\small \pagestyle{biblio}}
+        \renewcommand{\baselinestretch}{0.95}
+        \AtNextBibliography{\footnotesize \pagestyle{biblio}}
         \printbibliography[heading=none]  
     \end{multicols}
 

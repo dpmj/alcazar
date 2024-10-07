@@ -57,13 +57,30 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ARTICLES
 
-@article{IEEE315,  
-    author={{Institute of Electrical and Electronics Engineers (IEEE)}},  
-    journal={IEEE Std 315-1975 (Reaffirmed 1993)},   
-    title={{IEEE Standard American National Standard Canadian Standard Graphic Symbols for Electrical and Electronics Diagrams (Including Reference Designation Letters)}},   
-    year={1993},  
-    pages={i-244},  
-    doi={10.1109/IEEESTD.1993.93397}
+@article{cubesat-impact-astronomy,
+  title={Impact of satellite constellations on optical astronomy and recommendations toward mitigations},
+  author={Walker, Constance and Hall, Jeffrey and Allen, Lori and Green, Richard and Seitzer, Patrick and Tyson, Tony and Bauer, Amanda and Krafton, Kelsie and Lowenthal, James and Parriott, Joel and others},
+  journal={Bulletin of the American Astronomical Society},
+  volume={52},
+  number={2},
+  year={2020}
+}
+
+@article{lora-phy-understanding,
+    author = {Xu, Zhenqiang and Tong, Shuai and Xie, Pengjin and Wang, Jiliang},
+    title = {From Demodulation to Decoding: Toward Complete {LoRa PHY} Understanding and Implementation},
+    year = {2023},
+    issue_date = {November 2022},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {18},
+    number = {4},
+    issn = {1550-4859},
+    doi = {10.1145/3546869},
+    journal = {ACM Trans. Sen. Netw.},
+    month = {1},
+    articleno = {64},
+    numpages = {27},
 }
 
 
@@ -71,43 +88,71 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BOOKS
 
-@inbook{SOFTWARE_ENGINEERING_9,
-    title       = {{Software Engineering}},
-    author      = {Ian Sommerville},
-    edition     = {9},
-    publisher   = {Pearson},
-    year        = {2011},
-    isbn        = {978-0-13-703515-1},
-    chapter     = {4: {Requirements} engineering},
-    pages       = {83-117}
+@inbook{nasa-soa2023-avionics,
+    title = {State-of-the-Art Small Spacecraft Technology},
+    chapter = {8, Small Spacecraft Avionics},
+    pages = {207--223},
+    year = {2023},
+    author = {{National Aeronautics and Space Administration}},
+    note = {NASA/TP-2022-0018058},
+    address = {Ames Research Center, California, USA},
+    month = {1}
 }
 
-@book{SOLDERDEFECTS,
-    title={Digital Communications: Fundamentals and Applications},
-    author={Christopher Nash and Dr. Ronald C. Lasky},
-    edition={},
-    publisher={BR Publishing, Inc.},
-    year={2004},
-    isbn={978-1-7370232-7-2},
+@incollection{book-product-devel,
+    title = {Chapter 16 - Product and process development},
+    editor = {D.R. Kiran},
+    booktitle = {Production Planning and Control},
+    publisher = {Butterworth-Heinemann},
+    pages = {223-246},
+    year = {2019},
+    isbn = {978-0-12-818364-9},
+    doi = {10.1016/B978-0-12-818364-9.00016-0},
+    author = {D.R. Kiran},
 }
 
+@book{maral-satcoms, 
+    edition={3rd ed.}, 
+    title={Satellite communications systems: systems, techniques and technology}, 
+    ISBN={0471971669}, 
+    publisher={John Wiley \& Sons}, 
+    author={Maral, Gérard and Bousquet, Michel},
+    year={1998}, 
+}
 
+@book{solder-defects,
+	title={The Printed Circuit Assembler's Guide to solder defects},
+	author={Christopher Nash and Ronald C. Lasky},
+	publisher={BR Publishing, Inc.},
+	year={2021},
+	isbn={978-1-7370232-7-2},
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % LEGISLATION
 
+@misc{un-2030-agenda,
+  title        = {{Transforming our world: the 2030 Agenda for Sustainable Development}},
+  year         = {2015},
+  month        = {10},
+  number       = {A/RES/70/1},
+  type         = {UN General Assembly Resolution},
+  note         = {Doc. ID 15-16301 (E)},
+  url          = {https://undocs.org/en/A/RES/70/1},
+}
+
 @misc{europa_rohs,
     title={{Directive 2011/65/EU of the European Parliament and of the Council of 8 June 2011 on the restriction of the use of certain hazardous substances in electrical and electronic equipment}},
-    author={},
     year={2011},
-    note = {Document number: 02011L0065-20211101. \url{http://data.europa.eu/eli/dir/2011/65/2021-11-01} Accessed: June 2022}
+    note = {Doc. ID 02011L0065-20211101},
+    url = {http://data.europa.eu/eli/dir/2011/65/2021-11-01},
 }
 
 @misc{europa_ce,
-    title={{Commission Notice - The ‘Blue Guide’ on the implementation of EU products rules 2016 (Text with EEA relevance)}},
-    author={},
+    title={{Commission Notice - The Blue Guide on the implementation of EU products rules 2016 (Text with EEA relevance)}},
     year={2016},
-    note = {Document number: 52016XC0726(02). \url{https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52016XC0726(02)} Accessed: June 2022}
+    note = {Doc. ID 52016XC0726(02)},
+    url          = {https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52016XC0726(02)},
 }
 
 
@@ -115,83 +160,125 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PROCEEDINGS
 
-@inproceedings{proceedings_piezo,
-    author={Wenbin, Bai and Kai, Li and Qingqing, Gong and YaJun, Ren and Ze, Niu},
-    booktitle={{2020 IEEE 4th International Conference on Frontiers of Sensors Technologies (ICFST)}}, 
-    title={Analysis and Design of Piezoelectric Sensor Conditioning Circuit}, 
-    year={2020},
-    volume={},
-    number={},
-    pages={34-38},
-    doi={10.1109/ICFST51577.2020.9294764}
+@InProceedings{grounding-schemes-sats,
+    author="Srinivas, P.
+    and Rahasyam, Kumar
+    and Beebamma, N.
+    and Sastry, PSR Srinivasa",
+    editor="Sastry, PSR Srinivasa
+    and CV, Jiji
+    and Raghavamurthy, D.V.A.
+    and Rao, Samba Siva",
+    title="Grounding Schemes for Small Satellite Systems",
+    booktitle="Advances in Small Satellite Technologies",
+    year="2020",
+    publisher="Springer Singapore",
+    address="Singapore",
+    pages="273--281",
+    isbn="978-981-15-1724-2"
 }
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DATASHEETS AND REFERENCE MANUALS
 
-@manual{ESP32_DATASHEET,
-    title       = {{ESP32} Series datasheet},
-    author      = {{Espressif Systems Co. Ltd.}},
-    year        = {2021},
-    note        = {Version 3.7.  \url{https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf} Accessed: November 2021}
+@manual{ds-sx1276,
+    title       = {{SX1276/77/78/79 LoRa transceiver datasheet}},
+    author      = {{Semtech Corp.}},
+    year        = {2020},
+    month       = {5},
+    url         = {https://www.semtech.com/products/wireless-rf/lora-connect/sx1276},
+    note        = {Rev. 7. Doc. ID DS.SX1276-7-8-9.W.APP. Accessed: Apr 2024}
 }
 
-@manual{ESP32_HARDWARE_DESIGN_GUIDELINES,
-    title       = {{ESP32} Hardware Design Guidelines},
-    author      = {{Espressif Systems Co. Ltd.}},
-    year        = {2021},
-    note        = {Version 3.2.  \url{https://www.espressif.com/sites/default/files/documentation/esp32_hardware_design_guidelines_en.pdf} Accessed: November 2021}
+@manual{ds-sx1302,
+    title       = {{SX1302 LoRa baseband processor datasheet}},
+    author      = {{Semtech Corp.}},
+    year        = {2020},
+    month       = {10},
+    url         = {https://www.semtech.com/products/wireless-rf/lora-core/sx1302},
+    note        = {Rev. 1.2. Doc. ID DS.SX1302.W.APP. Accessed: Apr 2024}
 }
 
-@manual{ESP32_TECHNICAL_REFERENCE_MANUAL,
-    title       = {{ESP32} Technical Reference Manual},
-    author      = {{Espressif Systems Co. Ltd.}},
-    year        = {2021},
-    note        = {Version 4.6.  \url{https://www.espressif.com/sites/default/files/documentation/esp32_technical_reference_manual_en.pdf} Accessed: November 2021}
+@techreport{stm32-rm0394,
+    type = {Ref. Manual},
+    year = {2018},
+    month = {10},
+    title = {{RM0394 STM32L41/42/43/44/45/46 advanced ARM-based 32-bit MCUs}},
+    institution = {{ST Microelectronics Inc.}},
+    note = {Rev 4. Accessed: Mar. 2024},
+    url = {https://www.st.com/resource/en/reference_manual/rm0394-stm32l41xxx42xxx43xxx44xxx45xxx46xxx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf}
 }
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% DOCUMENTATION
+% DOCUMENTATION, REPOSITORIES, ETC
 
-@manual{ESP32_PROGRAMMING,
-    title       = {{ESP-IDF} documentation/programming guide.},
-    author      = {{Espressif Systems Co. Ltd.}},
-    year        = {2022},
-    note        = {\url{https://docs.espressif.com/projects/esp-idf/en/latest/esp32/} Accessed: February 2022}
+@techreport{github_celestial,
+    type = {Repository},
+    title = {{Celestial {Altium} library}},
+    institution = {{Celestial Ltd.}},
+    note = {Accessed: Mar. 2024},
+    url = {https://github.com/issus/altium-library}
 }
 
-@misc{github_LVGL,
-    title           = {{The LVGL (Light and Versatile Graphics Library) repository}},
-    author          = {@lvgl (LVGL group)},
-    note            = {\url{https://github.com/Bodmer/TFT_eSPI} Accessed: March 2022}
+@techreport{gitlab_satnogs,
+    type = {Repository},
+    title = {{SatNOGS} COMMS hardware},
+    institution = {{LibreSpace Foundation.}},
+    note = {Accessed: Sep. 2024},
+    url = {https://gitlab.com/librespacefoundation/satnogs-comms/satnogs-comms-hardware}
 }
 
-@misc{github_celestial,
-    title           = {Celestial {Altium} library repository},
-    author          = {@issus},
-    note            = {\url{https://github.com/issus/altium-library} Accessed: April 2022}
+@techreport{hal_sx1302,
+    type = {Repository},
+    title = {{SX1302} Hardware Abstraction Layer},
+    institution = {{Semtech Inc.}},
+    note = {Accessed: Mar. 2024},
+    url = {https://github.com/Lora-net/sx1302_hal}
 }
 
-@misc{esp32_devkit_reference_design,
-    title           = {{ESP32-DevKitC-V4 Reference Design r2.1}},
-    author          = {{Espressif Systems Co. Ltd.}},
-    note            = {\url{https://www.espressif.com/sites/default/files/documentation/esp32-devkitc-v4_reference_design.zip}  Accessed: April 2022}
+@techreport{lora-hw-e539v03a,
+    type = {Ref. des.},
+    year = {2021},
+    month = {1},
+    title = {{SX1302/03 CoreCell ev. mod., SX1250, EU868}},
+    institution = {{Semtech Corp.}},
+    note = {SX1302CSS868GW1. PCB E539V03A. Ver V3a}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Application notes
+
+@techreport{an1368-analog-ferrite,
+    type = {App. Note},
+    year = {2010},
+    author = {Jefferson Eco and Jefferson Eco},
+    title = {AN-1368 Ferrite bead Demystified},
+    institution = {{Analog Devices Inc.}},
+    url = {https://www.analog.com/media/en/analog-dialogue/volume-50/number-1/articles/ferrite-beads-demystified.pdf},
+    note = {Accessed: Aug. 2024}
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% USER'S MANUALS
+% Standards, regulations
 
-@manual{HAMEG_USER_MANUAL,
-    title       = {{HAMEG HMO1022/HMO1024 mixed-signal digital oscilloscope user's manual}},
-    author      = {{HAMEG Instruments GmbH}},
-    year        = {},
-    note        = {\url{https://cdn.rohde-schwarz.com/hameg-archive/HAMEG_DB_EN_HMO1022_1024.pdf} Accessed: July 2021}
+@techreport{ecss-e-st-50-05c,
+    type = {Std.},
+    month = {10},
+    year = {2011},
+    title = {{ECSS-E-ST-50-05C Rev.2. Space engineering. Radio frequency and modulation}},
+    volume = {1},
+    address = {Noordwijk, The Netherlands},
+    institution = {ESA-ESTEC, Requirements and Standards Division}
 }
 
-
+@techreport{itu-r-reg-articles,
+    type = {Regulation},
+    year = {2020},
+    title = {Radio regulations. Articles},
+    volume = {1},
+    institution = {International Telecommunication Union, Radiocommunication Sector},
+    url = {https://web.archive.org/web/20240724140349/https://www.itu.int/pub/R-REG-RR-2020},
+}

@@ -12,100 +12,180 @@
 % Free and Open-Source template for academic works
 % https://github.com/dpmj/alcazar
 
-% This document includes various examples of acronyms for a glossary.
+% This document includes arious examples of acronyms for a glossary.
 
-
+% FORMAT:
+% \newglossaryentry{}{name={}, text={}, plural={}, description={}}
 
 % -----------------------------------------------------------------------------
 % A
 
-\newglossaryentry{adiabatic}{name={Adiabatic process},text={adiabatic},description={A kind of thermodynamic process in which the thermodynamic system does not exchange heat or mass with its surrounding environment}}
+\newglossaryentry{adcs}{name={ADCS}, description={Attitude Determination and Control System.}}
 
-\newglossaryentry{antenna}{name={Antenna},text={antenna},plural={antennae},description={A metallic structure that acts as an interface between radiated waves propagating through space and electronic circuits. Antennas can receive and/or transmit radio-frequency electromagnetic waves} }
+\newglossaryentry{ai}{name={AI},text={AI},description={Artificial Intelligence.}}
+
+\newglossaryentry{awgn}{name={AWGN},text={AWGN},description={Additie White Gaussian Noise.}}
+
+\newglossaryentry{antenna}{name={Antenna},text={antenna},plural={antennae},description={A metallic structure that acts as an interface between radiated waves propagating through space and electronic circuits. Antennas can receive and/or transmit radio-frequency electromagnetic waves.}}
 
 
 % -----------------------------------------------------------------------------
 % B
 
-\newglossaryentry{bypass_cap}{name={Bypass capacitor}, plural={bypass capacitors}, description={A synonym for ``\glsname{decoupling_cap}''}}
+\newglossaryentry{bom}{name={BOM}, description={Bill Of Materials.}}
 
-\newglossaryentry{BJT}{name={BJT}, description={\textbf{(Bipolar-Junction Transistor)} A type of semiconductor-based \glsname{transistor} that uses electrons and electron holes as carriers. The current flow between the ``collector'' and the ``emitter'' terminals is controlled by a small current injected at the ``base'' terminal }}
+\newglossaryentry{bpf}{name={BPF}, description={Band Pass Filter.}}
+
+\newglossaryentry{ber}{name={BER}, text={BER}, description={Bit Error Rate.}}
+
+\newglossaryentry{bypasscap}{name={Bypass capacitor}, plural={bypass capacitors}, description={A synonym for ``\glsname{decoupling_cap}''.}}
 
 
 % -----------------------------------------------------------------------------
 % C
 
-\newglossaryentry{coupling_cap}{name={Coupling capacitor}, text={coupling capacitor}, plural={coupling capacitors}, description={A capacitor used to couple an AC signal from one circuit phase to another, blocking the DC component. Functionally opposite to a \glsname{decoupling_cap}}}
+\newglossaryentry{cpu}{name={CPU}, description={Central Processing Unit.}}
 
-\newglossaryentry{conflictresource}{name={Conflict resource}, text={conflict resource}, description={ Natural resources whose systematic exploitation and trade in a context of conflict contribute to, benefit from or result in the commission of serious violations of human rights, violations of international humanitarian law or violations amounting to crimes under international law}}
+\newglossaryentry{cskb}{name={CSKB}, description={CubeSat Kit Bus.}}
 
-\newglossaryentry{choke}{name={Choke}, text={choke}, description={An inductor specifically used to block high-frequency AC while passing low-frequency signals and DC }}
+\newglossaryentry{cots}{name={COTS}, description={Commercial Off-The-Shelf.}}
 
-\newglossaryentry{C}{name=C, description={\textbf{(C programming language)} A high-level, cross-platform, compiled, imperative, structured, functional, procedural, static-type and general-purpose programming language with mechanisms to provide access to low-level functionality such as memory management }}
+\newglossaryentry{can}{name={CAN}, description={Controller Area Network.}}
 
-\newglossaryentry{circuittopology}{name={Circuit topology}, plural={circuit topologies}, description={The interconnections between the circuit components. Topology is not concerned with the physical layout of parts in a circuit, nor with their positions on a circuit diagram, but only what connections exist between the components. Different values or ratings of the parts are considered as being the same topology}}
+\newglossaryentry{cr}{name={CR}, description={Coding Rate.}}
 
+\newglossaryentry{crc}{name={CRC}, description={Cyclic Redundancy Check.}}
+
+\newglossaryentry{cnr}{name={CNR}, description={Carrier-to-Noise Ratio.}}
+
+\newglossaryentry{cds}{name={CDS}, description={CubeSat Design Specification.}}
+
+\newglossaryentry{css}{name={CSS}, description={Chirp Spread Spectrum.}}
+
+\newglossaryentry{cubesat}{name={CubeSat}, text={CubeSat}, plural={CubeSats}, description={A type of \glsname{microsat} or \glsname{nanosat}, composed of one or more standard cubic units of 10 cm side.}}
+
+\newglossaryentry{couplingcap}{name={Coupling capacitor}, text={coupling capacitor}, plural={coupling capacitors}, description={A capacitor used to couple an AC signal from one circuit phase to another, blocking the DC component. Functionally opposite to a \glsname{decoupling_cap}.}}
+
+\newglossaryentry{conflictresource}{name={Conflict resource}, text={conflict resource}, description={Natural resources whose systematic exploitation and trade in a context of conflict contribute to, benefit from or result in violations of human rights and international law.}}
+
+\newglossaryentry{choke}{name={Choke}, text={choke}, description={An inductor specifically used to block high-frequency AC while passing low-frequency signals and DC.}}
+
+\newglossaryentry{cad}{name={CAD}, plural={CAD}, description={Computer-Aided Design.}}
+
+\newglossaryentry{chatbot}{name={ChatBot}, text={chatbot}, description={A software designed to simulate human conversation through text or voice interactions.}}
 
 % -----------------------------------------------------------------------------
 % D
 
-\newglossaryentry{decoupling_cap}{name={Decoupling capacitor}, text={decoupling capacitor}, plural={decoupling capacitors}, description={A decoupling capacitor removes unwanted AC components (\glsname{noise} and \glsname{ripple}) from a DC signal. Usually located on the power input pins of an active device, it's a common and effective technique for noise filtering on power traces. It provides a charge reserve physically near to the component, which supplies energy to it in case of an irregular or pulsed power consumption, thus preventing the supply voltage from decaying}}
+\newglossaryentry{drc}{name={DRC},  description={Design Rule Check.}}
 
-\newglossaryentry{differential_pair}{name={Differential Pair}, text={differential pair}, plural={differential pairs}, description={A pair of parallel conductors of identical impedance carrying differential signals, which are two opposite, complementary signals. The receiving circuit responds to the difference between the two signals. This technique is used for example in high-fidelity audio and high-speed digital lines, with many advantages such as improving signal integrity, noise rejection and equalizing the time of arrival of delicate signals}} 
+\newglossaryentry{dft}{name={DFT}, text={DFT}, description={Discrete Fourier Transform.}}
 
-\newglossaryentry{diode}{name={Diode}, text={diode}, plural={diodes}, description={An electronic component formed by a P-N semiconductor junction with two terminals (``anode'' and ``cathode''). It has low resistance in the {\it forward} direction (thus conducting current), and high resistance in the {\it reverse} direction }} 
+\newglossaryentry{decoupling_cap}{name={Decoupling capacitor}, text={decoupling capacitor}, plural={decoupling capacitors}, description={Usually located on the power input pins of an active device, it is a capacitor that provides a charge reserve physically near a component, which supplies energy to it in case of pulsed power consumption, thus preventing the supply voltage from decaying. It is also used to remove unwanted AC components (noise and ripple) from a DC signal.}}
 
+\newglossaryentry{differential_pair}{name={Differential Pair}, text={differential pair}, plural={differential pairs}, description={A pair of parallel conductors of identical impedance carrying differential signals, which are two opposite, complementary signals.}} 
 
 % -----------------------------------------------------------------------------
 % E
 
-\newglossaryentry{EMC}{name={EMC}, text={Electro-Magnetic Compatibility}, description={\textbf{(Electro-Magnetic Compatibility)} the capability of electrical and electronic systems, equipment and devices to operate in their intended electromagnetic environment within a defined margin of safety, and at design levels of performance without suffering or causing unacceptable degradation as a result of \glsname{EMI}}}
+\newglossaryentry{esr}{name={ESR}, description={Equivalent Series Resistance.}}
 
-\newglossaryentry{EMI}{name={EMI}, text={Electro-Magnetic Interference}, description={\textbf{(Electro-Magnetic Interference)} the process by disruptive electromagnetic energy is transmitted from one electronic device to another, via radiated or conducted paths (or both)}}
 
-\newglossaryentry{embedded}{name={Embedded System}, text={embedded}, description={Systems which offers specialized and restricted functions. Their software and hardware resources are limited, and they are sized to your application. There are usually real-time constraints}}
+\newglossaryentry{esa}{name={ESA}, description={European Space Agency.}}
 
+\newglossaryentry{ecss}{name={ECSS}, description={European Cooperation for Space Standardization.}}
+
+
+\newglossaryentry{enig}{name={ENIG}, description={Electroless Nickel Immersion Gold.}}
+
+\newglossaryentry{esd}{name={ESD}, description={Electrostatic discharge.}}
+
+\newglossaryentry{epfd}{name={EPFD}, text={EPFD}, description={Equivalent Power Flux Density.}}
+
+\newglossaryentry{emc}{name={EMC}, description={Electro-Magnetic Compatibility. The capability of electronic systems to operate in their intended electromagnetic environment within a defined margin of safety without suffering or causing unacceptable degradation as a result of \glsname{emi}.}}
+
+\newglossaryentry{emi}{name={EMI}, description={Electro-Magnetic Interference. The process by disruptive electromagnetic energy is transmitted from one electronic device to another, via radiated or conducted paths.}}
+
+\newglossaryentry{embedded}{name={Embedded System}, text={embedded}, plural={embedded systems}, description={Electronic systems whose resources are limited and are sized for an specialized and restricted application.}}
+
+\newglossaryentry{edp}{name={EDP}, description={Engineering Desing Process}}
+
+\newglossaryentry{eda}{name={EDA}, description={Electronic Design Automation.}}
+
+\newglossaryentry{eps}{name={EPS}, description={Electrical Power System.}}
+
+\newglossaryentry{egse}{name={EGSE}, description={Electrical Ground Support Equipment.}}
 
 % -----------------------------------------------------------------------------
 % F
 
-\newglossaryentry{FR-4}{name={FR-4}, text={FR-4}, description={\textbf{(Flame Retardant 4)} A designation for fiberglass-reinforced epoxy laminate material that it is self-extinguishing. Commonly used as an electrical insulator for electronic devices and \glsname{PCB} fabrication for its fire resistance, nearly zero water absorption and high mechanical strength}}
 
-\newglossaryentry{footprint}{name={Footprint}, text={footprint}, plural={footprints}, description={A synonym for \glsname{landpattern}, is the arrangement of pads used to physically and electrically attach a component to a \glsname{PCB} }}
+\newglossaryentry{fpu}{name={FPU}, description={Floating Point Unit.}}
 
-\newglossaryentry{fiducial}{name={Fiducial marks}, text={fiducial}, plural={fiducials}, description={On a \glsname{PCB}, fiducial marks are pads which act as reference points for \glsname{stencil} alignment, computer vision automated component placement by \glsname{pickandplace} machines and optical inspections systems. To achieve the best precision, three should be placed as far apart as possible}}
+\newglossaryentry{fec}{name={FEC}, text={FEC}, description={Forward Error Correction}}
 
-\newglossaryentry{ferritebead}{name={Ferrite Bead}, description={A type of \glsname{choke} made of ferritic material that \glsname{filter} high-frequency AC and \glsname{noise} in a circuit}}
+\newglossaryentry{fft}{name={FFT}, text={FFT}, description={Fast Fourier Transform}}
 
-\newglossaryentry{form_factor}{name={Form factor}, text={form factor}, description={The size and shape of a \glsname{PCB}. Aspects such as the chassis, mounting schemes and standards are taken into consideration for defining a board form factor}}
+\newglossaryentry{fscm}{name={FSCM}, text={FSCM}, description={Frequency Shift Chirp Modulation}}
+
+\newglossaryentry{fspl}{name={FSPL}, text={FSPL}, description={Free Space Path Losses}}
+
+\newglossaryentry{fr4}{name={FR-4}, text={FR-4}, description={Flame Retardant 4. Fiberglass-reinforced self-extinguishing epoxy laminate. Used as an insulator for \glsname{pcb}s for its fire resistance, nearly zero water absorption and high mechanical strength}}
+
+\newglossaryentry{footprint}{name={Footprint}, text={footprint}, plural={footprints}, description={The arrangement of pads used to attach a component to a \glsname{pcb}.}}
+
+\newglossaryentry{fiducial}{name={Fiducial marks}, text={fiducial}, plural={fiducials}, description={Pads which act as reference points for \glsname{stencil} alignment, computer vision automated component placement by \glsname{pickandplace} machines and optical inspections systems.}}
+
+\newglossaryentry{ferritebead}{name={Ferrite Bead}, description={A type of \glsname{choke} made of ferritic material that \glsname{filter} high-frequency AC and \glsname{noise} in a circuit.}}
+
+\newglossaryentry{formfactor}{name={Form factor}, text={form factor}, description={The size and shape of a \glsname{pcb}. The chassis, mounting hardware and standards are taken into account for defining a form factor.}}
 
 
 % -----------------------------------------------------------------------------
 % G
 
-\newglossaryentry{GNU}{name={GNU}, description={\textbf{(\glsname{GNU}'s Not Unix!)}}}
+\newglossaryentry{gateway}{name={Gateway}, text={gateway}, plural={gateways}, description={A network device that acts as a bridge between different networks and provide interoperability between different network architectures.}}
 
-\newglossaryentry{GPIB}{name={GPIB}, description={\textbf{(General Purpose Interface Bus)} A multi-master interface bus specification, based on the IEEE-488.2 standard. The bus is meant for parallel, short-range digital communications. Originally developed in the 1960s by Hewlett-Packard as HP Interface Bus(HP-IB), it's very common among old electronic instrumentation. }}
+\newglossaryentry{gnss}{name={GNSS}, description={Global Navigation Satellite System.}}
 
+\newglossaryentry{GNU}{name={GNU}, description={\glsname{GNU}'s Not Unix!}}
+
+\newglossaryentry{gpio}{name={GPIO}, plural={GPIOs}, description={General-Purpose Input/Output.}}
+
+\newglossaryentry{gs}{name={GS}, description={Ground Station}}
 
 % -----------------------------------------------------------------------------
 % H
 
+\newglossaryentry{hal}{name={HAL}, description={Hardware Abstraction Layer.}}
 
 % -----------------------------------------------------------------------------
 % I
 
-\newglossaryentry{isotropic}{name={Isotropic material}, text={isotropic}, description={A material whose mechanical and thermal properties are the same in all directions}}
+\newglossaryentry{i2c}{name={I2C}, description={Inter-Integrated Circuit}}
 
-\newglossaryentry{IPython}{name={IPython}, description={\textbf{(Interactive Python)} is a command shell for originally developed for \glsname{Python} (but nowdays it supports many other programming languages). It offers an interactive shells, debugging, media support, a browser-based notebook interface and parallel computing.}}
+\newglossaryentry{ic}{name={IC}, text={IC}, plural={ICs}, description={Integrated Circuits}}
 
-\newglossaryentry{IC}{name={IC},text={Integrated Circuit}, plural={Integrated Circuits}, description={\textbf{(Integrated Circuit)} A monolithic set of electronic circuits integrated onto a small flat piece of semiconductor material, usually silicon}}
+\newglossaryentry{itu}{name={ITU}, text={ITU}, plural={ITU}, description={International Telecommunication Union}}
 
+\newglossaryentry{itu-r}{name={ITU-R}, text={ITU-R}, plural={ITU-R}, description={\glsname{itu} Radiocommunication Sector}}
+
+\newglossaryentry{itu-rr}{name={ITU/RR}, text={ITU/RR}, plural={ITU/RR}, description={\glsname{itu} Radio Regulations}}
+
+\newglossaryentry{isa}{name={ISA}, text={ISA}, plural={ISA}, description={Industry Standard Architecture}}
+
+\newglossaryentry{IC}{name={IC}, plural={ICs}, description={Integrated Circuit. A monolithic set of electronic circuits integrated onto a small flat piece of semiconductor.}}
+
+\newglossaryentry{ism}{name={ISM}, text={ISM}, plural={ISM}, description={Industrial, Scientific and Medical.}}
+
+\newglossaryentry{iot}{name={IoT}, text={IoT}, plural={IoT}, description={Internet of Things.}}
 
 % -----------------------------------------------------------------------------
 % J
 
-\newglossaryentry{jupyter}{name={Jupyter Lab}, description={A web-based interactive development environment for notebooks, code, and data. It an open, flexible environment with support for extensions. Jupyter supports multiple programming languages, but the main one is \glsname{Python}, which uses \glsname{IPython} as a interpreter and kernel }}
+\newglossaryentry{jaxa}{name={JAXA}, description={Japan Aerospace Exploration Agency.}}
+
+\newglossaryentry{jtag}{name={JTAG}, description={Joint Test Action Group.}}
 
 
 % -----------------------------------------------------------------------------
@@ -115,31 +195,66 @@
 % -----------------------------------------------------------------------------
 % L
 
-\newglossaryentry{lead}{name={Lead}, text={lead}, plural={leads}, description={Can be referred to: \\1. The chemical element with the symbol \textit{Pb}, and atomic number 82. It is a heavy metal, very dense, malleable and with a relatively low melting point. It is also a toxic substance.\\2. A length of rigid wire designed to electrically connect two spots }}
 
-\newglossaryentry{linux}{name={GNU/Linux}, text={GNU/Linux}, description={A family of \glsname{open_source} \glsname{unix}-like OSes (called {\it ``distributions''}) based on the Linux kernel and accompanied by \glsname{GNU}'s software and libraries}}
+\newglossaryentry{lpf}{name={LPF}, description={Low Pass Filter.}}
 
-\newglossaryentry{landpattern}{name={Land pattern}, description={The arrangement of pads used to physically and electrically attach a component to a \glsname{PCB} }}
+\newglossaryentry{ldro}{name={LDRO}, text={LDRO}, description={Low Data Rate Optimization.}}
 
-\newglossaryentry{LED}{name={LED}, description={\textbf{(Light-Emitting Diode)} A semiconductor \glsname{diode} that emits visible light when current flows through it. Photons are released by the recombination of electrons with electron holes. The color of the light is determined by the amount of energy that electrons require for crossing the band gap of the semiconductor }}
+
+\newglossaryentry{los}{name={LoS}, description={Line of Sight.}}
+
+\newglossaryentry{ldo}{name={LDO}, description={Low-DropOut regulator.}}
+
+\newglossaryentry{lna}{name={LNA}, text={LNA}, plural={LNAs}, description={Low-Noise Amplifier.}}
+
+\newglossaryentry{linkbudget}{name={Link Budget}, text={link budget}, plural={link budget}, description={A feasibility analysis of a communication link to evaluate reliable data transmission between two points. It accounts for all power gains and losses from the transmitter, through the medium, to the receiver.}}
+
+\newglossaryentry{leo}{name={LEO}, text={LEO}, plural={LEO}, description={Low-Earth Orbit.}}
+
+\newglossaryentry{lora}{name={LoRa}, description={Long Range. A proprietary \glsname{lpwan} technology designed by Semtech Corp. for wireless communication over long distances.}}
+
+\newglossaryentry{lpwan}{name={LPWAN}, description={Low-Power Wide-Area Network.}}
+
+\newglossaryentry{lorawan}{name={LoRaWAN}, text={LoRaWAN}, plural={LoRaWAN}, description={A communication protocol and system architecture designed by Semtech Corp. for \glsname{iot} devices built on top of \glsname{lora}.}}
+
+\newglossaryentry{linux}{name={GNU/Linux}, text={GNU/Linux}, description={A family of \glsname{opensource} \glsname{unix}-like OSes (called {\it ``distributions''}) based on the Linux kernel and accompanied by \glsname{GNU}'s software and libraries.}}
+
+\newglossaryentry{LED}{name={LED}, description={Light-Emitting Diode.}}
 
 
 % -----------------------------------------------------------------------------
 % M
 
-\newglossaryentry{microwave}{name={Microwaves}, text={microwave}, plural={microwaves}, description={The name given to electromagnetic waves with frequencies between 300 MHz and 300 GHz. In this range, the wavelengths vary between one meter and one millimeter, respectively}}
+\newglossaryentry{mcu}{name={MCU}, description={\glsname{microcontroller} unit.}}
 
-\newglossaryentry{microcontroller}{name={Microcontroller}, text={microcontroller}, plural={microcontrollers}, description={A standalone computer which contains one or more CPUs or cores along with memory and peripherals on a single \glsname{IC}. Is similar to, but less sophisticated than, a \glsname{SoC}. These chips are meant for \glsname{embedded} devices, in opposition to the microprocessors used in general purpose applications }}
+\newglossaryentry{mmcx}{name={MMCX}, description={Micro-Miniature Coaxial.}}
 
-\newglossaryentry{microprocessor}{name={Microprocessor}, text={microprocessor}, plural={microprocessors}, description={A type of \glsname{IC} circuit that contains the arithmetic-logic and control blocks required to perform the tasks of a CPU}}
+\newglossaryentry{mac}{name={MAC}, description={Medium Access Control.}}
 
-\newglossaryentry{mil}{name={Mil}, text={mil}, plural={mil}, description={Unit of length equal to 0.001 inches, or 0.0254 mm}}
+\newglossaryentry{mixedsignal}{name={Mixed-Signal}, text={mixed-signal}, description={The coexistence of both analog and digital signals in an electronic system.}}
 
+\newglossaryentry{microsat}{name={Micro-Satellite}, plural={micro-satellites}, description={A type of small satellite with a mass ranging from 10 to 100 kg.}}
+
+\newglossaryentry{microwave}{name={Microwaves}, text={microwave}, plural={microwaves}, description={The name given to electromagnetic waves with frequencies between 300 MHz and 300 GHz.}}
+
+\newglossaryentry{microcontroller}{name={Micro-controller}, text={microcontroller}, plural={microcontrollers}, description={A standalone computer which contains one or more \glsname{cpu} cores along with memory and peripherals on a single \glsname{ic}, meant for \glstext{embedded} devices.}}
+
+\newglossaryentry{mpcie}{name={mPCIe}, text={mPCIe}, plural={mPCIe}, description={Mini-\glstext{pcie}.}}
 
 % -----------------------------------------------------------------------------
 % N
 
-\newglossaryentry{noise}{name={Noise}, text={noise}, description={Unwanted and unpredictable disturbance in a signal}} 
+\newglossaryentry{nc}{name={NC}, description={Not Connected.}}
+
+\newglossaryentry{nasa}{name={NASA}, description={National Aeronautics and Space Administration.}}
+
+\newglossaryentry{nda}{name={NDA}, plural={NDAs}, description={Non-Disclosure Agreement.}}
+
+\newglossaryentry{nf}{name={NF}, text={NF}, description={Noise Figure.}}
+
+\newglossaryentry{nanosat}{name={Nano-Satellite}, text={nano-satellite}, plural={nano-satellites}, description={A type of small satellite with a mass ranging from 1 to 10 kg.}}
+
+\newglossaryentry{noise}{name={Noise}, text={noise}, description={Unwanted and unpredictable disturbance in a signal.}} 
 
 
 % -----------------------------------------------------------------------------
@@ -149,19 +264,38 @@
 % -----------------------------------------------------------------------------
 % O
 
-\newglossaryentry{open_source}{name={Open Source}, text={open source}, description={An initiative in which the developer licenses a software or resource to grant users the rights to use, change, make derived work and freely distribute the software and its source code}}
+\newglossaryentry{oc}{name={OC}, description={Over-current.}}
 
-\newglossaryentry{open_hardware}{name={Open Hardware}, text={open hardware}, description={The philosophy of \glsname{open_source} but applied to mechanical, electric and electronic resources}}
+\newglossaryentry{ov}{name={OV}, description={Over-voltage.}}
+
+\newglossaryentry{obc}{name={OBC}, description={On-Board Computer.}}
+
+\newglossaryentry{opensource}{name={Open Source}, text={open source}, description={An initiative in which the developer licenses a software or resource to grant users the rights to use, change, make derived works and freely distribute the work and its source.}}
 
 
 % -----------------------------------------------------------------------------
 % P
 
-\newglossaryentry{pickandplace}{name={Pick and Place machine}, text={pick and place}, description={A machine with a robot arm and computer vision for picking components from a feeder and inserting them into a specific site on the \glsname{PCB}}}
 
-\newglossaryentry{Python}{name={Python}, description={A high-level, cross-platform, interpreted, dynamically-typed, garbage-collected, general-purpose programming language. Has strong emphasis in code readability and includes a comprehensive standard library. It supports structured, object-oriented and functional programming paradigms }}
+\newglossaryentry{pg}{name={PG}, description={Power Good.}}
 
-\newglossaryentry{PCB}{name={PCB}, text={Printed Circuit Board}, description={\textbf{(Printed Circuit Board)} A rugged, non-conductive boards built on a dielectric substrate structure used to provide electrical connection between the components of a electronic circuit, as well as mechanical support for those components}}
+\newglossaryentry{pfd}{name={PFD}, text={PFD}, description={Power Flux Density.}}
+
+\newglossaryentry{pa}{name={PA}, text={PA}, plural={PAs}, description={Power Amplifier.}}
+
+\newglossaryentry{payload}{name={Payload}, text={payload}, plural={payloads}, description={The primary mission-specific instruments or experiments that the satellite is designed to carry and operate in space.}}
+
+\newglossaryentry{pc104}{name={PC/104}, description={A \glsname{formfactor} for stackable and modular \glspl{pcb} for \glspl{embedded}.}}
+
+\newglossaryentry{pci104}{name={PCI-104}, description={A \glsname{pc104} variant that includes the \glsname{pci} connector but not the \glsname{isa} connector.}}
+
+\newglossaryentry{pci}{name={PCI}, text={PCI}, plural={PCI}, description={Peripheral Component Interconnect.}}
+
+\newglossaryentry{pcie}{name={PCIe}, text={PCI-express}, plural={PCIe}, description={\glsname{pci}-Express.}}
+
+\newglossaryentry{pickandplace}{name={Pick and Place machine}, text={pick and place}, description={A machine with a robot arm and computer vision for picking components from a feeder and inserting them into a specific site on the \glsname{pcb}.}}
+
+\newglossaryentry{pcb}{name={PCB}, text={printed circuit board}, description={Printed Circuit Board. A rugged boards built on a dielectric substrate used to provide mechanical support and electrical connection between the components of a circuit.}}
 
 
 % -----------------------------------------------------------------------------
@@ -171,57 +305,87 @@
 % -----------------------------------------------------------------------------
 % R
 
-\newglossaryentry{reverse_engineering}{name={RE}, text={Reverse Engineering}, description={The analysis of a device or piece of software to determine how it functions, with very little insight into exactly how it does so, and with the intent of recreating or modifying it}}
+\newglossaryentry{rbf}{name={RBF}, description={Remove Before Flight.}}
 
-\newglossaryentry{resonance}{name={Resonance}, text={resonance}, description={A phenomenon of increased amplitude that occurs in object free-to-vibrate objects when the frequency of an applied periodic force matches the object's natural (or resonant) frequency}}
+\newglossaryentry{roscosmos}{name={Roscosmos}, description={Russian Federal Space Agency.}}
 
-\newglossaryentry{ripple}{name={Ripple}, text={ripple}, description={A residual, periodic variation of a DC voltage due to incomplete suppression of the AC signal after rectification }}
+\newglossaryentry{rf}{name={RF}, text={RF}, plural={RF}, description={Radio-Frequency.}}
 
-\newglossaryentry{rise_time}{name={Rise time}, text={rise time}, description={Time required for a signal to raise from the 10\% to the 90\% of its higher state}}
+\newglossaryentry{reverse_engineering}{name={RE}, text={Reverse Engineering}, description={The analysis of a device or piece of software to determine how it functions, with very little insight into exactly how it does so.}}
 
-\newglossaryentry{reflow}{name={Re-flow soldering}, text={reflow}, description={The process consists on joining components to substrates by placing the parts into \glsname{solder_paste} and then warming the paste up to its melting point for a short period of time, in order to achieve re-flow and the interconnection between a component terminal and a \glsname{PCB} pad}}
+\newglossaryentry{reflow}{name={Re-flow soldering}, text={reflow}, description={The process consists on joining components to substrates by placing the parts into \glsname{solder_paste} and then warming the paste up to its melting point for a short period of time, in order to achieve re-flow and the interconnection between a component terminal and a \glsname{pcb} pad.}}
 
-\newglossaryentry{rohs}{name={RoHS}, text={RoHS}, description={\textbf{(Restriction of Hazardous Substances)} European normative that restricts the use of the following hazardous substances in electrical and electronic equipment: lead (Pb), mercury (Hg), cadmium (Cd), hexavalent chromium (Cr6+), polybrominated biphenyls (PBB), polybrominated diphenyl ether (PBDE), bisphthalate (DEHP), butyl benzyl phthalate (BBP), dibutyl phthalate (DBP) and diisobutyl phthalate (DIBP) in a concentration no larger than 1000 ppm}}
+\newglossaryentry{rohs}{name={RoHS}, text={RoHS}, description={Restriction of Hazardous Substances.}}
 
 
 % -----------------------------------------------------------------------------
 % S
 
-\newglossaryentry{switching_noise}{name={Switching noise}, text={switching noise}, description={ \glsname{noise} caused by switching devices. When a device is switching, current is drawn or passed to the power supply in a sequence of pulses. When this current is drawn at high frequencies, the self-inductance of the package leads and traces becomes significant with respect to switching transients}}
+\newglossaryentry{sku}{name={SKU}, description={Stock Keeping Unit.}}
 
-\newglossaryentry{skew}{name={Skew}, text={skew}, description={The effect of one signal being delayed with respect to another signal, due to different path lengths. This can cause timing errors in an electronic design}}
+\newglossaryentry{sma}{name={SMA}, description={Sub-Miniature version A.}}
 
-\newglossaryentry{stencil}{name={Stencil}, text={stencil}, description={A sheet of material (usually plastic or stainless steel) with openings according to the \glsname{solder_mask}. The apertures are the same shape and size as the SMD component pads, and are placed in their corresponding position. With the stencil it is easy to deposit the right amount of \glsname{solder_paste} accurately and repeatably}}
+\newglossaryentry{spi}{name={SPI}, description={Serial Peripheral Interface.}}
 
-\newglossaryentry{stackup}{name={Layer stackup}, text={layer stackup}, description={Arrangement of conductive and insulating layers in a \glsname{PCB}}}
+\newglossaryentry{swd}{name={SWD}, description={Serial Peripheral Interface.}}
 
-\newglossaryentry{solder_paste}{name={Solder paste}, text={solder paste}, description={A sticky mixture of powdered solder (the fusible metal alloy which bonds pads and components) and flux (a viscous chemical cleaning agent) }}
+\newglossaryentry{stem}{name={STEM}, description={Science, Technology, Engineering, and Mathematics.}}
 
-\newglossaryentry{SCPI}{name={SCPI}, description={\textbf{(Standard Commands for Programmable Instruments)} A standard command syntax designed for controlling instruments }}
+\newglossaryentry{sdg}{name={SDG}, text={SDG}, description={Sustainable Development Goals.}}
 
-\newglossaryentry{SoC}{name={SoC},text={SoC},description={\textbf{(System on Chip)} \glsname{IC} that integrates all the components within a chip including analog, digital, mixed and even radio frequency functionality}}
+\newglossaryentry{sfd}{name={SFD}, text={SFD}, description={Start Frame Delimiter.}}
 
-\newglossaryentry{solder_mask}{name={Solder mask},text={solder mask},description={The insulating polymer coating used to mask or protect the \glsname{PCB}'s copper tracks from corrosion and oxidation, dirt, dust, and fingerprints. It also prevents masked areas of being poured by solder during \glsname{reflow} and other processes such as etching or plating. This way, no shorts are created between tracks. Solder mask give PCBs a distinct colour, usually green}}
+\newglossaryentry{sf}{name={SF}, text={SF}, description={Spreading Factor.}}
 
-\newglossaryentry{silkscreen}{name={Silkscreen},text={silkscreen},description={Also called {\it ``overlay''}, is the layer of shapes and text printed above the \glsname{solder_mask}}}
+\newglossaryentry{snr}{name={SNR}, text={SNR}, description={Signal-to-Noise Ratio.}}
+
+\newglossaryentry{som}{name={SoM}, text={SoM}, plural={SoM}, description={System-on-Module.}}
+
+\newglossaryentry{switchingnoise}{name={Switching noise}, text={switching noise}, description={The noise generated during the switching of electronic components. When current is drawn at high frequencies, the self-inductance of the package leads becomes significant, leading to voltage spikes and \glsname{emi}.}}
+
+\newglossaryentry{skew}{name={Skew}, text={skew}, description={The effect of one signal being delayed with respect to another signal, due to different path lengths. This can cause timing errors in an electronic design.}}
+
+\newglossaryentry{stencil}{name={Stencil}, text={stencil}, description={A sheet of material (usually plastic or stainless steel) with openings according to the \glsname{solder_mask}. The apertures are the same shape and size as the SMD component pads, and are placed in their corresponding position. With the stencil it is easy to deposit the right amount of \glsname{solder_paste} accurately and repeatably.}}
+
+\newglossaryentry{stackup}{name={Layer stackup}, text={layer stackup}, description={Arrangement of conductive and insulating layers in a \glsname{pcb}.}}
+
+\newglossaryentry{solder_paste}{name={Solder paste}, text={solder paste}, description={A sticky mixture of powdered solder (the fusible metal alloy which bonds pads and components) and flux (a viscous chemical cleaning agent).}}
+
+\newglossaryentry{solder_mask}{name={Solder mask},text={solder mask},description={The insulating polymer coating used to mask or protect the \glsname{pcb}'s copper tracks from corrosion and oxidation, dirt, dust, and fingerprints. It also prevents masked areas of being poured by solder during \glsname{reflow} and other processes such as etching or plating. This way, no shorts are created between tracks. Solder mask give PCBs a distinct colour, usually green.}}
+
+\newglossaryentry{silkscreen}{name={Silkscreen},text={silkscreen},description={Also called {\it ``overlay''}, is the layer of shapes and text printed above the \glsname{solder_mask}.}}
 
 
 % -----------------------------------------------------------------------------
 % T
 
-\newglossaryentry{testpoint}{name={Test Point}, text={test point}, plural={test points}, description={In a PCB, a test point is a special THT or SMT pad used to inspect or inject signals on a circuit. During the manufacturing process, test points are used to verify that a electronic device is working correctly. Test points may also be used subsequently to repair a device if it malfunctions or if it needs a calibration}}
+\newglossaryentry{tbd}{name={TBD}, description={To Be Defined.}}
 
-\newglossaryentry{transistor}{name={Transistor}, text={transistor}, description={A device capable of amplifying and/or switching electric signals or power. A voltage or current applied to a pair of its terminals controls the current through another pair }}
+\newglossaryentry{tbr}{name={TBR}, description={To Be Resolved.}}
 
-\newglossaryentry{TTM}{name={Time-To-Market},description={Elapsed time since the specifications of a product until it is commercially available}}
+\newglossaryentry{toa}{name={ToA}, text={ToA}, description={Time-on-Air.}}
+
+\newglossaryentry{tcxo}{name={TCXO}, text={TCXO}, description={Temperature-Compensated \glsname{xtal}.}}
+
+\newglossaryentry{ttc}{name={TT\&C}, text={TT\&C}, description={Telemetry, Tracking and teleCommand.}}
+
+\newglossaryentry{tle}{name={TLE}, text={TLE}, description={Two-Line Element.}}
+
+\newglossaryentry{testpoint}{name={Test Point}, text={test point}, plural={test points}, description={A special pad used to inspect or inject signals on a circuit.}}
+
+\newglossaryentry{transistor}{name={Transistor}, text={transistor}, description={A device capable of amplifying and/or switching electric signals or power. A voltage or current applied to a pair of its terminals controls the current through another pair.}}
+
+\newglossaryentry{ttm}{name={Time-To-Market},description={Elapsed time since the specifications of a product until it is commercially available.}}
 
 
 % -----------------------------------------------------------------------------
 % U
 
-\newglossaryentry{unix}{name={UNIX}, text={Unix}, description={A family of OSes which derive from the original Unix developed at the Bell Labs Research Center }}
+\newglossaryentry{uart}{name={UART}, description={Universal Asynchronous Receiver-Transmitter.}}
 
-\newglossaryentry{ultrasonic_wave}{name={Ultrasonic wave}, text={ultrasonic wave}, plural={ultrasonic waves}, description={Equivalent to sound waves (\glspl{acoustic_wave}), but with a frequency spectrum higher than the upper audible limit of human hearing (20 kHz)}}
+\newglossaryentry{usb}{name={USB}, description={Universal Serial Bus.}}
+
+\newglossaryentry{unix}{name={UNIX}, text={Unix}, description={A family of OSes which derive from the original Unix developed at the Bell Labs Research Center.}}
 
 
 % -----------------------------------------------------------------------------
@@ -231,12 +395,13 @@
 % -----------------------------------------------------------------------------
 % W
 
-\newglossaryentry{wave_soldering}{name={Wave soldering}, text={wave soldering}, description={A standard method for industrial, mass soldering of leaded THT components onto \glsname{PCB}s. Consists of passing loaded boards over a wave of liquid solder. This soldering can be used successfully for assembly of \glsname{mixed_technology} boards}}
-
 
 % -----------------------------------------------------------------------------
 % X
 
+\newglossaryentry{xtal}{name={XTAL}, text={XTAL}, description={Crystal Oscillator.}}
+
+\newglossaryentry{xpd}{name={XPD}, text={XPD}, description={Cross-Polarization Discrimination.}}
 
 % -----------------------------------------------------------------------------
 % Y

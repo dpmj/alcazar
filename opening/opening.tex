@@ -63,14 +63,16 @@
 \begingroup
 
     % Greatly compress space used by TOC, LOF and LOT
-    \renewcommand{\baselinestretch}{1}  % less spacing
+    \renewcommand{\baselinestretch}{1.0}  % less spacing
     \small  % smaller font size
     \setlength{\parskip}{0mm}  % Paragraph skip 0mm
 
 
     % List of Contents
     {
+        \renewcommand{\baselinestretch}{1.0}  % spacing. 0.95 is a good compromise if needed
         \tableofcontents
+        \singlespacing
         
         \addcontentsline{toc}{chapter}{Table of contents}
     }

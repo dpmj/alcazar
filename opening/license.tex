@@ -17,22 +17,88 @@
 % LICENSE
 
 \newpage
-\thispagestyle{empty}
+\pagestyle{empty}
 
 \vspace*{\fill}
+
+
+
+
+
+\begingroup
+
+\vspace*{5mm}
+
+% \vspace*{\fill}
+
+\small
+\setlength\tabcolsep{0pt}
+\renewcommand*{\arraystretch}{1.2}
+{\noindent\large  Cite this work:}
+
+% \begin{mdframed}[backgroundcolor=listing-background,hidealllines=true]
+% \vspace*{2mm}
+% \lstinputlisting[style=cite, nolol]{./cite.txt}
+
+\newwrite\tempfile
+\immediate\openout\tempfile=cite.txt
+\immediate\write\tempfile{%
+@phdthesis{cite-key,^^J%
+\space\space author  = "\thesisAuthor\space and\space\thesisTutor",^^J%
+\space\space title   = "\thesisTitle",^^J%
+\space\space school  = "\thesisSchool",^^J%
+\space\space year    = "\thesisYear",^^J%
+\space\space month   = "\thesisMonth",^^J%
+\space\space address = "\thesisAddress",^^J%
+\space\space type = "\thesisType"^^J%
+}%
+}
+\immediate\closeout\tempfile
+
+% Does not work because escapes are inside strings
+% \begin{minted}{bibtex}
+% @mastersthesis{citeKey,
+%     author  = "¢{\thesisAuthor}¢ and ¢{\thesisTutor}¢",
+%     title   = "¢{\thesisTitle}¢",
+%     school  = "¢{\thesisSchool}¢",
+%     year    = "¢{\thesisYear}¢",
+%     month   = "¢{\thesisMonth}¢",
+%     address = "¢{\thesisAddress}¢"
+% }
+% \end{minted}
+
+\inputminted[style=algol_nu, breaklines, linenos=false, obeytabs=true, tabsize=4, breaksymbolleft=\space\space]{bibtex}{./cite.txt}
+% \end{mdframed}
+
+
+\endgroup
+ 
+
+\vspace*{2mm}
+
+
 
 \begingroup
 
     \setlength\tabcolsep{0pt}
     \renewcommand*{\arraystretch}{1.4}
-    \renewcommand{\baselinestretch}{0.9}\footnotesize  % Comprime space
+    \renewcommand{\baselinestretch}{1}\footnotesize  % Comprime space
     
+    \begingroup
+    \renewcommand{\baselinestretch}{1.2}\footnotesize  % Comprime space
     \noindent
     \begin{tabular}{m{3.5cm} m{11.5cm}}
-        \includegraphics[width=3cm]{opening/resources/license/by-sa.pdf} & {\normalsize {\thesisAuthor} and {\thesisTutor}} \\
+        \includegraphics[width=3cm]{opening/resources/license/by-nc-sa.pdf} & {\normalsize {\thesisAuthor},} \newline {\normalsize{\thesisTutor}}\\
     \end{tabular}
+    \endgroup 
     
-    \noindent This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license. This is a human-readable summary of (and not a substitute for) the license. You are free to:
+    \noindent This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license. This is a summary of (and not a substitute for) the license. 
+    
+    \vspace{1mm}
+    
+    \noindent   You are free to:
+
+    \vspace{1mm}
     
     \noindent
     \begin{tabular}{m{1.5cm} m{13.5cm}}
@@ -47,13 +113,19 @@
     \noindent
     \begin{tabular}{m{1.5cm} m{13.5cm}}
         \includegraphics[width=2em]{opening/resources/license/by.pdf} & \textbf{Attribution:} You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\\
+        \includegraphics[width=2em]{opening/resources/license/nc.pdf} & \textbf{NonCommercial:} You may not use the material for commercial purposes.\\
         \includegraphics[width=2em]{opening/resources/license/sa.pdf} & \textbf{ShareAlike:} If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
     \end{tabular}
     
     \noindent To view a complete copy of this license, visit 
-    \href{https://creativecommons.org/licenses/by-nc-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0}
+    \href{https://creativecommons.org/licenses/by-nc-sa/4.0/}{https://creativecommons.org/licenses/by-nc-sa/4.0/}
 
 \endgroup
+
+
+
+\vspace*{5mm}
+
 
 
 % Give a little credit to the template :)
@@ -61,11 +133,9 @@
 
 \begingroup
 
-    \vspace*{2mm}
-
     \setlength\tabcolsep{0pt}
     \renewcommand*{\arraystretch}{1.4}
-    \renewcommand{\baselinestretch}{0.9}\footnotesize  % Comprime space
+    \renewcommand{\baselinestretch}{1}\footnotesize  % Comprime space
     
     \noindent
     \begin{tabular}{m{3.5cm} m{11.5cm}}
