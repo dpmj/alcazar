@@ -20,7 +20,7 @@
 ## Features
 
 <p align="center">
-<img src="figures/examples/alcazar-feature-display.jpg" width="100%"/>
+<img src="figures/examples/alcazar-display-neue.png" width="100%"/>
 </p>
 
 - A page to include information about the authors.
@@ -227,7 +227,7 @@ If you use and like this template, please consider giving credit :)
 }
 ```
 
- There is already a small text in `opening/license.tex` below the license text that acknowledges the use of this template. It's completely optional, of course ;)
+There is already a small acknowledgement in `opening/license.tex` below the license text. It's completely optional, of course ;)
 
 
 ## Thanks!
