@@ -6,7 +6,6 @@
 <a href="https://raw.githubusercontent.com/dpmj/alcazar/main/output/main.pdf">See PDF Preview</a></b>
 </p>
 
-
 ## Philosophy
 
 - KISS.
@@ -15,7 +14,6 @@
 - Compact, but not crowded.
 - Compatible with `latexmk` and `pdflatex`
 - No exotic or discontinued packages.
-
 
 ## Features
 
@@ -28,25 +26,23 @@
 - Automatic generation of a bibtex cite.
 - *"Executive overview"* page (sometimes required in University Degrees adhered to ABET).
 - A page to cite your own papers as a result of the project.
-- A page to include acknoledgements and a *dedication* page 
+- An acknowledgements page and a dedication page. 
 - Automatic Table of Contents (ToC), List of Figures (LoF) and List of Tables (LoT).
-- Double column bibliography and glossary.
-- Support for annexes. 
-- If needed, templates for the Sustainable Development Goals (SDGs) are included in Annex C.
+- Two-column bibliography and glossary.
+- Support for appendices. 
+- Templates for the Sustainable Development Goals (SDGs) are included in Appendix C if required.
 
+## Customisation
 
-## Customization
-
-- Details about you and your work are defined in `main.tex`. Fill them in according to your thesis. The document will update all occurrences automatically, including a bibtex cite! 
-- The titlepage can be easily configured by editing `opening/titlepage.tex`.
-- Fill information about the authors in `opening/about.tex`.
-- Edit `opening/acknowledgements.tex` and `opening/dedication.tex` as you like.
+- Details about you and your work are defined in `main.tex'. Fill it in according to your thesis. The document will automatically update all occurrences, including a bibtex citation! 
+- The title page can be easily configured by editing `opening/titlepage.tex`.
+- Fill in information about the authors in `opening/about.tex`.
+- Edit `opening/acknowledgements.tex` and `opening/dedication.tex` as you wish.
 - Include your abstract in one or more languages in `opening/abstract.tex`.
-- Chapter and Annex numbers on the page sides can be problematic for printing. They can be disabled by uncommenting a few lines in `\fancypagestyle{chapters}` and `\fancypagestyle{addenda}` page styles in `style/alcazar.sty`.
-- The default text font is *Libertinus Serif*, but you can change it in `style/pkgs.sty`. Other high-quality options that I recommend are Charter and Source Serif Pro, although the font size may be needed to be changed from 12 pt to 11 pt.
-- The default sans-serif font is Open Sans. Good alternatives are Inter and Source Sans Pro.
-- The default monospace font is IBM Plex Mono. Great alternatives are Fira Mono and Inconsolata, although the monospace font family size should be adjusted.
-
+- Chapter and appendix numbers on the page margins can be problematic for printing. They can be disabled by uncommenting a few lines in the `\fancypagestyle{chapters}` and `\fancypagestyle{addenda}` page styles in `style/alcazar.sty`.
+- The default text font is *Libertinus Serif*, but you can change this in `style/pkgs.sty`. Other high quality options I recommend are Charter and Source Serif Pro, although you may need to change the font size from 12 pt to 11 pt.
+- The default sans serif is Open Sans. Good alternatives are Inter and Source Sans Pro.
+- The default monospace font is IBM Plex Mono. Good alternatives are Fira Mono and Inconsolata, although the size of the monospace font family should be adjusted.
 
 ## Build
 
@@ -55,29 +51,23 @@
 - `biber` for `biblatex`, 
 - `python 3` and the `pygments` package for the `minted` package.
 
-
 ### Important information
 
 - This project can be built with `latexmk` or `pdflatex`, although I greatly encourage the use of `latexmk`. Below are examples of compilation commands with some recommended arguments. The `-shell-escape` flag is required for the `minted` package.
 
 - This project is configured to automatically output all the auxiliary build files into the same `./output/` folder, **including the final .PDF**.
 
-
 ### `latexmk`
 
 Simply use:
-
 ```bash
 latexmk -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -pdf outdir=./output/ main.tex
 ```
-
 This project uses a `latexmkrc` file to fix the `makeglossaries` tool when using a subfolder for saving build outputs.
-
 
 ### `pdflatex`
 
 This method has problems with using a subfolder for build outputs. For this reason, it is recommended to execute `pdflatex` without setting an `-output-directory=`:
-
 ```bash
 pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
 biber main
@@ -86,11 +76,9 @@ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
 pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
 ```
 
-
 ### Makefile
 
 A `Makefile` is already included, which invokes `latexmk`.
-
 
 ### Overleaf
 
@@ -98,7 +86,7 @@ Since overleaf uses `latexmk`, no configuration is required, it works out of the
  
 ### LaTeX Workshop by James Yu (extension for VS Code / Codium)
 
-#### `latexmk`
+#### Using `latexmk`
 
 Works with the default `latexmk` recipe almost out of the box. Some settings need to to be changed:
 
@@ -108,9 +96,9 @@ Works with the default `latexmk` recipe almost out of the box. Some settings nee
 "latex-workshop.latex.outDir": "%DIR%/output"
 ```
 
-### `pdflatex` recipe
-To compile using `biber` and `makeglossaries` with `pdflatex` you need to add the following tools to your `.vscode/settings.json` configuration file, under the section `latex-workshop.latex.tools` (In the UI, navigate to *Latex-workshop > Latex: Recipes > Edit in settings.json*): 
+#### Creating a new `pdflatex` recipe
 
+To compile using `biber` and `makeglossaries` with `pdflatex` you need to add the following tools to your `.vscode/settings.json` configuration file, under the section `latex-workshop.latex.tools` (In the UI, navigate to *Latex-workshop > Latex: Recipes > Edit in settings.json*): 
 ```json
 {
     "name": "biber",
@@ -127,9 +115,7 @@ To compile using `biber` and `makeglossaries` with `pdflatex` you need to add th
     ],
 }
 ```
-
 Edit the `pdflatex` entry as follows to include the `-shell-escape` argument:
-
 ```json
 {
     "name": "pdflatex",
@@ -144,9 +130,7 @@ Edit the `pdflatex` entry as follows to include the `-shell-escape` argument:
     "env": {}
 }
 ```
-
 Now add a new recipe, under `latex-workshop.latex.recipes` (to generate the configuration section from the UI, go to *Latex-workshop > Latex: Tools > Edit in settings.json*):
-
 ```json
 {
     "name": "alcazar",
@@ -159,16 +143,13 @@ Now add a new recipe, under `latex-workshop.latex.recipes` (to generate the conf
     ]
 }
 ```
-
 And run the `alcazar` recipe. 
 
 **Note:** If you keep getting a `makeglossaries` error saying that `main.aux` could not be found, set the `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` setting to `false` (in the UI, uncheck *"Latex-workshop > Latex > AutoBuild > Clean and retry: Enabled"*)
 
-
 ## File structure
 
 The file structure of Alcázar is simple and self-explanatory:
-
 ```
 ./
 ├── bibliography/               # BIBLIOGRAPHY
@@ -207,29 +188,6 @@ The file structure of Alcázar is simple and self-explanatory:
 └── main.tex                    # The main document.
 ```
 
-
-
-## License
-    
-This work is licensed under a
-[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-
-## Credits / citation
-
-If you use and like this template, please consider giving credit :)
-
-```bibtex
-@misc{alcazar-latex-template,
-  author = {Del Pino Mena, Juan},
-  title = {Alcazar: A free and Open-Source LaTeX template for academic works},
-  url = {https://github.com/dpmj/alcazar}
-}
-```
-
-There is already a small acknowledgement in `opening/license.tex` below the license text. It's completely optional, of course ;)
-
-
 ## Thanks!
 
 Alcázar was born as a personal project to replace the poor quality report templates I encountered throughout my academic life. It continued to grow until it made sense to create a comprehensive template. I have learned a lot during the development of Alcázar.
@@ -238,6 +196,22 @@ Thanks to my friends and colleagues who beta-tested Alcázar. You found many bug
 
 And to all the people who have already used Alcázar, I hope I have helped you despite my questionable LaTeX skills!
 
+## Credits / citation
+
+If you use and like this template, please consider giving credit :)
+```bibtex
+@misc{alcazar-latex-template,
+  author = {Del Pino Mena, Juan},
+  title = {Alcazar: A free and Open-Source LaTeX template for academic works},
+  url = {https://github.com/dpmj/alcazar}
+}
+```
+There is already a small acknowledgement in `opening/license.tex` below the license text. It's completely optional, of course ;)
+
+## License
+    
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ## Disclaimer
 
