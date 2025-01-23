@@ -217,28 +217,26 @@ This work is licensed under a
 
 ## Credits / citation
 
-If you use this template, please consider giving credit :)
-
-There is already a small text in `opening/license.tex` that acknowledges the use of this template. It's completely optional, of course ;)
-
+If you use and like this template, please consider giving credit :)
 
 ```bibtex
-@misc{alcazar-thesis-template,
+@misc{alcazar-latex-template,
   author = {Del Pino Mena, Juan},
   title = {Alcazar: A free and Open-Source LaTeX template for academic works},
-  year = {2023},
-  publisher = {GitHub},
   url = {https://github.com/dpmj/alcazar}
 }
 ```
 
+ There is already a small text in `opening/license.tex` below the license text that acknowledges the use of this template. It's completely optional, of course ;)
+
+
 ## Thanks!
 
-Alcázar was born as a personal project to replace the poor quality report templates that I have always encountered in my academic life. It continued to grow until it made sense to do a comprehensive template. I have learn a lot during the development of Alcázar.
+Alcázar was born as a personal project to replace the poor quality report templates I encountered throughout my academic life. It continued to grow until it made sense to create a comprehensive template. I have learned a lot during the development of Alcázar.
 
-Thanks to my friends and peers who have beta-tested Alcázar. You have found many bugs, have made excellent suggestions and inspired me a lot.
+Thanks to my friends and colleagues who beta-tested Alcázar. You found many bugs, made excellent suggestions and inspired me a lot.
 
-And to all the people who have already used Alcázar, I hope I have helped you, despite my questionable LaTeX skills!
+And to all the people who have already used Alcázar, I hope I have helped you despite my questionable LaTeX skills!
 
 
 ## Disclaimer
