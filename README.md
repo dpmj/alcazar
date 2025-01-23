@@ -1,11 +1,6 @@
 <p align="center">
-<img src="figures/examples/alcazar-title.jpg" width="100%"/>
+<img src="figures/examples/alcazar-title.png" width="100%"/>
 </p>
-
-<p align="center">
-<img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" height="24px"/>
-</p>
-
 
 <p align="center"><b>
 <a href="https://raw.githubusercontent.com/dpmj/alcazar/main/output/main.pdf">See PDF Preview</a></b>
