@@ -12,12 +12,15 @@
 % Free, Open-Source Thesis template for LaTeX
 % https://github.com/dpmj/alcazar
 
+% ------------------------------------------------------------------------------
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% If you need pdf/a compliance, see this guide:
+% https://github.com/op3/latex-pdfa-howto
+
+% ------------------------------------------------------------------------------
 % PREAMBLE
 
 \documentclass[twoside, openright, 12pt, final]{report}
-
 
 % ------------------------------------------------------------------------------
 % Variables
@@ -27,32 +30,35 @@
 % Title for the pages' heading 
 \newcommand{\thesisTitleShort}{Alcázar: a free and open source template for academic works.}
 
-\newcommand{\thesisType}{Master's Thesis}  % Bachelor's Thesis, Master's Thesis, PhD Thesis...
+\newcommand{\thesisType}{Master's Thesis}  % Bachelor's Thesis, Master's Thesis, PhD Thesis...Thesis...
 \newcommand{\thesisDegree}{Master's Degree}  % Bachelor's Degree, Master's Degree, PhD...
-\newcommand{\thesisArea}{Typesetting Engineering}  % Area of knowledge
+\newcommand{\thesisArea}{Area of knowledge}  % Area of knowledge
 
-\newcommand{\thesisAuthor}{Name of the author of the thesis}
-\newcommand{\thesisTutor}{Name of the supervisor of the thesis}  
+\newcommand{\thesisAuthor}{Thesis Author}  % Your name
+\newcommand{\thesisTutor}{Thesis Supervisor}  % Your supervisor's name
 
-\newcommand{\thesisYear}{2077}  % Date of the thesis' submission or defense 
-\newcommand{\thesisMonth}{June}
+\newcommand{\thesisYear}{2024}  % Date of the thesis' submission or defense 
+\newcommand{\thesisMonth}{September}
 \newcommand{\thesisDate}{{\thesisMonth} {\thesisYear}}
-\newcommand{\thesisAcademicCourse}{2076/2077}  % During which academic year(s) was the thesis developed
+\newcommand{\thesisAcademicCourse}{2023/2024}  % During which academic year(s) was the thesis developed
 
-\newcommand{\thesisSchool}{University of Misco}
-\newcommand{\thesisAddress}{Fake avenue 00, Region, Country}
-\newcommand{\thesisDepartment}{Based department}
+\newcommand{\thesisSchool}{Universitat Politècnica de València}
+\newcommand{\thesisAddress}{Camí de Vera, s/n, 46022 València, Valencia, Spain}
+\newcommand{\thesisDepartment}{Department of Communications}
 
+% For the document
 \newcommand{\thesisKeywords}{Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 4, Keyword 5, Keyword 6, Keyword 7, Keyword 8, Keyword 9, Keyword 10, Keyword N}  
-% For the abstract and indexing
+
 
 % ------------------------------------------------------------------------------
 % Import document style
 \usepackage{style/alcazar}
 
+\title{\thesisTitle}
+\author{\thesisAuthor}
 
 % END PREAMBLE
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 % BEGIN DOCUMENT
 
 \begin{document}
@@ -78,6 +84,6 @@
 \end{document}
 
 % END DOCUMENT
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 
 

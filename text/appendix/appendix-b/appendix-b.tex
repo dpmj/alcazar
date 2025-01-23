@@ -16,16 +16,13 @@
 % Example of another appendix
 
 
-
-
 \chapter{A long table of things}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus quis elit id sagittis. Cras tincidunt nisi at tellus luctus, et congue dolor posuere. Aliquam suscipit felis sit amet lacus ultrices aliquet. Sed sagittis ultrices nisi, vel elementum elit dignissim non. Fusce faucibus ex at massa ultrices elementum. Nullam ullamcorper lorem sit amet facilisis cursus. Suspendisse non erat non justo porta placerat. Morbi porttitor dictum molestie. Sed vitae iaculis libero. Suspendisse in gravida lacus, tempor ultrices nibh. Nam consequat scelerisque porttitor \footnote{And if you can believe it, It's a Friday once again!}.
+\lipsum[90-93] \footnote{And if you can believe it, It's a Friday once again!}.\footnote{Descanse en paz, maestro.} \lipsum[94] 
 
-Nulla elementum orci in dolor dapibus, ac facilisis sem ultrices. Nullam eleifend id eros sed luctus. Maecenas arcu ipsum, scelerisque id lorem in, placerat posuere tellus. 
+Landscape table: \autoref{tab:predecesoras-1}. 
 
-Etiam gravida velit sed arcu viverra dapibus. Mauris vitae augue dapibus, molestie justo eget, condimentum ipsum. Nulla tristique mi eget semper luctus \autoref{tab:predecesoras-1}. 
-
+Longtable: \autoref{tab:long}. 
 
 \begin{landscape}
     \begin{table}[p]
@@ -70,3 +67,108 @@ Etiam gravida velit sed arcu viverra dapibus. Mauris vitae augue dapibus, molest
     \end{tabular}%
     \end{table}
 \end{landscape}
+
+
+
+
+
+
+
+\begingroup
+    \newcounter{rownumbersmod}
+    \newcommand\rownumbermod{\stepcounter{rownumbersmod}\arabic{rownumbersmod}}
+    % \scriptsize
+    % \tt
+    \fontsize{8}{8}\selectfont\tt
+    \renewcommand{\arraystretch}{1.03}
+    \renewcommand{\baselinestretch}{1}
+    % |*{1}{>{\raggedleft\arraybackslash}m{3.2cm}}|
+    \begin{longtable}{|*{1}{>{\raggedleft\arraybackslash}m{0.3cm}}|m{1.95cm}|*{1}{>{\raggedleft\arraybackslash}m{0.45cm}}|*{1}{>{\raggedleft\arraybackslash}m{1.25cm}}|*{1}{>{\raggedleft\arraybackslash}m{0.95cm}}|*{1}{>{\raggedright\arraybackslash}m{3cm}}|*{1}{>{\raggedright\arraybackslash}m{1.2cm}}|*{1}{>{\raggedleft\arraybackslash}m{0.75cm}}|*{1}{>{\raggedright\arraybackslash}m{1.2cm}}|}
+        \hline
+        \textbf{\#} & \textbf{Designator} & \textbf{Qty} & \textbf{Value} & \textbf{Tol.} & \textbf{P/N} & \textbf{Manuf.} & \textbf{\euro/u} & \textbf{Supplier} \\
+        \hline
+        \endfirsthead
+        \multicolumn{9}{r}{\textit{Continued from previous page}} \\
+        \hline
+        \textbf{\#} & \textbf{Designator} & \textbf{Qty} & \textbf{Value} & \textbf{Tol.} & \textbf{P/N} & \textbf{Manuf.} & \textbf{Price} & \textbf{Supplier} \\ 
+        \hline
+        \endhead
+        \hline
+        \multicolumn{9}{r}{{\textit{Continued on next page}}} \\
+        \caption{Bill of materials.}
+        \label{tab:long} 
+        \\
+        \endfoot
+
+        \multicolumn{9}{r}{{}} \\
+        \caption[\\Bill of materials (cont.).]{Bill of materials.}
+        \endlastfoot
+        \rownumbermod & C201, C207, C305, C306, C307, C308, C313, C418, C422, C437 & 10 & 1 uF & 10 \% & GRT155C71A105KE13D & Murata & 0.089 & DigiKey \\ \hline
+        \rownumbermod & C202, C203, C204, C205, C206, C300, C332, C330, C304, C309, C310, C311, C312, C410, C416, C417, C419, C421, C436, C506, C514, C518, C526 & 23 & 0.1 uF & 10 \% & C0402C104K4RECAUTO & KEMET & 0.093 & DigiKey \\ \hline
+        \rownumbermod & C400, C408 & 2 & 10 pF & ±2 \% & GJM0335C1E100GB01D & Murata & 0.099 & DigiKey \\ \hline
+        \rownumbermod & C401 & 1 & 6.8 pF & ±.1 pF & GJM0335C1E6R8BB01D & Murata & 0.090 & DigiKey \\ \hline
+        \rownumbermod & C402 & 1 & 39 pF & ±5 \% & GJM1555C1H390JB01D & Murata & 0.130 & DigiKey \\ \hline
+        \rownumbermod & C403, C409 & 2 & 1.5 pF & ±.1 pF & GJM0335C1E1R5BB01D & Murata & 0.090 & DigiKey \\ \hline
+        \rownumbermod & C404, C405 & 2 & 4.7 pF & ±.1 pF & GJM0335C1E4R7BB01D & Murata & 0.090 & DigiKey \\ \hline
+        \rownumbermod & C406, C413 & 2 & 470 nF & ±10 \% & GRM155R71A474KE01D & Murata & 0.360 & DigiKey \\ \hline
+        \rownumbermod & C407, C414 & 2 & 3.1 pF & ±.1 pF & GJM0335C1H3R1BB01D & Murata & 0.090 & DigiKey \\ \hline
+        \rownumbermod & C411 & 1 & 47 pF & ±5 \% & C0201C470J8GAC7867 & KEMET & 0.090 & DigiKey \\ \hline
+        \rownumbermod & C412 & 1 & 47 nF & ±20 \% & C0402C473M4RAC7867 & KEMET & 0.090 & DigiKey \\ \hline
+        \rownumbermod & C415, C420 & 2 & 100 pF & ±5 \% & QLCD250Q101J1GV001T & Johanson & 0.130 & DigiKey \\ \hline
+        \rownumbermod & C423, C424, C425 & 3 & 56 pF & ±2 \% & GRM0335C1H560GA01D & Murata & 0.090 & DigiKey \\ \hline
+        \rownumbermod & C426, C427 & 2 & 1.4 pF & ±.1 pF & GJM0335C1E1R4BB01D & Murata & 0.090 & DigiKey \\ \hline
+        \rownumbermod & C429 & 1 & 62 pF & ±2 \% & GRM0335C1H620GA01D & Murata & 0.090 & DigiKey \\ \hline
+        \rownumbermod & C430 & 1 & 2.2 pF & ±.1 pF & CBR02C229B3GAC & KEMET & 0.150 & DigiKey \\ \hline
+        \rownumbermod & C432 & 1 & 1 uF & ±10 \% & CL05A105KO5NNNC & Samsung & 0.090 & DigiKey \\ \hline
+        \rownumbermod & C433, C435 & 2 & 220 pF & ±5 \% & GRM0335C1H221JA01D & Murata & 0.090 & DigiKey \\ \hline
+        \rownumbermod & C434 & 1 & 10 nF & ±5 \% & GRM1555C1E103JE01J & Murata & 0.140 & DigiKey \\ \hline
+        \rownumbermod & C500, C501, C502 & 3 & 2.2 nF & ±10 \% & CC0201KRX7R8BB222 & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & C503, C504, C501, C507, C508, C515, C516, C517, C519, C520, C524, C525, C527, C528, C529 & 15 & 22 uF &  ±20 \% & GRM188C80J226ME15D & Murata & 0.136 & DigiKey \\ \hline
+        \rownumbermod & C510, C511, C512 & 3 & 10 uF & ±10 \% & GMC10X7R106K10NT & Cal-Chip & 0.410 & DigiKey \\ \hline
+        \rownumbermod & C513, C522, C531 & 3 & 470 nF & ±10 \% & CGA2B1X7S1C474K050BC & TDK & 0.230 & DigiKey \\ \hline
+        \rownumbermod & C523 & 1 & 47 uF & ±20 \% & GRM21BR61A476ME15K & Murata & 0.600 & DigiKey \\ \hline
+        \rownumbermod & D200 & 1 &  &  & RCLAMP0561PQTCT & Semtech & 0.420 & DigiKey \\ \hline
+        \rownumbermod & D201, D301 & 2 & Green &  & EAST10052GA0 & Everlight & 0.310 & DigiKey \\ \hline
+        \rownumbermod & D202, D302 & 2 & Yellow &  & FHY1105P-TR & Stanley & 0.310 & DigiKey \\ \hline
+        \rownumbermod & D203, D300 & 2 & Red &  & EAST10053RA0 & Everight & 0.310 & DigiKey \\ \hline
+        \rownumbermod & FB500, FB501, FB502, FB503, FB504 & 5 & 8.5 Ohm @ 100 MHz &  & BLE18PS080SN1D & Murata & 0.280 & DigiKey \\ \hline
+        \rownumbermod & L400, L406 & 2 & 100 nH & ±5 \% & LQW15AWR10J80D & Murata & 0.240 & DigiKey \\ \hline
+        \rownumbermod & L401 & 1 & 10 nH & ±2 \% & LQW15AN10NG80D & Murata & 0.210 & DigiKey \\ \hline
+        \rownumbermod & L402 & 1 & 5.6 nH & ±2 \% & LQW15AN5N6G8ZD & Murata & 0.210 & DigiKey \\ \hline
+        \rownumbermod & L403, L407 & 2 & 68 nH & ±2 \% & LQW15AN68NG0ZD & Murata & 0.180 & DigiKey \\ \hline
+        \rownumbermod & L404, L408 & 2 & 15 uH & ±20 \% & VLS252010CX-150M-1 & TDK & 0.340 & DigiKey \\ \hline
+        \rownumbermod & L405, L409 & 2 & 82 nH & ±2 \% & LQW15AN82NG00D & Murata & 0.130 & DigiKey \\ \hline
+        \rownumbermod & L410, L411 & 2 & 100 nH & ±5 \% & LQW15ANR10J00D & Murata & 0.130 & DigiKey \\ \hline
+        \rownumbermod & L412 & 1 & 6 nH & ±0.1 nH & LQW15AN6N0B8ZD & Murata & 0.210 & DigiKey \\ \hline
+        \rownumbermod & L413 & 1 & 2.2 nH & ±0.5 nH & LQW15AN2N2D10D & Murata & 0.140 & DigiKey \\ \hline
+        \rownumbermod & L500, L501, L502 & 3 & 2.2 uH & ±20 \% & SRN4018-2R2M & Bourns & 0.380 & DigiKey \\ \hline
+        \rownumbermod & R200, R210, R211, R212, R213, R20, R20, R214, R301, R302, R303, R304, R305, R306, R308, R309, R310, R311, R402, R405 & 18 & 0 Ohm &  & AC0201JR-070RL & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R201 & 1 & 100 Ohm & ±5 \% & EXB-2HV101JV & Panasonic & 0.280 & DigiKey \\ \hline
+        \rownumbermod & R202, R314, R315, R316 & 4 & 680 Ohm & ±5 \% & RC0201JR-07680RL & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R203 & 1 & 750 Ohm & ±5 \% & RC0201JR-07750RL & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R204 & 1 & 1.5 kOhm & ±5 \% & CRCW02011K50JNED & Vishay & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R205 & 1 & 100 Ohm & ±5 \% & EXB-28V101JX & Panasonic & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R206, R207, R312, R313 & 4 & 4.7 kOhm & ±1 \% & AC0201FR-074K7L & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R208 & 1 & 47 kOhm & ±1 \% & AC0201FR-0747KL & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R209 & 1 & 33 kOhm & ±1 \% & CRCW020133KOFKED & Vishay & 0.140 & DigiKey \\ \hline
+        \rownumbermod & R300, R307 & 2 & 10 kOhm & ±1 \% & AF0201FR-0710KL & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R400, R401 & 2 & 220 Ohm & ±1 \% & RC0201FR-07220RL & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R403, R407, R408 & 3 & 1 kOhm & ±1 \% & RC0201FR-071KL & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R404 & 1 & 5.1 kOhm & ±1 \% & ERJ-1GNF5101C & Panasonic & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R406 & 1 & 3.3 kOhm & ±1 \% & ERJ-1GJF3301C & Panasonic & 0.140 & DigiKey \\ \hline
+        \rownumbermod & R500, R504, R507 & 3 & 100 kOhm & ±1 \% & RC0201FR-13100KL & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R501 & 1 & 2.49 kOhm & ±1 \% & AC0201FR-072K49L & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R502, R506, R509 & 3 & 4.87 kOhm & ±1 \% & RC0201RR-074K87L & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R505 & 1 & 15.4 kOhm & ±1 \% & RC0201FR-0715K4L & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & R508 & 1 & 19.1 kOhm & ±1 \% & RC0201FR-0719K1L & Yageo & 0.090 & DigiKey \\ \hline
+        \rownumbermod & SH1 & 1 &  &  & MS375-10F & Masach & 1.940 & DigiKey \\ \hline
+        \rownumbermod & SH1 (cover) & 1 &  &  & MS375-10C & Masach & 1.370 & DigiKey \\ \hline
+        \rownumbermod & U201 & 1 &  &  & STTS751-0DP3F & STM & 1.390 & DigiKey \\ \hline
+        \rownumbermod & U300 & 1 &  &  & SX1302IMLTRT & Semtech & 24.09 & DigiKey \\ \hline
+        \rownumbermod & U400, U402 & 2 &  &  & SX1250IMLTRT & Semtech & 9.020 & DigiKey \\ \hline
+        \rownumbermod & U401 & 1 &  &  & JPS-2-1N+ & Mini Circuits & 8.720 & DigiKey \\ \hline
+        \rownumbermod & U403 & 1 &  &  & SKY65366-21 & Skyworks & 2.550 & DigiKey \\ \hline
+        \rownumbermod & U500, U501, U502 & 3 &  &  & TPS62912RPUR & Texas I & 1.960 & DigiKey \\ \hline
+        \rownumbermod & Y400 & 1 &  & ±0.5 ppm & FT2MNTUM-32.0-T1 & Fox Electr. & 2.550 & DigiKey \\ \hline
+    \end{longtable}
+\endgroup

@@ -13,33 +13,49 @@
 % https://github.com/dpmj/alcazar
 
 
+% ------------------------------------------------------------------------------
 % DEBUG
-
 % \usepackage{showframe}
+\usepackage{lipsum}
 
 
+% ------------------------------------------------------------------------------
 % BASE
 
 \usepackage[spanish, english]{babel}  % Language
 \usepackage[utf8]{inputenc}  % File encoding 
 
 
+% ------------------------------------------------------------------------------
 % TEXT AND FONTS
 
 % Serif font
-\usepackage{libertinus}  % Traditional but with personality, easy to read, compact
-\usepackage[libertine]{newtxmath}  % Math support
-% Some alternatives:
-% \usepackage{nimbusserif}  % Similar to Times
-% \usepackage[default,regular,semibold]{sourceserifpro}  % A bit big and less compact, but easy on the eyes
 
-% Monospace font
-\usepackage[scale = 0.9]{plex-mono}  
+% Uncomment all font imports to use Computer Modern (the default latex font)
 
-% Sans-serif font
+% Libertinus Serif: Traditional, with personality, easy to read in screens and prints, compact
+\usepackage{libertinus}
+\usepackage[libertine]{newtxmath}  % Math support for libertinus
+
+% Alternatives:
+
+% Charter: Very easy to read in screens and prints, less compact than libertinus
+% \usepackage{charter}
+
+% Source Serif Pro: Less compact, but easy on the eyes, great on screens
+% You may want to reduce the font size to 11 (see \documentclass in main.tex)
+% \usepackage[default,regular,semibold]{sourceserifpro}
+
+% Nimbus Serif: Similar to Times New Roman
+% \usepackage{nimbusserif}
+
+% Monospace font - IBM Plex Mono
+\usepackage[scale = 0.85]{plex-mono}  % scaled when used with libertinus
+
+% Sans-serif font - Open Sans
 \usepackage[defaultsans,scale=0.9]{opensans}
 
-% Encoding
+% Output encoding
 \usepackage[T1]{fontenc}
 
 % Symbols
@@ -50,12 +66,14 @@
 \usepackage[singlespacing]{setspace}  % Control line spacing
 
 
+% ------------------------------------------------------------------------------
 % MATH
 
 \usepackage{amsmath}  % Math
 \usepackage[separate-uncertainty=true]{siunitx}  % International System units
 
 
+% ------------------------------------------------------------------------------
 % GRAPHICS AND ICONS
 
 \usepackage{graphicx}  % Required for inserting images
@@ -71,6 +89,7 @@
 \tikzset{x=1cm, y=1cm} % Default tikz units
 
 
+% ------------------------------------------------------------------------------
 % PAGE GEOMETRY AND STYLE
 
 \usepackage{geometry}  % Modify page geometry
@@ -79,17 +98,20 @@
 \usepackage{pdflscape}  % Landscape pages
 
 
+% ------------------------------------------------------------------------------
 % TITLE FORMATTING
 
 \usepackage{titlesec}  % Modify title style and spacing
 
 
+% ------------------------------------------------------------------------------
 % URL, REF AND HYPERREF
 
 \usepackage{hyperref}
 \usepackage{xurl}  % eXtended url package
 \usepackage{nameref}  % get section names by label
 
+% ------------------------------------------------------------------------------
 % LICENSE
 
 \usepackage[
@@ -99,11 +121,13 @@
 ]{doclicense}
 
 
+% ------------------------------------------------------------------------------
 % APPENDIX
 
 \usepackage{appendix}
 
 
+% ------------------------------------------------------------------------------
 % TABLES
 
 \usepackage{multirow}
@@ -113,6 +137,7 @@
 \usepackage{longtable}
 
 
+% ------------------------------------------------------------------------------
 % FIGURES
 
 \usepackage{float}
@@ -120,19 +145,19 @@
 \usepackage{subcaption}  % Subfigures
 
 
-% LISTINGS
+% ------------------------------------------------------------------------------
+% CODE LISTINGS
 
-% \usepackage{listings}
-% \usepackage{mdframed}
-% \usepackage{moreverb}
-\usepackage[newfloat]{minted}
+\usepackage[newfloat, outputdir=output]{minted}
 
 
+% ------------------------------------------------------------------------------
 % LISTS
 
 \usepackage{enumitem}
 
 
+% ------------------------------------------------------------------------------
 % BIBLIOGRAPHY
 
 % Necessary to make the bibliography two-column
@@ -144,27 +169,21 @@
 \addbibresource{bibliography/references.bib}
 
 
-
+% ------------------------------------------------------------------------------
 % GLOSSARIES AND ACRONYMS
 
 % One-column glossary
 % \usepackage[nonumberlist, acronym, toc, style=listhypergroup]{glossaries}  
 
 % Two-column glossary
-\usepackage[toc, style=mcoltreehypergroup, stylemods=mcols, nonumberlist]{glossaries-extra}  
+\usepackage[toc, style=mcoltreehypergroup, stylemods=mcols, nonumberlist, automake=delayed]{glossaries-extra}  
 
 \usepackage{glossary/glossary}  % Glossary file
 \makeglossaries
 
+
+% ------------------------------------------------------------------------------
 % Multitoc - for two-column table of contents, list of figures and tables.
 % Outdated and discontinued
 % \usepackage[toc, lof, lot]{multitoc}  
-
-
-% \usepackage[]{tocloft}
-
-
-
-% \setlength{\cftsubsecindent}{0cm}
-% \setlength{\cftsubsubsecindent}{0cm}
 

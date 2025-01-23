@@ -22,19 +22,19 @@
 \addcontentsline{toc}{chapter}{Bibliography}
 
 {
-    \renewcommand{\UrlFont}{\ttfamily\fontsize{9}{9}\selectfont}  
-    % Smaller URLs (USE FOR IBM PLEX MONO ONLY)
+    % Smaller URLs, if needed
+    % \renewcommand{\UrlFont}{\ttfamily\fontsize{9}{10}\selectfont}  
     
     \footnotesize  % Compress space used by bibliography
 
-    % For bibtex bibliography
+    % If using bibtex
     % \bibliographystyle{ieeetr}
     % \bibliography{bibliography/references}
 
     % Multi-column bibliography 
-    % For biblatex bibliography
+    % If using biber/biblatex
     \begin{multicols}{2}[\printbibheading]
-        \renewcommand{\baselinestretch}{0.95}
+        \renewcommand{\baselinestretch}{1}
         \AtNextBibliography{\footnotesize \pagestyle{biblio}}
         \printbibliography[heading=none]  
     \end{multicols}

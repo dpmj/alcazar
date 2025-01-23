@@ -1,5 +1,10 @@
-.directory
+output/*
+output/**
+!output/main.pdf
+
 .vscode/
+.directory
+
 *_minted_main/
 *.log
 *.toc
@@ -19,9 +24,10 @@
 *.lof
 *.lot
 *.out
-*.kate-swp
 *.synctex.gz
 *.run.xml
 *.pygtex
 *.pygstyle
 *(busy)
+
+*.kate-swp

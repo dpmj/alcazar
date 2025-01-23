@@ -13,46 +13,36 @@
 % https://github.com/dpmj/alcazar
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 % Import the packages and definitions 
 
 \usepackage{style/pkgs}
 \usepackage{style/colors}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 % PDF PARAMETERS
-
-% \pdfminorversion=6
-% \pdfobjcompresslevel=3
-% \pdfcompresslevel=9
 
 \pdfminorversion=7
 \pdfinclusioncopyfonts=1
 \pdfgentounicode=1
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 % TEXT STYLE
 
 \setlength{\parindent}{5mm}  % Indentation
 \setlength{\parskip}{1mm}  % Paragraph skip
 
-% \setlength{\parsep}{2mm}
-% \setlength{\headsep}{4mm}
-% \setlength{\topskip}{0mm}
-% \setlength{\topmargin}{0mm}
-% \setlength{\topsep}{4mm}
-% \setlength{\partopsep}{0mm}
-
 % Default spacing between lines
-\renewcommand{\baselinestretch}{1.0}  
+\renewcommand*\baselinestretch{1.0}\selectfont  % 1.1 for Libertinus
+
+% \fontsize{12pt}{14pt}\selectfont
 
 % Commands to have small monospace text
-\NewCommandCopy{\svtt}{\texttt}
-\renewcommand\texttt[1]{\svtt{\small#1}}
+% \NewCommandCopy{\svtt}{\texttt}
+% \renewcommand\texttt[1]{\svtt{\small#1}}
 
 % No skip between items in a list to save space 
-% Enumitem config
 \setenumerate{itemsep=0mm}
 \setitemize{itemsep=0mm}
 \setdescription{itemsep=0mm}
@@ -64,7 +54,7 @@
 % \hbadness=10000
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 % STYLE OF TITLES
 
 % Chapter
@@ -82,27 +72,17 @@
 \titlespacing{\subsubsection}{0mm}{3mm}{1mm}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 % TABLE OF CONTENTS 
 
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
 
-% Change TOC indentation
-% \makeatletter
-%     \renewcommand*\l@section{\@dottedtocline{1}{0.75em}{2em}}
-%     \renewcommand*\l@subsection{\@dottedtocline{1}{1.5em}{2.5em}}
-%     \renewcommand*\l@subsubsection{\@dottedtocline{1}{2.25em}{3.25em}}
-%     \renewcommand*\l@paragraph{\@dottedtocline{1}{3em}{3.75em}}
-%     % \renewcommand*\l@subparagraph{\@dottedtocline{1}{3.75em}{4em}}
-% \makeatother
-
 % Column separation - multicol
 \setlength{\columnsep}{8mm}
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 % HYPERREF SETUP
 
 \hypersetup{%
@@ -124,35 +104,36 @@
         Title={\thesisTitle},
         Author={\thesisAuthor}
     },
-    colorlinks = true,  % false: boxed links; true: colored links
+    colorlinks = true,  % false: boxed links; true: colored, boxed links
     linkcolor = url-color,  % color of internal links (blue)
     citecolor = cite-color,  % color of links to bibliography (green)
     filecolor = file-color,  % color of file links (black)
     urlcolor = url-color,  % color of external links (green)
 }
+% Save ink and money! Change URL colors to black before printing!:
+% colorlinks = false,
+% linkcolor = black,
+% citecolor = black,
+% filecolor = black,
+% urlcolor = black,
 
-\title{\thesisTitle}
-\author{\thesisAuthor}
-
-% change color of glossary cites to black
+% The color of glossary cites is black for easier reading
 \renewcommand*{\glstextformat}[1]{\textcolor{black}{#1}}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 % CODE LISTINGS - MINTED
 
 \usemintedstyle{colorful}
-% Good options (for light themes): default, sas, solarized-light, pastie, colorful, bw
-% solarized-light has not the best readability
-% pastie and colorful may be buggy when using linebreaks and escapeinsides
+% Good options (light): default, sas, solarized-light, pastie, colorful, bw
+% Note: solarized-light has not the best readability, and pastie and colorful 
+% may be buggy when using linebreaks and escapeinsides
 
-% To get a list of all available stylesheets, see the online demo at the Pygments
-% website or execute the following command on the command line:
-% $ pygmentize -L styles
-
+% To get a list of all available stylesheets, see the online demo at the 
+% Pygments website, or run $ pygmentize -L styles
 
 \setminted{bgcolor=listing-background,
-           fontsize=\scriptsize,
+           fontsize=\footnotesize,  % 80-column-wide text fits
            escapeinside=¢¢,
            tabsize=4,
            linenos,
@@ -161,12 +142,18 @@
 \newenvironment{code}{\captionsetup{type=listing}}{}
 \SetupFloatingEnvironment{listing}{name=Listing}
 
+% Style line numbers
+\renewcommand{\theFancyVerbLine}{
+\ttfamily
+\textcolor[rgb]{0.4,0.4,0.4}{
+\footnotesize{
+\arabic{FancyVerbLine}}}}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 % FIGURES AND CAPTIONS
 
-\renewcommand{\subfigureautorefname}{\figureautorefname}  % fix autoref for subfloats
+% fix autoref for subfloats
+\renewcommand{\subfigureautorefname}{\figureautorefname}
 
 % Spacing
 
@@ -174,21 +161,11 @@
 \setlength{\belowdisplayskip}{2mm}  % space below captions
 \setlength{\abovedisplayshortskip}{0mm}  % space above captions
 \setlength{\belowdisplayshortskip}{0mm}  % space below captions
-\setlength{\intextsep}{2mm}  % space on top and bottom of an in-text float
-\setlength{\floatsep}{2mm}  % space between adjacent floats on the top or
-\setlength{\textfloatsep}{2mm}  % space between text and floats at the top or bottom
+\setlength{\intextsep}{2mm}  % top/bottom space between in-text floats
+\setlength{\floatsep}{2mm}  % top/bottom space between adjacent floats
+\setlength{\textfloatsep}{2mm}  % top/bottom space between text and floats
 
-% Number of figures
-
-% \setcounter{topnumber}{3}  % Max. number of figs. on top
-% \setcounter{bottomnumber}{3}  % Max. number of figs. on bottom
-% \setcounter{totalnumber}{10}  % Max. number of figs. per page
-
-% \renewcommand{\topfraction}{1}  % Ratio of page filled with figures
-% \renewcommand{\bottomfraction}{1}  % Ratio of page filled with figures
-% \renewcommand{\textfraction}{0}  % Ratio of page filled with text
-% \renewcommand{\floatpagefraction}{1}  % Ratio of page filled with floats
-
+% Table types
 
 % New 'M' style for tables that centers text vertically and horizontally. 
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
@@ -198,8 +175,7 @@
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 %% ICONS
 
 % Command to vertically centre adjacent content
@@ -223,21 +199,11 @@
 }
 
 
-%% BIBLIOGRAPHY
-
-% Bibliography redefinition so its on double column
-
-% \patchcmd{\thebibliography}
-%     {\list}
-%     {\begin{multicols}{2}\small\list}
-%     {}
-%     {}
-% \appto{\endthebibliography}{\end{multicols}}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 % CHAPTER NUMBER IN THE SIDE
+
+% Can be problematic when printing. 
+% To disable them, see "PAGE STYLE AND GEOMETRY" below
 
 % Definition of the box with number inside with tikz
 
@@ -282,8 +248,7 @@
 }
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 % PAGE STYLE AND GEOMETRY
 
 \geometry{
@@ -293,33 +258,7 @@
     inner   = 3.5cm,
     outer   = 2.5cm
 } 
-
-% Style of normal pages
-
-% \fancyhead{}
-
-% \fancyhfoffset[RO,LE]{0cm}
-    
-% \fancyhead[LE]{\small{\thepage}}
-% \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
-% \fancyhead[C]{}
-% \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
-% \fancyhead[RO]{\small{\thepage}}
-
-% \fancyfoot[LE]{\small{\thepage}}
-% \fancyfoot[RE]{\small{\thesisTitleShort}}
-% \fancyhead[C]{}
-% \fancyfoot[LO]{\small{\thesisAuthor}}
-% \fancyfoot[RO]{\small{\thepage}}
-
-% \renewcommand{\headrulewidth}{0.2mm}
-% \renewcommand{\footrulewidth}{0.2mm}
-
 \setlength{\headheight}{13.6pt}
-
-% \pagestyle{fancy}
-
-
 
 % Chapters
 
@@ -327,11 +266,13 @@
 {
     \fancyhfoffset[RO,LE]{0cm}
     
-    \fancyhead[LE]{\leftChapterNumber \small{\thepage}}
+    \fancyhead[LE]{\leftChapterNumber \small{\thepage}}  
+    % \fancyhead[LE]{\small{\thepage}}  % uncomment to disable the side chapter numbers
     \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
     \fancyhead[C]{}
     \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
     \fancyhead[RO]{\small{\thepage} \rightChapterNumber}
+    % \fancyhead[RO]{\small{\thepage}}  % uncomment to disable the side chapter numbers
     
     \fancyfoot[LE]{\small{\thepage}}
     \fancyfoot[RE]{\small{\thesisTitleShort}}
@@ -350,10 +291,12 @@
     \fancyhfoffset[RO,LE]{0cm}
     
     \fancyhead[LE]{\leftAppendixNumber \small{\thepage}}
+    % \fancyhead[LE]{\small{\thepage}}  % uncomment to disable the side chapter numbers
     \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
     \fancyhead[C]{}
     \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
     \fancyhead[RO]{\small{\thepage} \rightAppendixNumber}
+    % \fancyhead[RO]{\small{\thepage}}  % uncomment to disable the side chapter numbers
     
     \fancyfoot[LE]{\small{\thepage}}
     \fancyfoot[RE]{\small{\thesisTitleShort}}
@@ -438,6 +381,8 @@
 }
 
 
+% ------------------------------------------------------------------------------
+% Really blank pages between chapters 
 % https://texfaq.org/FAQ-reallyblank
 
 \let\origdoublepage\cleardoublepage
@@ -447,6 +392,3 @@
 }
 
 \let\cleardoublepage\clearemptydoublepage
-
-
-

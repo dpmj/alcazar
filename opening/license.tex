@@ -13,7 +13,7 @@
 % https://github.com/dpmj/alcazar
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ------------------------------------------------------------------------------
 % LICENSE
 
 \newpage
@@ -21,24 +21,17 @@
 
 \vspace*{\fill}
 
-
-
-
+% ------------------------------------------------------------------------------
+% Generate automatic citation
 
 \begingroup
 
 \vspace*{5mm}
 
-% \vspace*{\fill}
-
 \small
 \setlength\tabcolsep{0pt}
 \renewcommand*{\arraystretch}{1.2}
 {\noindent\large  Cite this work:}
-
-% \begin{mdframed}[backgroundcolor=listing-background,hidealllines=true]
-% \vspace*{2mm}
-% \lstinputlisting[style=cite, nolol]{./cite.txt}
 
 \newwrite\tempfile
 \immediate\openout\tempfile=cite.txt
@@ -55,29 +48,14 @@
 }
 \immediate\closeout\tempfile
 
-% Does not work because escapes are inside strings
-% \begin{minted}{bibtex}
-% @mastersthesis{citeKey,
-%     author  = "¢{\thesisAuthor}¢ and ¢{\thesisTutor}¢",
-%     title   = "¢{\thesisTitle}¢",
-%     school  = "¢{\thesisSchool}¢",
-%     year    = "¢{\thesisYear}¢",
-%     month   = "¢{\thesisMonth}¢",
-%     address = "¢{\thesisAddress}¢"
-% }
-% \end{minted}
-
-\inputminted[style=algol_nu, breaklines, linenos=false, obeytabs=true, tabsize=4, breaksymbolleft=\space\space]{bibtex}{./cite.txt}
-% \end{mdframed}
-
+\inputminted[style=algol_nu, breaklines, linenos=false, obeytabs=true, tabsize=4, breaksymbolleft=\space\space]{bibtex}{cite.txt}
 
 \endgroup
+% ------------------------------------------------------------------------------
  
-
 \vspace*{2mm}
 
-
-
+% ------------------------------------------------------------------------------
 \begingroup
 
     \setlength\tabcolsep{0pt}
@@ -88,7 +66,7 @@
     \renewcommand{\baselinestretch}{1.2}\footnotesize  % Comprime space
     \noindent
     \begin{tabular}{m{3.5cm} m{11.5cm}}
-        \includegraphics[width=3cm]{opening/resources/license/by-nc-sa.pdf} & {\normalsize {\thesisAuthor},} \newline {\normalsize{\thesisTutor}}\\
+        \includegraphics[width=3cm]{opening/resources/license/by-nc-sa.pdf} & \vspace*{\fill}{\normalsize {\thesisAuthor},} \newline {\normalsize{\thesisTutor}} \vspace*{\fill}\\
     \end{tabular}
     \endgroup 
     
@@ -121,13 +99,11 @@
     \href{https://creativecommons.org/licenses/by-nc-sa/4.0/}{https://creativecommons.org/licenses/by-nc-sa/4.0/}
 
 \endgroup
-
-
+% ------------------------------------------------------------------------------
 
 \vspace*{5mm}
 
-
-
+% ------------------------------------------------------------------------------
 % Give a little credit to the template :)
 % It's completely optional, of course ;)
 
@@ -139,11 +115,10 @@
     
     \noindent
     \begin{tabular}{m{3.5cm} m{11.5cm}}
-        \includegraphics[width=3cm]{opening/resources/logos/alcazar.pdf} & \noindent This document has been generated using {\href{https://github.com/dpmj/alcazar}{Alcázar}}, a free and open source {\LaTeX} template for academic works by \href{https://www.linkedin.com/in/dpmj/}{Juan Del Pino Mena}. \\
+        \includegraphics[width=3cm]{opening/resources/logos/alcazar.pdf} & 
+        \noindent This document has been generated using {\href{https://github.com/dpmj/alcazar}{Alcázar}}, a free and open source {\LaTeX} template for academic works by \href{https://www.linkedin.com/in/dpmj/}{Juan Del Pino Mena}. \\
     \end{tabular}
 
-    
-
 \endgroup
-
+% ------------------------------------------------------------------------------
 
