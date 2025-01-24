@@ -57,12 +57,8 @@
 
 - This project is configured to automatically output all the auxiliary build files into the same `./output/` folder, **including the final PDF**.
 
-<<<<<<< HEAD
 
 ### Using `latexmk`
-=======
-### `latexmk`
->>>>>>> 1a140a8d2d7af29e5f9173d929d6714390938f32
 
 Simply use:
 ```bash
@@ -70,12 +66,8 @@ latexmk -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -pdf 
 ```
 This project uses a `latexmkrc` file to fix the `makeglossaries` tool when using a subfolder for saving build outputs.
 
-<<<<<<< HEAD
 
 ### Using `pdflatex`
-=======
-### `pdflatex`
->>>>>>> 1a140a8d2d7af29e5f9173d929d6714390938f32
 
 This method has problems with using a subfolder for build outputs. For this reason, it is recommended to execute `pdflatex` without setting an `-output-directory=`:
 ```bash
@@ -96,11 +88,7 @@ Download this repo as a `.zip` file, then upload the file to Overleaf as a new p
 
 ### LaTeX Workshop by James Yu (extension for VS Code / Codium)
 
-<<<<<<< HEAD
 #### `latexmk` recipe
-=======
-#### Using `latexmk`
->>>>>>> 1a140a8d2d7af29e5f9173d929d6714390938f32
 
 Works with the default `latexmk` recipe almost out of the box. Some settings need to to be changed:
 
