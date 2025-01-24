@@ -60,10 +60,10 @@
 
 - This project can be built with `latexmk` or `pdflatex`, although I greatly encourage the use of `latexmk`. Below are examples of compilation commands with some recommended arguments. The `-shell-escape` flag is required for the `minted` package.
 
-- This project is configured to automatically output all the auxiliary build files into the same `./output/` folder, **including the final .PDF**.
+- This project is configured to automatically output all the auxiliary build files into the same `./output/` folder, **including the final PDF**.
 
 
-### `latexmk`
+### Using `latexmk`
 
 Simply use:
 
@@ -74,7 +74,7 @@ latexmk -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -pdf 
 This project uses a `latexmkrc` file to fix the `makeglossaries` tool when using a subfolder for saving build outputs.
 
 
-### `pdflatex`
+### Using `pdflatex`
 
 This method has problems with using a subfolder for build outputs. For this reason, it is recommended to execute `pdflatex` without setting an `-output-directory=`:
 
@@ -94,11 +94,11 @@ A `Makefile` is already included, which invokes `latexmk`.
 
 ### Overleaf
 
-Since overleaf uses `latexmk`, no configuration is required, it works out of the box. Download this repo as a `.zip`, and then upload the file to Overleaf as a new project.
- 
+Download this repo as a `.zip` file, then upload the file to Overleaf as a new project. Although Overleaf uses `latexmk`, the `minted` package will send an error regarding the output folder. To fix this, you need to remove the `outputdir=output` setting from the `minted` package import in `style/pkgs.sty`. 
+
 ### LaTeX Workshop by James Yu (extension for VS Code / Codium)
 
-#### `latexmk`
+#### `latexmk` recipe
 
 Works with the default `latexmk` recipe almost out of the box. Some settings need to to be changed:
 
