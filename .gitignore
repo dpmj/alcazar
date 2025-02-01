@@ -1,11 +1,5 @@
-output/*
-output/**
-!output/main.pdf
-
-.vscode/
 .directory
-
-*_minted_main/
+_minted-main
 *.log
 *.toc
 *.acn
@@ -26,8 +20,12 @@ output/**
 *.out
 *.synctex.gz
 *.run.xml
+*.pyg
 *.pygtex
 *.pygstyle
 *(busy)
-
 *.kate-swp
+*SAVE-ERROR
+*.fls
+*.fdb_latexmk
+cite.txt

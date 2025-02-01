@@ -3,7 +3,7 @@
 </p>
 
 <p align="center"><b>
-<a href="https://raw.githubusercontent.com/dpmj/alcazar/main/output/main.pdf">See PDF Preview</a></b>
+<a href="https://raw.githubusercontent.com/dpmj/alcazar/main/main.pdf">See PDF Preview</a></b>
 </p>
 
 ## Philosophy
@@ -18,7 +18,7 @@
 ## Features
 
 <p align="center">
-<img src="figures/examples/alcazar-display-neue.png" width="100%"/>
+<img src="figures/examples/alcazar-feature-display.png" width="100%"/>
 </p>
 
 - A page to include information about the authors.
@@ -53,23 +53,23 @@
 
 ### Important information
 
-- This project can be built with `latexmk` or `pdflatex`, although I greatly encourage the use of `latexmk`. Below are examples of compilation commands with some recommended arguments. The `-shell-escape` flag is required for the `minted` package.
-
-- This project is configured to automatically output all the auxiliary build files into the same `./output/` folder, **including the final PDF**.
+This project can be built with `latexmk` or `pdflatex`, although I greatly encourage the use of `latexmk`. Below are examples of compilation commands with some recommended arguments. The `-shell-escape` flag is required for the `minted` package. With `latexmk` both `biber` and `makeglossaries` should be run automatically.
 
 
 ### Using `latexmk`
 
-Simply use:
+Run:
 ```bash
-latexmk -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -pdf outdir=./output/ main.tex
+latexmk -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -pdf main    
 ```
-This project uses a `latexmkrc` file to fix the `makeglossaries` tool when using a subfolder for saving build outputs.
+A `Makefile` is included, you can also simply run `make`. 
+
+This project does not use a `latexmkrc` file.
 
 
 ### Using `pdflatex`
 
-This method has problems with using a subfolder for build outputs. For this reason, it is recommended to execute `pdflatex` without setting an `-output-directory=`:
+Run:
 ```bash
 pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
 biber main
@@ -80,22 +80,24 @@ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
 
 ### Makefile
 
-A `Makefile` is already included, which invokes `latexmk`.
+A `Makefile` is already included, which invokes `latexmk`. Simply run `make` in the project's root directory. Run `make clean` to remove all auxiliary files. 
 
 ### Overleaf
 
-Download this repo as a `.zip` file, then upload the file to Overleaf as a new project. Although Overleaf uses `latexmk`, the `minted` package will send an error regarding the output folder. To fix this, you need to remove the `outputdir=output` setting from the `minted` package import in `style/pkgs.sty`. 
+Download this repo as a `.zip` file, then upload the file to Overleaf as a new project. It should work out of the box.
 
 ### LaTeX Workshop by James Yu (extension for VS Code / Codium)
 
+**Recipes and tools for the `latexmk` and `pdflatex` recipes are already provided in `.vscode/settings.json`**. It should work out of the box with the default `latexmk` recipe. However, manual configuration is described below, if needed:
+
 #### `latexmk` recipe
 
-Works with the default `latexmk` recipe almost out of the box. Some settings need to to be changed:
+Works with the default `latexmk` recipe out of the box. These settings are recommeded:
 
 ```json
 "latex-workshop.latex.autoBuild.run": "never",
 "latex-workshop.intellisense.citation.backend": "biblatex",
-"latex-workshop.latex.outDir": "%DIR%/output"
+"latex-workshop.latex.outDir": "%DIR%",
 ```
 
 #### Creating a new `pdflatex` recipe
