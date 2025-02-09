@@ -34,38 +34,44 @@
 
 ## Customisation
 
-- Details about you and your work are defined in `main.tex'. Fill it in according to your thesis. The document will automatically update all occurrences, including a bibtex citation! 
-- The title page can be easily configured by editing `opening/titlepage.tex`.
-- Fill in information about the authors in `opening/about.tex`.
-- Edit `opening/acknowledgements.tex` and `opening/dedication.tex` as you wish.
-- Include your abstract in one or more languages in `opening/abstract.tex`.
-- Chapter and appendix numbers on the page margins can be problematic for printing. They can be disabled by uncommenting a few lines in the `\fancypagestyle{chapters}` and `\fancypagestyle{addenda}` page styles in `style/alcazar.sty`.
-- The default text font is *Libertinus Serif*, but you can change this in `style/pkgs.sty`. Other high quality options I recommend are Charter and Source Serif Pro, although you may need to change the font size from 12 pt to 11 pt.
-- The default sans serif is Open Sans. Good alternatives are Inter and Source Sans Pro.
-- The default monospace font is IBM Plex Mono. Good alternatives are Fira Mono and Inconsolata, although the size of the monospace font family should be adjusted.
+- Details about you and your work are defined in `main.tex'. Fill it in according to your thesis. The document will automatically update all occurrences, including a copy-and-paste-ready bibtex citation! 
+- The title page can be easily configured by editing `opening/titlepage.tex`. Include here your faculty's logos.
+- Fill in information about the authors in `opening/about.tex`. You can include here a photography of the authors.
+- Edit `opening/acknowledgements.tex` and `opening/dedication.tex` as you like!
+- Include your abstract (in one or more languages) in `opening/abstract.tex`.
+- Chapter and appendix numbers on the page margins can be problematic for printing. They can be disabled by commenting/uncommenting a few lines of code in `style/alcazar.sty`, under the `\fancypagestyle{chapters}` and `\fancypagestyle{addenda}` styles.
+
+### Fonts
+
+The default font is *[Libertinus Serif](https://tug.org/FontCatalogue/libertinusserif/)* plus *[Libertinus Sans](https://tug.org/FontCatalogue/libertinussans/)*.
+
+You can change this in `style/pkgs.sty`. Other high quality options I recommend are *[Source Serif Pro](https://tug.org/FontCatalogue/sourceserifproregular/)* plus *[Source Sans Pro](https://tug.org/FontCatalogue/sourcesanspro/)*. 
+The template handles well a Sans-Serif font as base font of the whole document, with *Source Sans Pro* and *[Inter](https://tug.org/FontCatalogue/interregular/)* being two good options. 
+
+The default monospace font is *[IBM Plex Mono]()*. Equally good alternatives are *[Fira Mono]()* and *[Inconsolata](https://tug.org/FontCatalogue/inconsolata/)*.
+
+All these options appear as commented lines in `style/pkgs.sty`, with the correct font scale and options already prepared.
 
 ## Build
 
 ### Requirements
  
 - `biber` for `biblatex`, 
-- `python 3` and the `pygments` package for the `minted` package.
+- `python 3` and `pygments` for the `minted` package.
 
 ### Important information
 
-This project can be built with `latexmk` or `pdflatex`, although I greatly encourage the use of `latexmk`. Below are examples of compilation commands with some recommended arguments. The `-shell-escape` flag is required for the `minted` package. With `latexmk` both `biber` and `makeglossaries` should be run automatically.
+This project can be built with `latexmk` or `pdflatex`, although I greatly encourage the use of `latexmk`. Below are examples of compilation commands with some recommended arguments. The `-shell-escape` flag is required for the `minted` package. With `latexmk` both `biber` and `makeglossaries` should run automatically.
 
+A `Makefile` is already included, which invokes `latexmk`. To compile, simply run `make` in the project's root directory. Run `make clean` to remove all auxiliary files. 
 
 ### Using `latexmk`
 
-Run:
+This project does not need a `latexmkrc` file.
+
 ```bash
 latexmk -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -pdf main    
 ```
-A `Makefile` is included, you can also simply run `make`. 
-
-This project does not use a `latexmkrc` file.
-
 
 ### Using `pdflatex`
 
@@ -77,10 +83,7 @@ makeglossaries main
 pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
 pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
 ```
-
-### Makefile
-
-A `Makefile` is already included, which invokes `latexmk`. Simply run `make` in the project's root directory. Run `make clean` to remove all auxiliary files. 
+Sometimes an additional call to `pdflatex` may be necessary.
 
 ### Overleaf
 
@@ -88,7 +91,7 @@ Download this repo as a `.zip` file, then upload the file to Overleaf as a new p
 
 ### LaTeX Workshop by James Yu (extension for VS Code / Codium)
 
-**Recipes and tools for the `latexmk` and `pdflatex` recipes are already provided in `.vscode/settings.json`**. It should work out of the box with the default `latexmk` recipe. However, manual configuration is described below, if needed:
+**Recipes and tools for the `latexmk` and `pdflatex` recipes are already provided in `.vscode/settings.json`. Alcázar should compile out of the box with the default `latexmk` recipe.** However, manual configuration is described below, if needed:
 
 #### `latexmk` recipe
 
@@ -210,7 +213,7 @@ If you use and like this template, please consider giving credit :)
   url = {https://github.com/dpmj/alcazar}
 }
 ```
-There is already a small acknowledgement in `opening/license.tex` below the license text. It's completely optional, of course ;)
+There is already a small acknowledgement text in `opening/license.tex` below the document license. It's completely optional, of course ;)
 
 ## License
     

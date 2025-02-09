@@ -29,32 +29,36 @@
 % ------------------------------------------------------------------------------
 % TEXT AND FONTS
 
-% Serif font
-
 % Uncomment all font imports to use Computer Modern (the default latex font)
 
-% Libertinus Serif: Traditional, with personality, easy to read in screens and prints, compact
+% --------------------
+% Document font. Default & recommended: Libertinus Serif
+% Traditional but with personality, compact, easy to read in both screens and printed.
 \usepackage{libertinus}
 \usepackage[libertine]{newtxmath}  % Math support for libertinus
 
+% Alternative:
+% \usepackage[default,regular,semibold,scale=0.96]{sourceserifpro}  % Pair it with Source Sans!
+
+% --------------------
+% Sans-serif font - Default: Libertinus Sans (included in libertinus)
+
 % Alternatives:
+% \usepackage[scale=0.95]{sourcesanspro}  % Pair it with Source Serif!
 
-% Charter: Very easy to read in screens and prints, less compact than libertinus
-% \usepackage{charter}
+% Alternatively, use Sans-serif font for the whole document: 
+% \usepackage[sfdefault,scale=0.92]{inter}  % Use Inter as standalone default font
+% \renewcommand*\familydefault{\sfdefault}  % Set any sans-serif font as default 
 
-% Source Serif Pro: Less compact, but easy on the eyes, great on screens
-% You may want to reduce the font size to 11 (see \documentclass in main.tex)
-% \usepackage[default,regular,semibold]{sourceserifpro}
+% --------------------
+% Monospace font - Default: IBM Plex Mono
+\usepackage[scale=0.85]{plex-mono}  % scaled when used with libertinus
 
-% Nimbus Serif: Similar to Times New Roman
-% \usepackage{nimbusserif}
+% Alternatives:
+% \usepackage[scale=0.85, lining]{FiraMono}
+% \usepackage[scale=1.00]{inconsolata} 
 
-% Monospace font - IBM Plex Mono
-\usepackage[scale = 0.85]{plex-mono}  % scaled when used with libertinus
-
-% Sans-serif font - Open Sans
-\usepackage[defaultsans,scale=0.9]{opensans}
-
+% --------------------
 % Output encoding
 \usepackage[T1]{fontenc}
 
@@ -141,7 +145,7 @@
 % FIGURES
 
 \usepackage{float}
-\usepackage[labelsep=endash, font=small, format=plain, labelfont={bf,up}]{caption}
+\usepackage[labelsep=endash, font={sf, small}, format=plain, labelfont={bf, up}]{caption}
 \usepackage{subcaption}  % Subfigures
 
 

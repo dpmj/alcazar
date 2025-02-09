@@ -35,18 +35,19 @@
 
 \lipsum[56] Nulla tristique mi eget semper luctus \cite{an1368-analog-ferrite}. \lipsum[57]
 
-\begin{table}
+\begin{table}[!ht]
+    \sf
     \small
     \centering
     \renewcommand{\arraystretch}{1.5}
     \begin{tabular}{|cccccc|}
     \hline
-    \rowcolor{lightgray}\multicolumn{6}{|c|}{\textbf{Voltage of internal LDO (VDD\_SDIO)}} \\ \hline
+    \rowcolor{lightgray}\multicolumn{6}{|c|}{\textbf{Voltage of internal LDO (VDD\_SDIO)}} \\ \hline    
     \multicolumn{1}{|c|}{Pin} & \multicolumn{1}{c|}{Default} & \multicolumn{2}{c|}{VDD\_SDIO = 3.3 V} & \multicolumn{2}{c|}{VDD\_SDIO = 1.8 V} \\ \hline
     \multicolumn{1}{|c|}{GPIO12/MTDI} & \multicolumn{1}{c|}{Pull-down} & \multicolumn{2}{c|}{0} & \multicolumn{2}{c|}{1} \\ \hline\hline
     
     \rowcolor{lightgray}\multicolumn{6}{|c|}{\textbf{Booting mode}} \\ \hline
-    \multicolumn{1}{|c|}{Pin} & \multicolumn{1}{c|}{Default} & \multicolumn{2}{c|}{SPI boot} & \multicolumn{2}{c|}{Download boot (programming)} \\ \hline
+    \multicolumn{1}{|c|}{Pin} & \multicolumn{1}{c|}{Default} & \multicolumn{2}{c|}{SPI boot} & \multicolumn{2}{c|}{Download boot} \\ \hline
     \multicolumn{1}{|c|}{GPIO0} & \multicolumn{1}{c|}{Pull-up} & \multicolumn{2}{c|}{1} & \multicolumn{2}{c|}{0} \\ \hline
     \multicolumn{1}{|c|}{GPIO2} & \multicolumn{1}{c|}{Pull-down} & \multicolumn{2}{c|}{Don't care} & \multicolumn{2}{c|}{0} \\ \hline\hline
     

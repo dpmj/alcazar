@@ -34,7 +34,8 @@
 \setlength{\parskip}{1mm}  % Paragraph skip
 
 % Default spacing between lines
-\renewcommand*\baselinestretch{1.0}\selectfont  % 1.1 for Libertinus
+\renewcommand*\baselinestretch{1.06}\selectfont  % 1.06 for Libertinus Serif
+% \renewcommand*\baselinestretch{1.1}\selectfont  % set 1.1 if using a sans-serif font
 
 % \fontsize{12pt}{14pt}\selectfont
 
@@ -61,9 +62,9 @@
 
 \titleformat{\chapter}[display]
 {}
-{\large \scshape \chaptername \enspace \thechapter}
+{\large\scshape\chaptername\enspace\thechapter}
 {0mm}
-{\LARGE \bfseries}
+{\LARGE\bfseries}
 []
 
 \titlespacing{\chapter}{0mm}{-5mm}{5mm}
@@ -161,9 +162,9 @@
 \setlength{\belowdisplayskip}{2mm}  % space below captions
 \setlength{\abovedisplayshortskip}{0mm}  % space above captions
 \setlength{\belowdisplayshortskip}{0mm}  % space below captions
-\setlength{\intextsep}{2mm}  % top/bottom space between in-text floats
-\setlength{\floatsep}{2mm}  % top/bottom space between adjacent floats
-\setlength{\textfloatsep}{2mm}  % top/bottom space between text and floats
+\setlength{\intextsep}{5mm}  % top/bottom space between in-text floats
+\setlength{\floatsep}{5mm}  % top/bottom space between adjacent floats
+\setlength{\textfloatsep}{5mm}  % top/bottom space between text and floats
 
 % Table types
 
@@ -173,6 +174,10 @@
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}
 % New 'L' style for tables that centers text vertically and to the left
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+
+
+\let\oldquote\quote \renewcommand\quote{\oldquote\sf\itshape} 
+\let\oldquote\quotation \renewcommand\quotation{\oldquote\sf} 
 
 
 % ------------------------------------------------------------------------------
@@ -266,19 +271,19 @@
 {
     \fancyhfoffset[RO,LE]{0cm}
     
-    \fancyhead[LE]{\leftChapterNumber \small{\thepage}}  
-    % \fancyhead[LE]{\small{\thepage}}  % uncomment to disable the side chapter numbers
-    \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
+    % \fancyhead[LE]{\sf\leftChapterNumber\small{\thepage}}  % uncomment to enable the side chapter numbers
+    \fancyhead[LE]{\sf\small{\thepage}}  % uncomment to disable the side chapter numbers
+    \fancyhead[RE]{\sf\small{\nouppercase{\leftmark}}}  
     \fancyhead[C]{}
-    \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
-    \fancyhead[RO]{\small{\thepage} \rightChapterNumber}
-    % \fancyhead[RO]{\small{\thepage}}  % uncomment to disable the side chapter numbers
+    \fancyhead[LO]{\sf\small{\nouppercase{\rightmark}}}
+    % \fancyhead[RO]{\sf\small{\thepage} \rightChapterNumber}  % uncomment to enable the side chapter numbers
+    \fancyhead[RO]{\sf\small{\thepage}}   % uncomment to disable the side chapter numbers
     
-    \fancyfoot[LE]{\small{\thepage}}
-    \fancyfoot[RE]{\small{\thesisTitleShort}}
+    \fancyfoot[LE]{\sf\small{\thepage}}
+    \fancyfoot[RE]{\sf\small{\thesisTitleShort}}
     \fancyhead[C]{}
-    \fancyfoot[LO]{\small{\thesisAuthor}}
-    \fancyfoot[RO]{\small{\thepage}}
+    \fancyfoot[LO]{\sf\small{\thesisAuthor}}
+    \fancyfoot[RO]{\sf\small{\thepage}}
     
     \renewcommand{\headrulewidth}{0.1mm}
     \renewcommand{\footrulewidth}{0.1mm}
@@ -290,19 +295,19 @@
 {
     \fancyhfoffset[RO,LE]{0cm}
     
-    \fancyhead[LE]{\leftAppendixNumber \small{\thepage}}
-    % \fancyhead[LE]{\small{\thepage}}  % uncomment to disable the side chapter numbers
-    \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
+    % \fancyhead[LE]{\sf\leftAppendixNumber \small{\thepage}}  % uncomment to enable the side chapter numbers
+    \fancyhead[LE]{\sf\small{\thepage}}  % uncomment to disable the side chapter numbers
+    \fancyhead[RE]{\sf\small{\nouppercase{\leftmark}}} 
     \fancyhead[C]{}
-    \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
-    \fancyhead[RO]{\small{\thepage} \rightAppendixNumber}
-    % \fancyhead[RO]{\small{\thepage}}  % uncomment to disable the side chapter numbers
+    \fancyhead[LO]{\sf\small{\nouppercase{\rightmark}}}
+    % \fancyhead[RO]{\sf\small{\thepage} \rightAppendixNumber}  % uncomment to enable the side chapter numbers
+    \fancyhead[RO]{\sf\small{\thepage}}  % uncomment to disable the side chapter numbers
     
-    \fancyfoot[LE]{\small{\thepage}}
-    \fancyfoot[RE]{\small{\thesisTitleShort}}
+    \fancyfoot[LE]{\sf\small{\thepage}}
+    \fancyfoot[RE]{\sf\small{\thesisTitleShort}}
     \fancyhead[C]{}
-    \fancyfoot[LO]{\small{\thesisAuthor}}
-    \fancyfoot[RO]{\small{\thepage}}
+    \fancyfoot[LO]{\sf\small{\thesisAuthor}}
+    \fancyfoot[RO]{\sf\small{\thepage}}
     
     \renewcommand{\headrulewidth}{0.1mm}
     \renewcommand{\footrulewidth}{0.1mm}
@@ -322,11 +327,11 @@
     \fancyhead[LO]{}
     \fancyhead[RO]{}
     
-    \fancyfoot[LE]{\small{\thepage}}
+    \fancyfoot[LE]{\sf\small{\thepage}}
     \fancyfoot[RE]{}
     \fancyhead[C]{}
     \fancyfoot[LO]{}
-    \fancyfoot[RO]{\small{\thepage}}
+    \fancyfoot[RO]{\sf\small{\thepage}}
     
     \renewcommand{\headrulewidth}{0.0mm}
     \renewcommand{\footrulewidth}{0.0mm}
@@ -364,17 +369,17 @@
 {
     \fancyhfoffset[RO,LE]{0cm}
     
-    \fancyhead[LE]{\small{\thepage}}
-    \fancyhead[RE]{\small{\nouppercase{\leftmark}}} 
+    \fancyhead[LE]{\sf\small{\thepage}}
+    \fancyhead[RE]{\sf\small{\nouppercase{\leftmark}}} 
     \fancyhead[C]{}
-    \fancyhead[LO]{\small{\nouppercase{\rightmark}}}
-    \fancyhead[RO]{\small{\thepage}}
+    \fancyhead[LO]{\sf\small{\nouppercase{\rightmark}}}
+    \fancyhead[RO]{\sf\small{\thepage}}
     
-    \fancyfoot[LE]{\small{\thepage}}
-    \fancyfoot[RE]{\small{\thesisTitleShort}}
+    \fancyfoot[LE]{\sf\small{\thepage}}
+    \fancyfoot[RE]{\sf\small{\thesisTitleShort}}
     \fancyhead[C]{}
-    \fancyfoot[LO]{\small{\thesisAuthor}}
-    \fancyfoot[RO]{\small{\thepage}}
+    \fancyfoot[LO]{\sf\small{\thesisAuthor}}
+    \fancyfoot[RO]{\sf\small{\thepage}}
     
     \renewcommand{\headrulewidth}{0.2mm}
     \renewcommand{\footrulewidth}{0.2mm}
