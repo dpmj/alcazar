@@ -6,6 +6,10 @@
 <a href="https://raw.githubusercontent.com/dpmj/alcazar/main/main.pdf">See PDF Preview</a></b>
 </p>
 
+<p align="center">
+<a href='https://ko-fi.com/R6R61JQHNA' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+</p>
+
 ## Philosophy
 
 - KISS.
@@ -54,6 +58,10 @@ All these options appear as commented lines in `style/pkgs.sty`, with the correc
 
 ## Build
 
+### Overleaf
+
+Download this repo as a `.zip` file, then upload the file to Overleaf as a new project. It should work out of the box.
+
 ### Requirements
  
 - `biber` for `biblatex`, 
@@ -61,9 +69,11 @@ All these options appear as commented lines in `style/pkgs.sty`, with the correc
 
 ### Important information
 
-This project can be built with `latexmk` or `pdflatex`, although I greatly encourage the use of `latexmk`. Below are examples of compilation commands with some recommended arguments. The `-shell-escape` flag is required for the `minted` package. With `latexmk` both `biber` and `makeglossaries` should run automatically.
+This project can be built with `latexmk` or `pdflatex`, although **I greatly encourage the use of `latexmk`.** Below are examples of compilation commands with some recommended arguments. The `-shell-escape` flag is required for the `minted` package. With `latexmk` both `biber` and `makeglossaries` should run automatically.
 
 A `Makefile` is already included, which invokes `latexmk`. To compile, simply run `make` in the project's root directory. Run `make clean` to remove all auxiliary files. 
+
+This template has been confirmed as working on both Linux (TeX Live) and Windows (MiKTeX).
 
 ### Using `latexmk`
 
@@ -85,13 +95,12 @@ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
 ```
 Sometimes an additional call to `pdflatex` may be necessary.
 
-### Overleaf
 
-Download this repo as a `.zip` file, then upload the file to Overleaf as a new project. It should work out of the box.
+### LaTeX Workshop by James Yu (extension for Visual Studio Code / Codium)
 
-### LaTeX Workshop by James Yu (extension for VS Code / Codium)
+**Recipes and tools for the `latexmk` and `pdflatex` recipes are already provided in `.vscode/settings.json`. Alcázar should compile out of the box with the default `latexmk` recipe.** 
 
-**Recipes and tools for the `latexmk` and `pdflatex` recipes are already provided in `.vscode/settings.json`. Alcázar should compile out of the box with the default `latexmk` recipe.** However, manual configuration is described below, if needed:
+Manual configuration is described below, if needed:
 
 #### `latexmk` recipe
 
@@ -203,9 +212,17 @@ Thanks to my friends and colleagues who beta-tested Alcázar. You found many bug
 
 And to all the people who have already used Alcázar, I hope I have helped you despite my questionable LaTeX skills!
 
+If you enjoy Alcázar, you can buy me a coffee on Ko-Fi! :)
+
+<a href='https://ko-fi.com/R6R61JQHNA' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+
 ## Credits / citation
 
-If you use and like this template, please consider giving credit :)
+If you use and like this template, please consider giving credit :) This is completely optional, of course ;)
+
+There is already a small acknowledgement text in `opening/license.tex` below the document license. 
+
 ```bibtex
 @misc{alcazar-latex-template,
   author = {Del Pino Mena, Juan},
@@ -213,12 +230,13 @@ If you use and like this template, please consider giving credit :)
   url = {https://github.com/dpmj/alcazar}
 }
 ```
-There is already a small acknowledgement text in `opening/license.tex` below the document license. It's completely optional, of course ;)
 
 ## License
     
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+This licence only applies to derivatives of the template itself. You can licence your reports created using this template however you wish, although I would encourage you to use a Creative Commons licence.
 
 ## Disclaimer
 

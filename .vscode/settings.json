@@ -68,5 +68,6 @@
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.intellisense.citation.backend": "biblatex",
     "latex-workshop.latex.outDir": "%DIR%",
-    "explorer.excludeGitIgnore": true
+    "explorer.excludeGitIgnore": true,
+    "editor.wordWrap": "on"
 }

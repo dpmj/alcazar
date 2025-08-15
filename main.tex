@@ -20,7 +20,8 @@
 % ------------------------------------------------------------------------------
 % PREAMBLE
 
-\documentclass[twoside, openright, 12pt, final]{report}
+% \documentclass[twoside, openright, 12pt, draft]{report}  % draft compile
+\documentclass[twoside, openright, 12pt]{report}  % final compile
 
 % ------------------------------------------------------------------------------
 % Variables
@@ -62,6 +63,11 @@
 % BEGIN DOCUMENT
 
 \begin{document}
+
+% Redefine \autoref{} section naming 
+\renewcommand{\subsectionautorefname}{\sectionautorefname}
+\renewcommand{\subsubsectionautorefname}{\sectionautorefname}
+
 
 % Titlepage, license, about, abstract, keywords, publications, acknowledgements, dedication and tables of contents
 \include{opening/opening}

@@ -212,45 +212,45 @@
 
 % Definition of the box with number inside with tikz
 
-\newcommand{\chapterNumber}[1]
-{%
-    \begin{tikzpicture}%
-        [blob/.style={minimum width=10mm, minimum height=15mm, align=center}]
-        \node[blob, fill=gray07, text=white] at (0,0) { \sffamily \bfseries \Huge #1};
-    \end{tikzpicture}
-}
+% \newcommand{\chapterNumber}[1]
+% {%
+%     \begin{tikzpicture}%
+%         [blob/.style={minimum width=10mm, minimum height=15mm, align=center}]
+%         \node[blob, fill=gray07, text=white] at (0,0) { \sffamily \bfseries \Huge #1};
+%     \end{tikzpicture}
+% }
 
 
 % For chapters
 
-\newcommand{\rightChapterNumber}
-{%
-    \begin{picture}(0,0)
-        \put(16mm, -25.5mm - 15mm * \value{chapter} + 15mm) {\chapterNumber{\arabic{chapter}}}
-    \end{picture}
-}
-\newcommand{\leftChapterNumber}
-{%
-    \begin{picture}(0,0)
-        \put(-25mm, -25.5mm - 15mm * \value{chapter} + 15mm) {\chapterNumber{\arabic{chapter}}}
-    \end{picture}
-}
+% \newcommand{\rightChapterNumber}
+% {%
+%     \begin{picture}(0,0)
+%         \put(16mm, -25.5mm - 15mm * \value{chapter} + 15mm) {\chapterNumber{\arabic{chapter}}}
+%     \end{picture}
+% }
+% \newcommand{\leftChapterNumber}
+% {%
+%     \begin{picture}(0,0)
+%         \put(-25mm, -25.5mm - 15mm * \value{chapter} + 15mm) {\chapterNumber{\arabic{chapter}}}
+%     \end{picture}
+% }
 
 
 % For appendices
 
-\newcommand{\rightAppendixNumber}
-{%
-    \begin{picture}(0,0)
-        \put(16mm, -25.5mm - 15mm * \value{chapter} + 15mm) {\chapterNumber{\Alph{chapter}}}
-    \end{picture}
-}
-\newcommand{\leftAppendixNumber}
-{%
-    \begin{picture}(0,0)
-        \put(-25mm, -25.5mm - 15mm * \value{chapter} + 15mm) {\chapterNumber{\Alph{chapter}}}
-    \end{picture}
-}
+% \newcommand{\rightAppendixNumber}
+% {%
+%     \begin{picture}(0,0)
+%         \put(16mm, -25.5mm - 15mm * \value{chapter} + 15mm) {\chapterNumber{\Alph{chapter}}}
+%     \end{picture}
+% }
+% \newcommand{\leftAppendixNumber}
+% {%
+%     \begin{picture}(0,0)
+%         \put(-25mm, -25.5mm - 15mm * \value{chapter} + 15mm) {\chapterNumber{\Alph{chapter}}}
+%     \end{picture}
+% }
 
 
 % ------------------------------------------------------------------------------
@@ -281,7 +281,7 @@
     
     \fancyfoot[LE]{\sf\small{\thepage}}
     \fancyfoot[RE]{\sf\small{\thesisTitleShort}}
-    \fancyhead[C]{}
+    \fancyfoot[C]{}
     \fancyfoot[LO]{\sf\small{\thesisAuthor}}
     \fancyfoot[RO]{\sf\small{\thepage}}
     
@@ -305,7 +305,7 @@
     
     \fancyfoot[LE]{\sf\small{\thepage}}
     \fancyfoot[RE]{\sf\small{\thesisTitleShort}}
-    \fancyhead[C]{}
+    \fancyfoot[C]{}
     \fancyfoot[LO]{\sf\small{\thesisAuthor}}
     \fancyfoot[RO]{\sf\small{\thepage}}
     
@@ -329,7 +329,7 @@
     
     \fancyfoot[LE]{\sf\small{\thepage}}
     \fancyfoot[RE]{}
-    \fancyhead[C]{}
+    \fancyfoot[C]{}
     \fancyfoot[LO]{}
     \fancyfoot[RO]{\sf\small{\thepage}}
     
@@ -354,7 +354,7 @@
     
     \fancyfoot[LE]{}
     \fancyfoot[RE]{}
-    \fancyhead[C]{}
+    \fancyfoot[C]{}
     \fancyfoot[LO]{}
     \fancyfoot[RO]{}
     
@@ -377,7 +377,7 @@
     
     \fancyfoot[LE]{\sf\small{\thepage}}
     \fancyfoot[RE]{\sf\small{\thesisTitleShort}}
-    \fancyhead[C]{}
+    \fancyfoot[C]{}
     \fancyfoot[LO]{\sf\small{\thesisAuthor}}
     \fancyfoot[RO]{\sf\small{\thepage}}
     
