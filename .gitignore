@@ -1,5 +1,6 @@
 .directory
 _minted-main
+_minted
 *.log
 *.toc
 *.acn

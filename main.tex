@@ -47,6 +47,8 @@
 \newcommand{\thesisAddress}{Camí de Vera, s/n, 46022 València, Valencia, Spain}
 \newcommand{\thesisDepartment}{Department of Communications}
 
+\newcommand{\thesisDOI}{10.5281/zenodo.13935260}  % Digital Object Identifier, leave blank if unknown (or get one at zenodo.org!)
+
 % For the document
 \newcommand{\thesisKeywords}{Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 4, Keyword 5, Keyword 6, Keyword 7, Keyword 8, Keyword 9, Keyword 10, Keyword N}  
 
@@ -57,6 +59,9 @@
 
 \title{\thesisTitle}
 \author{\thesisAuthor}
+
+% If it is not imported on main.tex, the bibliography sometimes cannot be found by Overleaf or the VS Code extension.
+\addbibresource{bibliography/references.bib}  
 
 % END PREAMBLE
 % ------------------------------------------------------------------------------

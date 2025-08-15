@@ -58,24 +58,26 @@ All these options appear as commented lines in `style/pkgs.sty`, with the correc
 
 ## Build
 
-### Overleaf
+### Using Overleaf
 
 Download this repo as a `.zip` file, then upload the file to Overleaf as a new project. It should work out of the box.
 
-### Requirements
- 
-- `biber` for `biblatex`, 
-- `python 3` and `pygments` for the `minted` package.
+### Manually
 
-### Important information
+#### Important information
 
 This project can be built with `latexmk` or `pdflatex`, although **I greatly encourage the use of `latexmk`.** Below are examples of compilation commands with some recommended arguments. The `-shell-escape` flag is required for the `minted` package. With `latexmk` both `biber` and `makeglossaries` should run automatically.
 
 A `Makefile` is already included, which invokes `latexmk`. To compile, simply run `make` in the project's root directory. Run `make clean` to remove all auxiliary files. 
 
+Requirements:
+ 
+- `biber` for `biblatex`, 
+- `python 3` and `pygments` for the `minted` package.
+
 This template has been confirmed as working on both Linux (TeX Live) and Windows (MiKTeX).
 
-### Using `latexmk`
+#### With `latexmk`
 
 This project does not need a `latexmkrc` file.
 
@@ -83,7 +85,7 @@ This project does not need a `latexmkrc` file.
 latexmk -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -pdf main    
 ```
 
-### Using `pdflatex`
+#### With `pdflatex`
 
 Run:
 ```bash
@@ -96,7 +98,7 @@ pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error main
 Sometimes an additional call to `pdflatex` may be necessary.
 
 
-### LaTeX Workshop by James Yu (extension for Visual Studio Code / Codium)
+### Using the LaTeX Workshop extension for Visual Studio Code / Codium by James Yu 
 
 **Recipes and tools for the `latexmk` and `pdflatex` recipes are already provided in `.vscode/settings.json`. Alcázar should compile out of the box with the default `latexmk` recipe.** 
 
@@ -163,7 +165,7 @@ And run the `alcazar` recipe.
 
 **Note:** If you keep getting a `makeglossaries` error saying that `main.aux` could not be found, set the `latex-workshop.latex.autoBuild.cleanAndRetry.enabled` setting to `false` (in the UI, uncheck *"Latex-workshop > Latex > AutoBuild > Clean and retry: Enabled"*)
 
-## File structure
+## Template file structure
 
 The file structure of Alcázar is simple and self-explanatory:
 ```
@@ -227,7 +229,8 @@ There is already a small acknowledgement text in `opening/license.tex` below the
 @misc{alcazar-latex-template,
   author = {Del Pino Mena, Juan},
   title = {Alcazar: A free and Open-Source LaTeX template for academic works},
-  url = {https://github.com/dpmj/alcazar}
+  url = {https://github.com/dpmj/alcazar},
+  doi = {10.5281/zenodo.13935260}
 }
 ```
 

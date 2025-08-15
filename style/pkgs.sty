@@ -14,7 +14,7 @@
 
 
 % ------------------------------------------------------------------------------
-% DEBUG
+% DEBUG (comment if unused)
 % \usepackage{showframe}
 \usepackage{lipsum}
 
@@ -22,7 +22,7 @@
 % ------------------------------------------------------------------------------
 % BASE
 
-\usepackage[spanish, english]{babel}  % Language
+\usepackage[english]{babel}  % Language
 \usepackage[utf8]{inputenc}  % File encoding 
 
 
@@ -85,12 +85,12 @@
 
 \usepackage{fontawesome5}  % FontAwesome icons
 
-\usepackage{dirtree}  % Do directory trees
+% \usepackage{dirtree}  % Do directory trees
 \usepackage{pdfpages}  % Insert PDF pages
 
-% \usepackage{tikz}
-% \usetikzlibrary{shapes, backgrounds}
-% \tikzset{x=1cm, y=1cm} % Default tikz units
+%\usepackage{tikz}
+%\usetikzlibrary{shapes, backgrounds}
+%\tikzset{x=1cm, y=1cm} % Default tikz units
 
 
 % ------------------------------------------------------------------------------
@@ -112,6 +112,7 @@
 % URL, REF AND HYPERREF
 
 \usepackage{hyperref}
+\usepackage{hyperxmp}
 \usepackage{xurl}  % eXtended url package
 \usepackage{nameref}  % get section names by label
 
@@ -151,7 +152,6 @@
 % for \FloatBarrier
 \usepackage{placeins}
 
-
 % ------------------------------------------------------------------------------
 % CODE LISTINGS
 
@@ -172,8 +172,8 @@
 %\usepackage{relsize}
 
 \usepackage{csquotes}
-\usepackage[backend=biber, style=ieee]{biblatex}
-\addbibresource{bibliography/references.bib}
+\usepackage[style=ieee, citestyle=ieee-comp, backend=biber]{biblatex}
+% \addbibresource{bibliography/references.bib}
 
 
 % ------------------------------------------------------------------------------
@@ -193,5 +193,3 @@
 % Multitoc - for two-column table of contents, list of figures and tables.
 % Outdated and discontinued
 % \usepackage[toc, lof, lot]{multitoc}  
-
-
