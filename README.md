@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-<a href='https://ko-fi.com/R6R61JQHNA' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+<a href='https://ko-fi.com/dpmjuan' target='_blank'><img height='42' style='border:0px;height:42px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 </p>
 
 ## Philosophy
@@ -216,7 +216,7 @@ And to all the people who have already used Alcázar, I hope I have helped you d
 
 If you enjoy Alcázar, you can buy me a coffee on Ko-Fi! :)
 
-<a href='https://ko-fi.com/R6R61JQHNA' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+<a href='https://ko-fi.com/dpmjuan' target='_blank'><img height='42' style='border:0px;height:42px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 
 ## Credits / citation
